@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">bsu_Fproj</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="student_portal">STUDENT PORTAL</string>
+    <string name="password_is_case_sensitive">* Password is case Sensitive</string>
+    <string name="for_new_students">For New Students</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="forgot_password_click_here">Forgot Password? Click here</string>
+    <string name="sign_in">Sign in</string>
+    <string name="bsu_top_img">bsu_top_img</string>
+    <string name="information_new_student">information_new_student</string>
 </resources>
