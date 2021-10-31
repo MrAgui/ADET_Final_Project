@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DatabaseOpenHelper dbHelper = new DatabaseOpenHelper(this, null, null, 1);
+
         contact_us_btn = findViewById(R.id.contactUs);
         contact_us_btn.setOnClickListener(view -> showContactUs());
 
@@ -40,29 +42,10 @@ public class MainActivity extends AppCompatActivity {
         btn_sign_in.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+                inputSrcode.setText(dbHelper.loadHandler());
 
-                DatabaseAccess databaseAccess = DatabaseAccess.getInstance(getApplicationContext());
-
-
-//                databaseAccess.open();
-
-                String u = inputSrcode.getText().toString();
-                boolean enrolled = false;
-                enrolled = databaseAccess.exist(u);
-
-//                databaseAccess.close();
-                if (enrolled){
-                    //new layout
-
-                   openPortal();
-                }
-                else{
-                    loginError();
-                }
-
-
-
-                //
+//                String u = inputSrcode.getText().toString();
+//                boolean enrolled = false;
 
 
             }
