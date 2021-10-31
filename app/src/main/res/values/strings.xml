@@ -10,4 +10,5 @@
     <string name="sign_in">Sign in</string>
     <string name="bsu_top_img">bsu_top_img</string>
     <string name="information_new_student">information_new_student</string>
+    <string name="success_login">Success Login</string>
 </resources>
