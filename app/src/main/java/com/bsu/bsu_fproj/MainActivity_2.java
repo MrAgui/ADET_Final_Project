@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity_2 extends AppCompatActivity{
 
     private ImageButton new_student_btn;
     private TextView contact_us_btn;
@@ -25,15 +25,65 @@ public class MainActivity extends AppCompatActivity {
     public EditText inputPassword;
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
+    boolean isLoggedIn = false;
+    final String TAG = "Main Activity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("Creating MainActivity Activity...");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //DatabaseOpenHelper dbHelper = new DatabaseOpenHelper(this, null, null, 1);
         //DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
+    }
 
+    @Override
+    protected void onRestart(){
+        System.out.println("Restarting MainActivity Instances...");
+        super.onRestart();
+    }
+
+    @Override
+    protected void onStart(){
+        System.out.println("Starting MainActivity...");
+        super.onStart();
+        checkLogin();
+        if(isLoggedIn){
+            startLoginActivity();
+        }
+    }
+    @Override
+    protected void onResume(){
+        System.out.println("Resuming MainActivity...");
+        super.onResume();
+    }
+    @Override
+    protected void onPause(){
+        System.out.println("Pausing MainActivity...");
+        super.onPause();
+    }
+    @Override
+    protected void onStop(){
+        System.out.println("Stopping MainActivity...");
+        super.onStop();
+        isLoggedIn = false;
+    }
+    @Override
+    protected void onDestroy(){
+        System.out.println("Destroying MainActivity...");
+        super.onDestroy();
+    }
+
+    public void checkLogin(){
+        if(isLoggedIn==true){
+            Log.d(TAG, "Student is logged in.");
+        }else{
+            Log.d(TAG, "Student is logged out.");
+
+        }
+    }
+
+    public void startLoginActivity(){
         contact_us_btn = findViewById(R.id.contactUs);
         contact_us_btn.setOnClickListener(view -> showContactUs());
 
@@ -46,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         inputPassword = findViewById(R.id.inputPassword);
 
         btn_sign_in.setOnClickListener(new View.OnClickListener(){
+
+
             @Override
             public void onClick(View view){
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
@@ -71,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     System.out.println("Username and password does not match");
                 }
 
-                /* Start EDIT TEST */
+
                 else {
                     try {
                         db = dbHelper.getReadableDatabase();
@@ -79,9 +131,6 @@ public class MainActivity extends AppCompatActivity {
                         c.moveToFirst();
                         do {
                             // https://stackoverflow.com/questions/3105080/output-values-found-in-cursor-to-logcat-android/13106260
-
-
-
                             System.out.println("--------");
                             for(int i=0;i<8;i++){
                                 System.out.println( c.getString(i));
@@ -99,11 +148,8 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 //    Select query       https://guides.codepath.com/android/local-databases-with-sqliteopenhelper
-// Define a projection that specifies which columns from the database
-// you will actually use after this query.
-
-                /* END EDIT TEST */
-
+                // Define a projection that specifies which columns from the database
+                // you will actually use after this query.
 
             }
         });

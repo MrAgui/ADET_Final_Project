@@ -13,6 +13,7 @@
 //
 //    private DatabaseAccess(Context context) {
 //        this.openHelper = new DatabaseOpenHelper(context);
+
 //    }
 //
 //    public static DatabaseAccess getInstance(Context context) {
@@ -23,6 +24,18 @@
 //        return instance;
 //    }
 //
+
+//    }
+//
+//    public static DatabaseAccess getInstance(Context context) {
+//        if (instance == null) {
+//            instance = new DatabaseAccess(context);
+//
+//        }
+//        return instance;
+//    }
+//
+
 //    public void open() {
 //        this.db = openHelper.getWritableDatabase();
 //    }
@@ -56,6 +69,7 @@
 ////        return buffer.toString();
 ////    }
 //
+
 ////    public boolean exist(String user) {
 ////        open();
 ////        c = db.rawQuery("select * from student_Info where sr_code = ?", new String[]{user});
@@ -68,5 +82,19 @@
 ////        }
 ////
 ////    }
+
+//    public boolean exist(String user) {
+//        open();
+//        c = db.rawQuery("select * from student_Info where sr_code = ?", new String[]{user});
+//        if (c.getCount() > 0) {
+//            close();
+//            return true;
+//        } else{
+//            close();
+//            return false;
+//        }
+//
+//    }
+
 //
 //}
