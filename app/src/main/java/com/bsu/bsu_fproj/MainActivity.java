@@ -105,12 +105,19 @@ public class MainActivity extends AppCompatActivity {
 
 /*START EDITING*/
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.i(TAG, "on Resume");
+    }
 
     @Override
     protected void onRestart(){
         super.onRestart();
         Log.i(TAG, "On Restart");
     }
+
+
 /*END ENDTING*/
 
     public void openPortal() {
