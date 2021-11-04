@@ -1,3 +1,4 @@
+/*
 package com.bsu.bsu_fproj;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,20 +26,15 @@ public class MainActivity extends AppCompatActivity {
     public EditText inputPassword;
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
-    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-        Log.i(TAG, "On create");
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i(TAG, "On Start");
+        //DatabaseOpenHelper dbHelper = new DatabaseOpenHelper(this, null, null, 1);
+        //DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
+
         contact_us_btn = findViewById(R.id.contactUs);
         contact_us_btn.setOnClickListener(view -> showContactUs());
 
@@ -50,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         inputSrcode = findViewById(R.id.inputSrcode);
         inputPassword = findViewById(R.id.inputPassword);
 
-        btn_sign_in.setOnClickListener(new View.OnClickListener() {
+        btn_sign_in.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) {
+            public void onClick(View view){
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
                 System.out.println("Executed Here");
                 Cursor c = null;
@@ -60,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 Editable EPassword = inputPassword.getText();
                 String sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
                 String password = EPassword.toString();
+
                 try {
                     db = dbHelper.getReadableDatabase();
                     c = db.rawQuery("select * from student_info where sr_code='" + sr_code + "' AND password='" + password + "'", new String[]{});
@@ -70,19 +67,26 @@ public class MainActivity extends AppCompatActivity {
 
                 System.out.println("checking fields");
                 // checking the inputs in login
-                if (c.moveToFirst() == false) {
+                if (c.moveToFirst() == false){
                     //output dialog
                     System.out.println("Username and password does not match");
-                } else {
+                }
+
+// Start EDIT TEST
+
+                else {
                     try {
                         db = dbHelper.getReadableDatabase();
-                        c = db.rawQuery("select * from student_info where sr_code='" + sr_code + "' AND password='" + password + "'", new String[]{});
+                        c = db.rawQuery("select * from student_info where sr_code='"+ sr_code +"' AND password='"+ password +"'", new String[]{});
                         c.moveToFirst();
                         do {
                             // https://stackoverflow.com/questions/3105080/output-values-found-in-cursor-to-logcat-android/13106260
+
+
+
                             System.out.println("--------");
-                            for (int i = 0; i < 8; i++) {
-                                System.out.println(c.getString(i));
+                            for(int i=0;i<8;i++){
+                                System.out.println( c.getString(i));
                             }
                             System.out.println("--------");
                             //System.out.println( c.getString(0));
@@ -91,27 +95,22 @@ public class MainActivity extends AppCompatActivity {
 
                     } finally {
 
+
                     }
                     openPortal();
                 }
-                //    Select query   https://guides.codepath.com/android/local-databases-with-sqliteopenhelper
-                // Define a projection that specifies which columns from the database
-                // you will actually use after this query.
+
+                //    Select query       https://guides.codepath.com/android/local-databases-with-sqliteopenhelper
+// Define a projection that specifies which columns from the database
+// you will actually use after this query.
+
+// END EDIT TEST
+
+
+
             }
         });
-
-
     }
-
-/*START EDITING*/
-
-
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        Log.i(TAG, "On Restart");
-    }
-/*END ENDTING*/
 
     public void openPortal() {
         Intent intent = new Intent(this, activity_portal.class);
@@ -137,3 +136,5 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+*/
