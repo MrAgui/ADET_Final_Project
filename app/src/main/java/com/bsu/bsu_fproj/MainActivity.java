@@ -105,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
 /*START EDITING*/
 
+    // not working
     @Override
     protected void onResume() {
         super.onResume();
