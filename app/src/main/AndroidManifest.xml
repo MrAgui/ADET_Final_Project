@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bsu_Fproj">
         <activity
+            android:name=".NavActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nav"
+            android:theme="@style/Theme.Bsu_Fproj.NoActionBar" />
+        <activity
             android:name=".activity_portal"
             android:exported="true" />
         <activity

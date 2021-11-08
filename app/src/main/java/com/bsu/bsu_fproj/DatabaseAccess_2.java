@@ -18,23 +18,15 @@ public class DatabaseAccess_2 {
     public static DatabaseAccess_2 getInstance (Context context){
             if (instance==null){
                 instance=new DatabaseAccess_2(context);
-
-
-
             }
             return instance;
     }
-
     public void open(){
         this.db=openHelper.getWritableDatabase();
-
     }
-
     public void close(){
         if (db!=null){
             this.db.close();
         }
     }
-
-
 }
