@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +24,14 @@ public class MainActivity extends AppCompatActivity {
     public Button btn_sign_in;
     public EditText inputSrcode;
     public EditText inputPassword;
+
+    // Storing Data inside variables to be used in the user profile
+
+    public String sr_codeHolder, first_NameHolder;
+
+
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
-    public String[] student_data = {"","","","","","","",""};
+//    public String[] student_data = {"","","","","","","",""};
 
 
     private static final String TAG = "MainActivity";
@@ -56,14 +63,30 @@ public class MainActivity extends AppCompatActivity {
 
 
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View view) {
+
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
                 System.out.println("Executed Here");
                 Cursor c = null;
                 Editable ESr_code = inputSrcode.getText();
                 Editable EPassword = inputPassword.getText();
+/*Edit test*/
+                sr_codeHolder = inputSrcode.getText().toString();
+
+//                System.out.println(sr_codeHolder + " sr_codeHolder");
+//
+//                Intent intent = new Intent(MainActivity.this, NavActivity.class);
+//
+//                intent.putExtra(UserEmail, EmailHolder);
+
+                
+/*End test*/
                 System.out.println("getting inputs");
+
+
                 sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
                 password = EPassword.toString();
                 try {
@@ -78,10 +101,19 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 System.out.println("checking fields");
+
+
+
                 // checking the inputs in login
                 if (c.moveToFirst() == false) {
+/*editing fields*/
+
+                    Toast.makeText(MainActivity.this,"UserName or Password is Wrong, Please Try Again.",Toast.LENGTH_LONG).show();
                     //output dialog
                     System.out.println("Username and password does not match");
+
+/*End editing field*/
+
                 } else {
                     try {
                         db = dbHelper.getReadableDatabase();
@@ -91,11 +123,11 @@ public class MainActivity extends AppCompatActivity {
                             // https://stackoverflow.com/questions/3105080/output-values-found-in-cursor-to-logcat-android/13106260
                             System.out.println("--------");
                             for (int i = 0; i < 8; i++) {
-                                student_data[i] = c.getString(i);
+//                                student_data[i] = c.getString(i);
 //                                System.out.println(student_data[i]);
                             }
                             System.out.println("--------");
-                            //System.out.println( c.getString(0));
+//                            System.out.println( c.getString(0));
                         } while (c.moveToNext());
 
                         db.close();
@@ -134,8 +166,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPortal() {
         Intent intent = new Intent(this, NavActivity.class);
+
+        sr_codeHolder = inputSrcode.getText().toString();
+
+
+        System.out.println(sr_codeHolder + " sr_codeHolder");
+
+
         intent.putExtra("name", sr_code);
+
+
         System.out.println(sr_code);
+
+        /*Start edit */
+        Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
+
+
+
+        /* End Edit*/
         startActivity(intent);
     }
     public void loginError(){
@@ -158,10 +206,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
 //    Get Data
-    public String getData(int i){
+/*    public String getData(int i){
         System.out.println(student_data[i]);
         return student_data[i];
 
 
-    }
+    }*/
 }

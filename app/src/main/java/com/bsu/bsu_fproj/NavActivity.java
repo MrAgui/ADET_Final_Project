@@ -30,8 +30,12 @@ public class NavActivity extends AppCompatActivity {
     MainActivity main = new MainActivity();
     private final String TAG = "NavActivity";
 
+    /*Starts edit */
     private TextView textViewNavName;
 
+    public String sr_codeHolder, first_NameHolder;
+
+    /* End Edit*/
 
     public String[] received_data = {"","","","","","","",""};
 
@@ -88,7 +92,11 @@ public class NavActivity extends AppCompatActivity {
                 System.out.println(c.getString(2));
                 System.out.println(c.getString(4));
                 System.out.println(c.getString(5));
+
+
 /*start edit*/
+
+//                sr_codeHolder  = intent.getStringExtra(MainActivity.UserEmail);;
 
 //                Intent intent = getIntent();
 //
