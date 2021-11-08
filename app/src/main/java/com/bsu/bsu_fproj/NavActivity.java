@@ -1,8 +1,12 @@
 package com.bsu.bsu_fproj;
 
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -14,16 +18,31 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 
 public class NavActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavBinding binding;
+    MainActivity main = new MainActivity();
+    private final String TAG = "NavActivity";
+
+    private TextView textViewNavName;
+
+
+    public String[] received_data = {"","","","","","","",""};
+
+    DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.i(TAG, "On create");
 
         binding = ActivityNavBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -47,6 +66,46 @@ public class NavActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null){
+            String value = extras.getString("name");
+        }
+
+        System.out.println("Success Getting data");
+
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        System.out.println("Executed Here");
+        Cursor c = null;
+        try {
+            db = dbHelper.getReadableDatabase();
+            c = db.rawQuery("select * from student_tbl where sr_code="+ extras.getString("name"), new String[]{});
+            c.moveToFirst();
+            do {
+                System.out.println(c.getString(1));
+                System.out.println(c.getString(2));
+                System.out.println(c.getString(4));
+                System.out.println(c.getString(5));
+/*start edit*/
+
+//                Intent intent = getIntent();
+//
+//                textViewNavName = findViewById(R.id.navName);
+//
+//                Account account = (Account) intent.getSerializableExtra("name");
+//                textViewNavName.setText(getString(R.string.sign_in) + " " + account.getFirst_Name());
+
+/*end edit*/
+
+            } while (c.moveToNext());
+
+            db.close();
+
+        } finally {
+
+        }
     }
 
     @Override

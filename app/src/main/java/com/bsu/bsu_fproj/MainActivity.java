@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -25,8 +24,12 @@ public class MainActivity extends AppCompatActivity {
     public EditText inputSrcode;
     public EditText inputPassword;
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
+    public String[] student_data = {"","","","","","","",""};
+
 
     private static final String TAG = "MainActivity";
+    String sr_code;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         inputSrcode = findViewById(R.id.inputSrcode);
         inputPassword = findViewById(R.id.inputPassword);
 
+
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 Editable ESr_code = inputSrcode.getText();
                 Editable EPassword = inputPassword.getText();
                 System.out.println("getting inputs");
-                String sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
-                String password = EPassword.toString();
+                sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
+                password = EPassword.toString();
                 try {
                     db = dbHelper.getReadableDatabase();
                     c = db.rawQuery("select * from student_tbl where sr_code='" + sr_code + "' AND password='" + password + "'", new String[]{});
@@ -87,11 +91,13 @@ public class MainActivity extends AppCompatActivity {
                             // https://stackoverflow.com/questions/3105080/output-values-found-in-cursor-to-logcat-android/13106260
                             System.out.println("--------");
                             for (int i = 0; i < 8; i++) {
-                                System.out.println(c.getString(i));
+                                student_data[i] = c.getString(i);
+//                                System.out.println(student_data[i]);
                             }
                             System.out.println("--------");
                             //System.out.println( c.getString(0));
                         } while (c.moveToNext());
+
                         db.close();
 
                     } finally {
@@ -128,6 +134,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPortal() {
         Intent intent = new Intent(this, NavActivity.class);
+        intent.putExtra("name", sr_code);
+        System.out.println(sr_code);
         startActivity(intent);
     }
     public void loginError(){
@@ -149,4 +157,11 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
+//    Get Data
+    public String getData(int i){
+        System.out.println(student_data[i]);
+        return student_data[i];
+
+
+    }
 }
