@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">bsu_Fproj</string>
     <string name="username">Username</string>
     <string name="password">Password</string>

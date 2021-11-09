@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -38,6 +39,7 @@ public class NavActivity extends AppCompatActivity {
     public String sr_codeHolder, first_NameHolder;
     TextView Name;
     TextView navName;
+
 
     /* End Edit*/
 
@@ -82,8 +84,8 @@ public class NavActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
 
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+         /*Passing each menu ID as a set of Ids because each
+         menu should be considered as top level destinations.*/
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home,
                 R.id.nav_news,
@@ -96,7 +98,14 @@ public class NavActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+/*Starts Edit*/
 
+//        NavigationView navigation_view = findViewById(R.id.nav_logout);
+//        navigation_view.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
+//            finish();
+//            return true;
+//        });
+/*Ends Edit*/
 
         System.out.println(navName);
 
@@ -191,4 +200,7 @@ public class NavActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
 }

@@ -16,9 +16,6 @@
             android:label="@string/title_activity_nav"
             android:theme="@style/Theme.Bsu_Fproj.NoActionBar" />
         <activity
-            android:name=".activity_portal"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
