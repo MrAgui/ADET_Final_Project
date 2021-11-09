@@ -20,6 +20,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
+    /* things to do navigation change the label, edit the UI for BSU theme */
+
+
+
+
+
+
     private ImageButton new_student_btn;
     private TextView contact_us_btn;
     public Button btn_sign_in;
@@ -75,16 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 Cursor c = null;
                 Editable ESr_code = inputSrcode.getText();
                 Editable EPassword = inputPassword.getText();
-/*Edit test*/
-//                sr_codeHolder = inputSrcode.getText().toString();
 
-//                System.out.println(sr_codeHolder + " sr_codeHolder");
-//
-//                Intent intent = new Intent(MainActivity.this, NavActivity.class);
-//
-//                intent.putExtra(UserEmail, EmailHolder);
-
-/*End test*/
                 System.out.println("getting inputs");
 
                 sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
@@ -104,13 +102,10 @@ public class MainActivity extends AppCompatActivity {
 
                 // checking the inputs in login
                 if (c.moveToFirst() == false) {
-/*editing fields*/
 
+                    //outputs dialog when error in logging in
                     Toast.makeText(MainActivity.this,"UserName or Password is Wrong, Please Try Again.",Toast.LENGTH_LONG).show();
-                    //output dialog
                     System.out.println("Username and password does not match");
-
-/*End editing field*/
 
                 } else {
                     try {
@@ -144,7 +139,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // not working
     @Override
     protected void onResume() {
         super.onResume();
@@ -159,29 +153,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPortal() {
         Intent intent = new Intent(this, NavActivity.class);
-/*Start editing */
-
-
-//        sr_codeHolder = inputSrcode.getText().toString();
-//        System.out.println(sr_codeHolder + " sr_codeHolder");
-//      sending the sr_code to the Navbar Activity
-
-
-
-
         intent.putExtra("name", sr_code);
-//        intent.putExtra(sr_code, sr_codeHolder);
-
         System.out.println(sr_code);
-
-
-
-
         Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
-
-/* End Edit*/
         startActivity(intent);
     }
+
     private void showContactUs(){
         Dialog dialog = new Dialog(this );
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.contact_us);
@@ -194,12 +171,4 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.new_student_dialog_bg);
         dialog.show();
     }
-
-//    Get Data
-/*    public String getData(int i){
-        System.out.println(student_data[i]);
-        return student_data[i];
-
-
-    }*/
 }

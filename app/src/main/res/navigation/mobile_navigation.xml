@@ -12,14 +12,30 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.bsu.bsu_fproj.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:id="@+id/nav_news"
+        android:name="com.bsu.bsu_fproj.ui.news.NewsFragment"
+        android:label="@string/menu_news"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.bsu.bsu_fproj.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_schedule"
+        android:name="com.bsu.bsu_fproj.ui.schedules.ScheduleFragment"
+        android:label="@string/menu_schedule"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_links"
+        android:name="com.bsu.bsu_fproj.ui.links.LinksFragment"
+        android:label="@string/menu_links"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.bsu.bsu_fproj.ui.contacts.ContactsFragment"
+        android:label="@string/menu_contacts"
+        tools:layout="@layout/fragment_slideshow" />
+
+
+
+
 </navigation>
