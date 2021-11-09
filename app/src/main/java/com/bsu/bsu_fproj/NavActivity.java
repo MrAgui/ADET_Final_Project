@@ -23,6 +23,8 @@ import android.database.sqlite.SQLiteException;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 
+import org.w3c.dom.Text;
+
 public class NavActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -31,14 +33,22 @@ public class NavActivity extends AppCompatActivity {
     private final String TAG = "NavActivity";
 
     /*Starts edit */
-    private TextView textViewNavName;
 
+    private TextView textViewNavName;
     public String sr_codeHolder, first_NameHolder;
+    TextView Name;
+    TextView navName;
 
     /* End Edit*/
 
-    public String[] received_data = {"","","","","","","",""};
+    public String[] received_data = {"","","",""};
+//    public TextView navName = (TextView) findViewById(R.id.navName);
+//    public TextView navProgram = (TextView) findViewById(R.id.navProgram);
+//    public TextView navYearLvl = (TextView) findViewById(R.id.navYearLvl);
 
+//     navName = (TextView) findViewById(R.id.navName);
+//    public TextView navProgram = (TextView) findViewById(R.id.navProgram);
+//    public TextView navYearLvl = (TextView) findViewById(R.id.navYearLvl);
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
 
@@ -48,9 +58,17 @@ public class NavActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.i(TAG, "On create");
 
+        setContentView(R.layout.nav_header_nav);
+
+
         binding = ActivityNavBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+/*Start edit*/
+        Name =(TextView)findViewById(R.id.navName);
 
+//        System.out.println(Name);
+
+/*End edit*/
         setSupportActionBar(binding.appBarNav.toolbar);
         binding.appBarNav.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,8 +77,11 @@ public class NavActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
@@ -72,7 +93,20 @@ public class NavActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
+        System.out.println(navName);
 
+
+        Name = navigationView.findViewById(R.id.navName);
+        Name = drawer.findViewById(R.id.navName);
+
+
+//        Name.setText(""+received_data[0] + " " + received_data[1]);
+
+
+
+        System.out.println(Name);
+
+        // getting extras from intent before activity starts
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             String value = extras.getString("name");
@@ -88,17 +122,25 @@ public class NavActivity extends AppCompatActivity {
             c = db.rawQuery("select * from student_tbl where sr_code="+ extras.getString("name"), new String[]{});
             c.moveToFirst();
             do {
-                System.out.println(c.getString(1));
                 System.out.println(c.getString(2));
+                System.out.println(c.getString(1));
                 System.out.println(c.getString(4));
                 System.out.println(c.getString(5));
+//
+//                System.out.println(sr_codeHolder);
+//                System.out.println(sr_code);
 
+                received_data[0] = c.getString(2);
+                received_data[1] = c.getString(1);
+                received_data[2] = c.getString(4);
+                received_data[3] = c.getString(5);
 
 /*start edit*/
-
-//                sr_codeHolder  = intent.getStringExtra(MainActivity.UserEmail);;
-
+                Intent intent = getIntent();
+                sr_codeHolder  = intent.getStringExtra("name");
 //                Intent intent = getIntent();
+
+                System.out.println(sr_codeHolder + "Success sending ");
 //
 //                textViewNavName = findViewById(R.id.navName);
 //
@@ -114,6 +156,21 @@ public class NavActivity extends AppCompatActivity {
         } finally {
 
         }
+//        Name.setText(""+received_data[0] + " " + received_data[1]);
+
+
+
+        // Setting TextView as the data inside the database
+        /*https://stackoverflow.com/questions/34973456/how-to-change-text-of-a-textview-in-navigation-drawer-header#comment117348821_38418531*/
+        NavigationView stack_navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = stack_navigationView.getHeaderView(0);
+        TextView navUsername = (TextView) headerView.findViewById(R.id.navName);
+        TextView navProgram = (TextView) headerView.findViewById(R.id.navProgram);
+        TextView navYearLvl= (TextView) headerView.findViewById(R.id.navYearLvl);
+        navUsername.setText(received_data[0] + " " +received_data[1]);
+        navProgram.setText(received_data[2]);
+        navYearLvl.setText(received_data[3]);
+
     }
 
     @Override

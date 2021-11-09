@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private ImageButton new_student_btn;
     private TextView contact_us_btn;
     public Button btn_sign_in;
@@ -27,14 +28,17 @@ public class MainActivity extends AppCompatActivity {
 
     // Storing Data inside variables to be used in the user profile
 
-    public String sr_codeHolder, first_NameHolder;
+//    public String sr_codeHolder, first_NameHolder;
+
+
 
 
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
-//    public String[] student_data = {"","","","","","","",""};
+    public String[] student_data = {"","","","","","","",""};
 
 
     private static final String TAG = "MainActivity";
+
     String sr_code;
     String password;
 
@@ -64,17 +68,15 @@ public class MainActivity extends AppCompatActivity {
 
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
 
-
             @Override
             public void onClick(View view) {
-
                 SQLiteDatabase db = dbHelper.getReadableDatabase();
                 System.out.println("Executed Here");
                 Cursor c = null;
                 Editable ESr_code = inputSrcode.getText();
                 Editable EPassword = inputPassword.getText();
 /*Edit test*/
-                sr_codeHolder = inputSrcode.getText().toString();
+//                sr_codeHolder = inputSrcode.getText().toString();
 
 //                System.out.println(sr_codeHolder + " sr_codeHolder");
 //
@@ -82,10 +84,8 @@ public class MainActivity extends AppCompatActivity {
 //
 //                intent.putExtra(UserEmail, EmailHolder);
 
-                
 /*End test*/
                 System.out.println("getting inputs");
-
 
                 sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
                 password = EPassword.toString();
@@ -101,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 System.out.println("checking fields");
-
-
 
                 // checking the inputs in login
                 if (c.moveToFirst() == false) {
@@ -146,8 +144,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-/*START EDITING*/
-
     // not working
     @Override
     protected void onResume() {
@@ -161,37 +157,31 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "On Restart");
     }
 
-
-/*END ENDTING*/
-
     public void openPortal() {
         Intent intent = new Intent(this, NavActivity.class);
+/*Start editing */
 
-        sr_codeHolder = inputSrcode.getText().toString();
+
+//        sr_codeHolder = inputSrcode.getText().toString();
+//        System.out.println(sr_codeHolder + " sr_codeHolder");
+//      sending the sr_code to the Navbar Activity
 
 
-        System.out.println(sr_codeHolder + " sr_codeHolder");
 
 
         intent.putExtra("name", sr_code);
-
+//        intent.putExtra(sr_code, sr_codeHolder);
 
         System.out.println(sr_code);
 
-        /*Start edit */
+
+
+
         Toast.makeText(MainActivity.this,"Login Successful",Toast.LENGTH_LONG).show();
 
-
-
-        /* End Edit*/
+/* End Edit*/
         startActivity(intent);
     }
-    public void loginError(){
-        Dialog dialog = new Dialog(this );
-        dialog.getWindow().setBackgroundDrawableResource(R.drawable.contact_us);
-        dialog.show();
-    }
-
     private void showContactUs(){
         Dialog dialog = new Dialog(this );
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.contact_us);
