@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.bsu.bsu_fproj.R;
 import com.bsu.bsu_fproj.databinding.FragmentContactsBinding;
-import com.bsu.bsu_fproj.databinding.FragmentGalleryBinding;
+
 
 public class ContactsFragment extends Fragment {
 
@@ -43,13 +43,15 @@ public class ContactsFragment extends Fragment {
 //        final TextView textView = root.findViewById(R.id.text_contacts);
 
         // changes in here
-        final TextView textView = binding.textContacts;
+
+
+        /*final TextView textView = binding.textContacts;
         contactsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return root;
     }
 

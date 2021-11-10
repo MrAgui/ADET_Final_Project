@@ -15,30 +15,31 @@
         android:id="@+id/nav_news"
         android:name="com.bsu.bsu_fproj.ui.news.NewsFragment"
         android:label="@string/menu_news"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_news" />
 
     <fragment
         android:id="@+id/nav_schedule"
         android:name="com.bsu.bsu_fproj.ui.schedules.ScheduleFragment"
         android:label="@string/menu_schedule"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_schedule" />
 
     <fragment
         android:id="@+id/nav_links"
         android:name="com.bsu.bsu_fproj.ui.links.LinksFragment"
         android:label="@string/menu_links"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_links" />
 
     <fragment
         android:id="@+id/nav_contacts"
         android:name="com.bsu.bsu_fproj.ui.contacts.ContactsFragment"
         android:label="@string/menu_contacts"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_contacts" />
 
-    <activity
+    <!--<activity
         android:id="@+id/nav_logout"
         android:name="com.bsu.bsu_fproj.NavActivity"
         android:label="@string/sign_in"
-        tools:layout="@layout/activity_main" />
+        />-->
+        <!--tools:layout="@layout/activity_main" -->
 
 </navigation>

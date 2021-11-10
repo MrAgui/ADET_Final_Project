@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
+import android.widget.Toast;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 
@@ -75,8 +76,11 @@ public class NavActivity extends AppCompatActivity {
         binding.appBarNav.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //logout
+                Intent logout = new Intent (NavActivity.this, MainActivity.class);
+                startActivity(logout);
+                finish();
+                Toast.makeText(NavActivity.this, "Successfully logged out.", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -91,8 +95,8 @@ public class NavActivity extends AppCompatActivity {
                 R.id.nav_news,
                 R.id.nav_schedule,
                 R.id.nav_links,
-                R.id.nav_contacts,
-                R.id.nav_logout)
+                R.id.nav_contacts
+                /*R.id.nav_logout*/)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
@@ -148,6 +152,10 @@ public class NavActivity extends AppCompatActivity {
                 received_data[1] = c.getString(1);
                 received_data[2] = c.getString(4);
                 received_data[3] = c.getString(5);
+
+                //Make arrays
+                //received_grades[]
+                //received_subjects[]
 
 /*start edit*/
                 Intent intent = getIntent();

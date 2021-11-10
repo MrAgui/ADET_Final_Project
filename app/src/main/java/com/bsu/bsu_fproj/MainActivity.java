@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                         db.close();
 
                     } finally {
-
+                        finish();
                     }
                     openPortal();
                 }
