@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     /* things to do navigation change the label, edit the UI for BSU theme */
 
+
     private ImageButton new_student_btn;
     private TextView contact_us_btn;
     public Button btn_sign_in;
