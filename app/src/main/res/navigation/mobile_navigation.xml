@@ -35,11 +35,5 @@
         android:label="@string/menu_contacts"
         tools:layout="@layout/fragment_contacts" />
 
-    <!--<activity
-        android:id="@+id/nav_logout"
-        android:name="com.bsu.bsu_fproj.NavActivity"
-        android:label="@string/sign_in"
-        />-->
-        <!--tools:layout="@layout/activity_main" -->
 
 </navigation>

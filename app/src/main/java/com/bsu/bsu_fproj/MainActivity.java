@@ -20,7 +20,23 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    /* things to do navigation change the label, edit the UI for BSU theme */
+    /*
+    *Things to do :
+    *
+    *
+    *
+    *
+    *
+    * Test the logout again
+    *
+    *
+    *
+    * Edit the UI for BSU theme PRIORITY
+    *
+    * put timer in onStop Nav activity
+    * Cant read dash in database
+    * Store image in DataBase  */
+
 
 
     private ImageButton new_student_btn;
@@ -29,14 +45,9 @@ public class MainActivity extends AppCompatActivity {
     public EditText inputSrcode;
     public EditText inputPassword;
 
-    // Storing Data inside variables to be used in the user profile
-
-//    public String sr_codeHolder, first_NameHolder;
-
-
-
-
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
+
+    // Storing Data inside an array to be used in the user profile
     public String[] student_data = {"","","","","","","",""};
 
 
@@ -115,15 +126,19 @@ public class MainActivity extends AppCompatActivity {
 //                                student_data[i] = c.getString(i);
 //                                System.out.println(student_data[i]);
                             }
+
                             System.out.println("--------");
-//                            System.out.println( c.getString(0));
+
                         } while (c.moveToNext());
 
                         db.close();
 
                     } finally {
+
+                        // Quits the MainActivity
                         finish();
                     }
+                    // proceeds to the success login
                     openPortal();
                 }
                 //    Select query   https://guides.codepath.com/android/local-databases-with-sqliteopenhelper

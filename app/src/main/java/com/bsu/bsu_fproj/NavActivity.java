@@ -34,15 +34,10 @@ public class NavActivity extends AppCompatActivity {
     MainActivity main = new MainActivity();
     private final String TAG = "NavActivity";
 
-    /*Starts edit */
-
     private TextView textViewNavName;
-    public String sr_codeHolder, first_NameHolder;
+    public String sr_codeHolder;
     TextView Name;
     TextView navName;
-
-
-    /* End Edit*/
 
     public String[] received_data = {"","","",""};
 //    public TextView navName = (TextView) findViewById(R.id.navName);
@@ -102,27 +97,11 @@ public class NavActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-/*Starts Edit*/
-
-//        NavigationView navigation_view = findViewById(R.id.nav_logout);
-//        navigation_view.getMenu().findItem(R.id.nav_logout).setOnMenuItemClickListener(menuItem -> {
-//            finish();
-//            return true;
-//        });
-/*Ends Edit*/
-
-        System.out.println(navName);
 
 
         Name = navigationView.findViewById(R.id.navName);
         Name = drawer.findViewById(R.id.navName);
 
-
-//        Name.setText(""+received_data[0] + " " + received_data[1]);
-
-
-
-        System.out.println(Name);
 
         // getting extras from intent before activity starts
         Bundle extras = getIntent().getExtras();
@@ -130,10 +109,10 @@ public class NavActivity extends AppCompatActivity {
             String value = extras.getString("name");
         }
 
-        System.out.println("Success Getting data");
+        System.out.println("Success Getting data_Nav");
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        System.out.println("Executed Here");
+        System.out.println("Executed Here_Nav");
         Cursor c = null;
         try {
             db = dbHelper.getReadableDatabase();
@@ -144,9 +123,6 @@ public class NavActivity extends AppCompatActivity {
                 System.out.println(c.getString(1));
                 System.out.println(c.getString(4));
                 System.out.println(c.getString(5));
-//
-//                System.out.println(sr_codeHolder);
-//                System.out.println(sr_code);
 
                 received_data[0] = c.getString(2);
                 received_data[1] = c.getString(1);
@@ -157,19 +133,11 @@ public class NavActivity extends AppCompatActivity {
                 //received_grades[]
                 //received_subjects[]
 
-/*start edit*/
                 Intent intent = getIntent();
                 sr_codeHolder  = intent.getStringExtra("name");
-//                Intent intent = getIntent();
 
                 System.out.println(sr_codeHolder + "Success sending ");
-//
-//                textViewNavName = findViewById(R.id.navName);
-//
-//                Account account = (Account) intent.getSerializableExtra("name");
-//                textViewNavName.setText(getString(R.string.sign_in) + " " + account.getFirst_Name());
 
-/*end edit*/
 
             } while (c.moveToNext());
 
@@ -178,9 +146,6 @@ public class NavActivity extends AppCompatActivity {
         } finally {
 
         }
-//        Name.setText(""+received_data[0] + " " + received_data[1]);
-
-
 
         // Setting TextView as the data inside the database
         /*https://stackoverflow.com/questions/34973456/how-to-change-text-of-a-textview-in-navigation-drawer-header#comment117348821_38418531*/
@@ -189,7 +154,7 @@ public class NavActivity extends AppCompatActivity {
         TextView navUsername = (TextView) headerView.findViewById(R.id.navName);
         TextView navProgram = (TextView) headerView.findViewById(R.id.navProgram);
         TextView navYearLvl= (TextView) headerView.findViewById(R.id.navYearLvl);
-        navUsername.setText(received_data[0] + " " +received_data[1]);
+        navUsername.setText(received_data[0] + " " + received_data[1]);
         navProgram.setText(received_data[2]);
         navYearLvl.setText(received_data[3]);
 
@@ -208,7 +173,13 @@ public class NavActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
-
-
+    // Returns the user
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // Timer
+        Log.d(TAG, "onStop");
+        NavActivity.this.finish();
+    }
 
 }

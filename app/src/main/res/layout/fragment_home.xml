@@ -4,19 +4,206 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gray"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+
+<!-- START HEADER DO NOT EDIT-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="80dp"
+        android:background="@drawable/student_portal_bg"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<!-- END HEADER DO NOT EDIT-->
+
+    </LinearLayout>
+
+    <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="411dp"
+                android:layout_height="256dp"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/subjects"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/subjects"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/grades"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/grades"
+                    app:layout_constraintEnd_toStartOf="@+id/liabilities"
+                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintStart_toEndOf="@+id/subjects"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/liabilities"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="48dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/liabilities"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/student_id"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/stud_id"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subjects"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <ImageButton
+                    android:id="@+id/curriculum"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="79dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/curriculum"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.016"
+                    app:layout_constraintStart_toEndOf="@+id/student_id"
+                    app:layout_constraintTop_toBottomOf="@+id/grades"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:id="@+id/subject_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subjects"
+                    app:layout_constraintEnd_toEndOf="@+id/subjects"
+                    app:layout_constraintStart_toStartOf="@+id/subjects"
+                    app:layout_constraintTop_toBottomOf="@+id/subjects"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/grades_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grades"
+                    app:layout_constraintEnd_toEndOf="@+id/grades"
+                    app:layout_constraintStart_toStartOf="@+id/grades"
+                    app:layout_constraintTop_toBottomOf="@+id/grades"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/liabilities_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Liabilities"
+                    app:layout_constraintEnd_toEndOf="@+id/liabilities"
+                    app:layout_constraintStart_toStartOf="@+id/liabilities"
+                    app:layout_constraintTop_toBottomOf="@+id/liabilities"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/stud_id_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student ID"
+                    app:layout_constraintEnd_toEndOf="@+id/student_id"
+                    app:layout_constraintStart_toStartOf="@+id/student_id"
+                    app:layout_constraintTop_toBottomOf="@+id/student_id"
+                    tools:ignore="HardcodedText"/>
+
+                <TextView
+                    android:id="@+id/curriculum_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Curriculum"
+                    app:layout_constraintEnd_toEndOf="@+id/curriculum"
+                    app:layout_constraintStart_toStartOf="@+id/curriculum"
+                    app:layout_constraintTop_toBottomOf="@+id/curriculum"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/textHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="411dp"
+                android:layout_height="500dp"
+                android:background="@color/white"
+                android:translationY="16dp" >
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="111dp"
+                    android:layout_height="425dp"
+                    android:layout_marginStart="147dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="153dp"
+                    android:layout_marginBottom="70dp"
+                    android:text='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

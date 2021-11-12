@@ -28,4 +28,15 @@
     <string name="menu_logout">Logout</string>
 
     <string name="title_activity_nav">NavActivity</string>
+    <string name="student_id">Student ID</string>
+    <string name="curriculum">Curriculum</string>
+    <string name="subject">Subject</string>
+    <string name="grades">Grades</string>
+    <string name="liabilities">Liabilities</string>
+    <string name="showGrades">TODO</string>
+    <string name="showsubject">showSubject</string>
+    <string name="showliabilities">showLiabilities</string>
+    <string name="showstud_id">showStud_ID</string>
+    <string name="showcurriculum">showCurriculum</string>
+    <string name="this_is_home">this is home</string>
 </resources>
