@@ -1,5 +1,6 @@
 package com.bsu.bsu_fproj.ui.contacts;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,9 +24,14 @@ public class ContactsFragment extends Fragment {
 
     private ContactsViewModel contactsViewModel;
 
+    private TextView trunklines_contacts;
+    private TextView registrar_contacts;
+    private TextView ict_services_contacts;
+
+
     /* Change the Fragment in Binding declaration */
     private FragmentContactsBinding binding;
-/*    previous version
+    /*    previous version
     private FragmentGalleryBinding binding;*/
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -33,27 +39,26 @@ public class ContactsFragment extends Fragment {
         contactsViewModel =
                 new ViewModelProvider(this).get(ContactsViewModel.class);
 
+//        trunklines_contacts.findViewById(R.id.trunklines);
+//        trunklines_contacts.setOnClickListener(view -> showtrunklines());
+
 
 
         // changes in here
         binding = FragmentContactsBinding.inflate(inflater, container, false);
-//        View root = binding.getRoot();
+
         View root = inflater.inflate(R.layout.fragment_contacts, container, false);
 
-//        final TextView textView = root.findViewById(R.id.text_contacts);
 
-        // changes in here
-
-
-        /*final TextView textView = binding.textContacts;
-        contactsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
         return root;
+
     }
 
-
+//
+//    private void showtrunklines(){
+//        Dialog dialog = new Dialog (ContactsFragment.this);
+//        dialog.setContentView(R.layout.new_student_dialog);
+//        dialog.getWindow().setBackgroundDrawableResource(R.drawable.new_student_dialog_bg);
+//        dialog.show();
+//    }
 }

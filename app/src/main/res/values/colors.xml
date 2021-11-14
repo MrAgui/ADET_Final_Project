@@ -10,5 +10,6 @@
     <color name="gray">#707070</color>
     <color name="lightred">#FF7167</color>
     <color name="lightbrown">#a39a1d</color>
+    <color name="btn_grey">#FFD3D3D3</color>
 
 </resources>

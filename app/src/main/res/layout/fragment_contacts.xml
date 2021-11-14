@@ -4,20 +4,255 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.contacts.ContactsFragment">
+    android:background="@color/white"
+    tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_contacts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="@string/sign_in"
+
+    <!-- START HEADER DO NOT EDIT-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="80dp"
+        android:background="@drawable/student_portal_bg"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- END HEADER DO NOT EDIT-->
+
+    </LinearLayout>
+
+    <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="411dp"
+                android:layout_height="256dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/fragment_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTACTS"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.031" />
+
+                <TextView
+                    android:id="@+id/bsuregistrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/mail_ii"
+                    android:text=" bsuregistrar@gmail.com"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/University_Registrar"
+                    app:layout_constraintTop_toBottomOf="@+id/University_Registrar" />
+
+                <TextView
+                    android:id="@+id/University_Registrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:text="University Registrar"
+                    android:textColor="#F44336"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.058"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/test"
+                    android:layout_width="182dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="36dp"
+                    android:drawableLeft="@drawable/con_phone"
+                    android:text="(043)980-0385 loc.1148"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/bsuregistrar"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/bsuregistrar"
+                    app:layout_constraintTop_toBottomOf="@+id/bsuregistrar"
+                    tools:paddingBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/gmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/mail_ii"
+                    android:text=" batstateucat@gmail.com or tao@g.batstate-u.edu.ph"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/test"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/test"
+                    app:layout_constraintTop_toBottomOf="@+id/test"
+                    tools:paddingBottom="2dp" />
+
+                <TextView
+                    android:id="@+id/facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:drawableLeft="@drawable/facebook"
+                    android:paddingBottom="2dp"
+                    android:text=" www.facebook.com/TAOBatStateU"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/gmail"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gmail"
+                    app:layout_constraintTop_toBottomOf="@+id/gmail" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Testing and Admission Office"
+                    android:textColor="#F44336"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/University_Registrar"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/University_Registrar"
+                    app:layout_constraintTop_toBottomOf="@+id/University_Registrar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="411dp"
+                android:layout_height="500dp"
+                android:background="@color/white"
+                android:translationY="16dp">
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="409dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="23dp"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/trunklines"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/trunklines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:drawableStart="@drawable/con_phone"
+                    android:text="Trunklines"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toStartOf="@+id/registrar_contacts"
+                    app:layout_constraintHorizontal_bias="0.246"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/registrar_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:drawableStart="@drawable/con_phone"
+                    android:text="Registrar"
+                    android:textSize="22sp"
+                    app:layout_constraintTop_toBottomOf="@+id/divider"
+                    app:layout_constraintStart_toEndOf="@id/trunklines"
+                    app:layout_constraintEnd_toStartOf="@id/ict_services_contacts"
+                    tools:layout_editor_absoluteX="144dp" />
+
+
+                <TextView
+                    android:id="@+id/ict_services_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:drawableStart="@drawable/con_phone"
+                    android:text="ICT Services"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/registrar_contacts"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ched_contacts"
+                    android:layout_width="136dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="68dp"
+                    android:src="@drawable/ched_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/bsu_contacts"
+                    app:layout_constraintTop_toBottomOf="@+id/ict_services_contacts" />
+
+                <ImageView
+                    android:id="@+id/bsu_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="104dp"
+                    android:src="@drawable/bsu_seal"
+                    app:layout_constraintEnd_toStartOf="@+id/ched_contacts"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trunklines" />
+
+                <ImageView
+                    android:id="@+id/landbank_contacts"
+                    android:layout_width="170dp"
+                    android:layout_height="132dp"
+                    android:layout_marginTop="228dp"
+                    android:src="@drawable/landbank"
+                    app:layout_constraintEnd_toEndOf="@+id/ched_contacts"
+                    app:layout_constraintHorizontal_bias="0.443"
+                    app:layout_constraintStart_toStartOf="@+id/bsu_contacts"
+                    app:layout_constraintTop_toBottomOf="@+id/registrar_contacts" />
+
+                <!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                </LinearLayout>-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="410dp"
+                android:layout_height="32dp"
+                android:background="@drawable/rectangle_contacts"
+                android:text="Copyright © Batangas State University"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

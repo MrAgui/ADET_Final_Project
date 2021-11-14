@@ -34,20 +34,14 @@ public class NavActivity extends AppCompatActivity {
     MainActivity main = new MainActivity();
     private final String TAG = "NavActivity";
 
-    private TextView textViewNavName;
+    // DATABASE
     public String sr_codeHolder;
     TextView Name;
-    TextView navName;
-
     public String[] received_data = {"","","",""};
-//    public TextView navName = (TextView) findViewById(R.id.navName);
-//    public TextView navProgram = (TextView) findViewById(R.id.navProgram);
-//    public TextView navYearLvl = (TextView) findViewById(R.id.navYearLvl);
-
-//     navName = (TextView) findViewById(R.id.navName);
-//    public TextView navProgram = (TextView) findViewById(R.id.navProgram);
-//    public TextView navYearLvl = (TextView) findViewById(R.id.navYearLvl);
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
+
+
+    // declaration for menu widgets
 
 
 
@@ -180,6 +174,10 @@ public class NavActivity extends AppCompatActivity {
         // Timer
         Log.d(TAG, "onStop");
         NavActivity.this.finish();
+    }
+
+    protected void showSubjects(){
+
     }
 
 }

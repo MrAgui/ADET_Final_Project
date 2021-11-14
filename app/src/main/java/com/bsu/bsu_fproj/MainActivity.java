@@ -27,11 +27,14 @@ public class MainActivity extends AppCompatActivity {
     *
     *
     *
-    * Test the logout again
+    * Create the fragments in menu widgets
+    * Onlick in listener in widgets
     *
     *
     *
     * Edit the UI for BSU theme PRIORITY
+    *
+    *
     *
     * put timer in onStop Nav activity
     * Cant read dash in database
@@ -182,4 +185,6 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawableResource(R.drawable.new_student_dialog_bg);
         dialog.show();
     }
+
+
 }
