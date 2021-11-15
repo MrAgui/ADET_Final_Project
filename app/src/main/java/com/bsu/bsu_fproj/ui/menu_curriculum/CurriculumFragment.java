@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bsu.bsu_fproj.R;
+
 class CurriculumFragment extends Fragment {
 
     @Nullable

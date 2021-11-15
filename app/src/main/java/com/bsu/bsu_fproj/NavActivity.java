@@ -41,20 +41,22 @@ public class NavActivity extends AppCompatActivity {
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
 
-    // declaration for menu widgets
+    // declaration for menu buttons
+
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i(TAG, "On create");
+        Log.i(TAG, "On create Nav_activity");
 
         setContentView(R.layout.nav_header_nav);
 
 
         binding = ActivityNavBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 /*Start edit*/
         Name =(TextView)findViewById(R.id.navName);
 
@@ -84,8 +86,7 @@ public class NavActivity extends AppCompatActivity {
                 R.id.nav_news,
                 R.id.nav_schedule,
                 R.id.nav_links,
-                R.id.nav_contacts
-                /*R.id.nav_logout*/)
+                R.id.nav_contacts)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
@@ -167,6 +168,7 @@ public class NavActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
     // Returns the user
     @Override
     protected void onStop() {
@@ -177,6 +179,7 @@ public class NavActivity extends AppCompatActivity {
     }
 
     protected void showSubjects(){
+
 
     }
 

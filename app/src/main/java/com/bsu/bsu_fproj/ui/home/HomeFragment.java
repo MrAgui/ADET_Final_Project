@@ -9,20 +9,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bsu.bsu_fproj.R;
 import com.bsu.bsu_fproj.databinding.FragmentHomeBinding;
+import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
+import com.bsu.bsu_fproj.ui.menu_subjects.SubjectsFragment;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    /*private HomeViewModel homeViewModel;*/
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
+        /*homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
@@ -35,9 +39,45 @@ public class HomeFragment extends Fragment {
                 textView.setText(s);
             }
         });
-        return root;
+        return root;*/
+        binding = FragmentHomeBinding.inflate(getLayoutInflater());
+        return binding.getRoot();
     }
 
+
+//    Made a new method onViewCreated create all the click listener fot the buttons
+//    When the view is displayed,
+    public void onViewCreated(View view, Bundle savedInstanceState){
+        super.onViewCreated(view, savedInstanceState);
+
+        binding.subjects.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("Clicked Subjects");
+/*CREATED OBJECT FROM CLASS SubjectFragment*/
+                Fragment subjectsFragment = new SubjectsFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frag_home,subjectsFragment );
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+        binding.grades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("Clicked Subjects");
+                Fragment gradesFragment = new GradesFragment();
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frag_home,gradesFragment );
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
+    }
 
 
     @Override

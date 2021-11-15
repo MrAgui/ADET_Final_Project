@@ -128,4 +128,96 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+
+    <!-- START PACIS_SCHEDULE STRINGS -->
+    <string name="col1">Time</string>
+    <string name="col2">Mon</string>
+    <string name="col3">Tue</string>
+    <string name="col4">Wed</string>
+    <string name="col5">Thu</string>
+    <string name="col6">Fri</string>
+
+    <!--1ST-->
+    <string name="row1">07:00AM - 08:00AM</string>
+    <string name="row2"></string>
+    <string name="row3">IT331</string>
+    <string name="row4"></string>
+    <string name="row5"></string>
+    <string name="row6">MATH408</string>
+
+    <!--2ND-->
+    <string name="row21">08:00AM - 09:00AM</string>
+    <string name="row22">IT321</string>
+    <string name="row23">-do-</string>
+    <string name="row24"></string>
+    <string name="row25">CS312</string>
+    <string name="row26">-do-</string>
+
+    <!--3RD-->
+    <string name="row31">09:00AM - 10:00AM</string>
+    <string name="row32">-do-</string>
+    <string name="row33">-do-</string>
+    <string name="row34">CS312</string>
+    <string name="row35">-do-</string>
+    <string name="row36">-do-</string>
+
+    <!--4TH-->
+    <string name="row41">10:00AM - 11:00AM</string>
+    <string name="row42">-do-</string>
+    <string name="row43"></string>
+    <string name="row44">-do-</string>
+    <string name="row45">-do-</string>
+    <string name="row46"></string>
+
+    <!--5th-->
+    <string name="row51">11:00AM - 12:00PM</string>
+    <string name="row52"></string>
+    <string name="row53">GED 104</string>
+    <string name="row54"></string>
+    <string name="row55"></string>
+    <string name="row56"></string>
+
+    <!--6TH-->
+
+    <string name="row61">12:00PM - 01:00PM</string>
+    <string name="row62"></string>
+    <string name="row63"></string>
+    <string name="row64"></string>
+    <string name="row65">IT331</string>
+    <string name="row66"></string>
+
+    <!--7TH-->
+
+    <string name="row71">01:00PM - 02:00PM</string>
+    <string name="row72">GED 104</string>
+    <string name="row73">IT314</string>
+    <string name="row74"></string>
+    <string name="row75">-do-</string>
+    <string name="row76"></string>
+
+    <!--8TH-->
+
+    <string name="row81">02:00PM - 03:00PM</string>
+    <string name="row82">-do-</string>
+    <string name="row83">-do-</string>
+    <string name="row84"></string>
+    <string name="row85">IT314</string>
+    <string name="row86">CS311</string>
+
+    <!--9TH-->
+
+    <string name="row91">03:00PM - 04:00PM</string>
+    <string name="row92"></string>
+    <string name="row93">-do-</string>
+    <string name="row94"></string>
+    <string name="row95">-do-</string>
+    <string name="row96">-do-</string>
+
+    <string name="row101">04:00PM - 05:00PM</string>
+    <string name="row102"></string>
+    <string name="row103"></string>
+    <string name="row104"></string>
+    <string name="row105"></string>
+    <string name="row106">-do-</string>
+    <!-- END PACIS_SCHEDULE STRINGS -->
 </resources>
