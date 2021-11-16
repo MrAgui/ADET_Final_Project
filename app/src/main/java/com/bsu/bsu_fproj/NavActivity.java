@@ -2,13 +2,19 @@ package com.bsu.bsu_fproj;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bsu.bsu_fproj.ui.links.LinksFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -25,7 +31,14 @@ import android.widget.Toast;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
+
+
+
 import org.w3c.dom.Text;
+
+import java.util.Locale;
 
 public class NavActivity extends AppCompatActivity {
 
@@ -63,6 +76,14 @@ public class NavActivity extends AppCompatActivity {
 //        System.out.println(Name);
 
 /*End edit*/
+
+        /*Start Care Links*/
+        TextView text1 = (TextView) findViewById(R.id.textView2);
+        /*text1.setMovementMethod(LinkMovementMethod.getInstance());*/
+
+        /*End Care Links   */
+
+
         setSupportActionBar(binding.appBarNav.toolbar);
         binding.appBarNav.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +118,9 @@ public class NavActivity extends AppCompatActivity {
         Name = navigationView.findViewById(R.id.navName);
         Name = drawer.findViewById(R.id.navName);
 
+        //for setting image in nav drawer
+
+
 
         // getting extras from intent before activity starts
         Bundle extras = getIntent().getExtras();
@@ -124,6 +148,8 @@ public class NavActivity extends AppCompatActivity {
                 received_data[2] = c.getString(4);
                 received_data[3] = c.getString(5);
 
+
+
                 //Make arrays
                 //received_grades[]
                 //received_subjects[]
@@ -146,9 +172,16 @@ public class NavActivity extends AppCompatActivity {
         /*https://stackoverflow.com/questions/34973456/how-to-change-text-of-a-textview-in-navigation-drawer-header#comment117348821_38418531*/
         NavigationView stack_navigationView = (NavigationView) findViewById(R.id.nav_view);
         View headerView = stack_navigationView.getHeaderView(0);
+        ImageView navStud_img = (ImageView) headerView.findViewById(R.id.navStud_img);
         TextView navUsername = (TextView) headerView.findViewById(R.id.navName);
         TextView navProgram = (TextView) headerView.findViewById(R.id.navProgram);
         TextView navYearLvl= (TextView) headerView.findViewById(R.id.navYearLvl);
+//        Uri imgUri = Uri.parse("file:///data/data/com.bsu.bsu_fproj/res/bsu_icon");
+//        Uri imgUri = Uri.parse("src/main/res/drawable/bsu_icon.png");
+//        navStud_img.setImageURI(imgUri);
+        String tempName = received_data[0]+"_"+received_data[1];
+        int id = getResources().getIdentifier(tempName.toLowerCase().trim(), "drawable", getPackageName());
+        navStud_img.setImageResource(id);
         navUsername.setText(received_data[0] + " " + received_data[1]);
         navProgram.setText(received_data[2]);
         navYearLvl.setText(received_data[3]);

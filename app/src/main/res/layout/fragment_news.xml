@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.news.NewsFragment">
 
-    <TextView
+    <!--<TextView
         android:id="@+id/textNews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,5 +18,374 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <!--    android:background="@color/lightred"-->
+
+    <!-- START HEADER DO NOT EDIT-->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:background="@drawable/student_portal_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- END HEADER DO NOT EDIT-->
+
+    </LinearLayout>
+
+    <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <!--Layout Inside ScrollView-->
+        <!--Start editing here-->
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="2000dp"
+                android:background="@color/white"
+                android:translationY="16dp"
+                tools:layout_editor_absoluteY="16dp">
+
+                <!-- 24 sp text size -->
+                <!-- codes in here -->
+
+
+                <TextView
+                    android:id="@+id/News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="881dp"
+                    android:text="News feed from batstate-u.edu.ph"
+                    android:textColor="#EC1F1F"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.081"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="382dp"
+                    android:layout_height="43dp"
+                    android:layout_marginTop="28dp"
+                    android:text="BatStateU, PPSI to honor national scientist Dr. Gavino C. Trono, Jr. in a virtual symposium"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.421"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/News" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/gray"
+                    android:backgroundTint="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/News"
+                    tools:layout_editor_absoluteX="0dp" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="298dp"
+                    android:layout_height="21dp"
+                    android:text="Posted : Tue, 09 Nov 2021 08:33:45 +0000"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="382dp"
+                    android:layout_height="122dp"
+                    android:layout_marginTop="4dp"
+                    android:text="The Batangas State University (BatStateU), through the Verde Island Passage Center for Oceanographic Research and Aquatic Life Sciences (VIP CORALS), and in partnership with the Philippine Phycological Society, Inc. (PPSI) will be co-hosting the 9th National Symposium and Scientific Meeting of the PPSI on Nov. 12-13 to which they will pay homage to the 90th […]"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="382dp"
+                    android:layout_height="61dp"
+                    android:layout_marginTop="4dp"
+                    android:text="The post BatStateU, PPSI to honor national scientist Dr. Gavino C. Trono, Jr. in a virtual symposium first appeared on Batangas State University."
+                    app:layout_constraintEnd_toEndOf="@+id/textView4"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="382dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="56dp"
+                    android:text="University gears toward future-proofing engineering through its 1st Int’l Conference on Innovations in Eng’g Education"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintHorizontal_bias="0.424"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="268dp"
+                    android:layout_height="19dp"
+                    android:layout_marginTop="28dp"
+                    android:text="Posted : Tue, 09 Nov 2021 04:56:56 +0000"
+                    app:layout_constraintEnd_toEndOf="@+id/textView3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="382dp"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="4dp"
+                    android:text="The University’s Center for Innovation in Engineering Education (CIEE)—the first of its kind in the country—is set to stage its 1st International Conference on Innovations in Engineering Education (ICIEE 2021) to be held virtually via Zoom Webinars on November 10 and 11, 2021.  This is the first major-scale event of the Center since its establishment […]"
+                    app:layout_constraintEnd_toEndOf="@+id/textView5"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="382dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="4dp"
+                    android:text="The post University gears toward future-proofing engineering through its 1st Int’l Conference on Innovations in Eng’g Education first appeared on Batangas State University."
+                    app:layout_constraintEnd_toEndOf="@+id/textView8"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="382dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="56dp"
+                    android:text="DOST grants funding to BatStateU for Regional Inclusive Innovation Center implementation"
+                    app:layout_constraintEnd_toEndOf="@+id/textView6"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView6"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Posted : Tue, 19 Oct 2021 07:28:22 +0000"
+                    app:layout_constraintEnd_toEndOf="@+id/textView7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="382dp"
+                    android:layout_height="119dp"
+                    android:text="BATANGAS CITY – The Department of Science and Technology (DOST) – Region 4a entered into partnership with the Batangas State University (BatStateU) through a Memorandum of Agreement (MOA) for the initial implementation of the Regional Inclusive Innovation Center (RIIC) in Calabarzon, on October 7. An initiative by DTI and DOST, supported by the USAID Science, […]"
+                    app:layout_constraintEnd_toEndOf="@+id/textView10"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="382dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="4dp"
+                    android:text="The post DOST grants funding to BatStateU for Regional Inclusive Innovation Center implementation first appeared on Batangas State University."
+                    app:layout_constraintEnd_toEndOf="@+id/textView12"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="382dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="56dp"
+                    android:text="BatStateU’s CIEE organizes 1st int’l conference on innovations in engineering education"
+                    app:layout_constraintEnd_toEndOf="@+id/textView10"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="Posted : Wed, 13 Oct 2021 03:10:22 +0000"
+                    app:layout_constraintEnd_toEndOf="@+id/textView11"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="382dp"
+                    android:layout_height="122dp"
+                    android:text="The Center for Innovation in Engineering Education (CIEE) of the Batangas State University is set to stage its first International Conference on Innovations in Engineering Education (ICIEE 2021) to be held on November 10 and 11, 2021.  Championing the theme “Engineering Educators: Active Drivers of Innovation,” ICIEE 2021 aims to serve as a platform for […]"
+                    app:layout_constraintEnd_toEndOf="@+id/textView14"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="382dp"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="4dp"
+                    android:text="The post BatStateU’s CIEE organizes 1st int’l conference on innovations in engineering education first appeared on Batangas State University."
+                    app:layout_constraintEnd_toEndOf="@+id/textView16"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView16"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="382dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="56dp"
+                    android:text="University breaks ground for a new facade in Pablo Borbon campus"
+                    app:layout_constraintEnd_toEndOf="@+id/textView14"
+                    app:layout_constraintHorizontal_bias="0.506"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Posted : Thu, 23 Sep 2021 09:00:00 +0000"
+                    app:layout_constraintEnd_toEndOf="@+id/textView15"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="380dp"
+                    android:layout_height="118dp"
+                    android:text="A new “Gateway to Greatness” will soon open for Batangas State University after University officials held a groundbreaking ceremony for the new University facade at the Pablo Borbon campus, Sept. 23.  University President Dr. Tirso A. Ronquillo led the symbolic time capsule-laying that signaled the official construction of the facade.  The project is part of […]"
+                    app:layout_constraintEnd_toEndOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="382dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="5dp"
+                    android:text="The post University breaks ground for a new facade in Pablo Borbon campus first appeared on Batangas State University."
+                    app:layout_constraintEnd_toEndOf="@+id/textView20"
+                    app:layout_constraintStart_toStartOf="@+id/textView20"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="382dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="56dp"
+                    android:text="BatStateU is top performing school in sanitary engineering licensure exam"
+                    app:layout_constraintEnd_toEndOf="@+id/textView18"
+                    app:layout_constraintStart_toStartOf="@+id/textView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="Posted : Tue, 07 Sep 2021 09:00:03 +0000"
+                    app:layout_constraintEnd_toEndOf="@+id/textView19"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="382dp"
+                    android:layout_height="122dp"
+                    android:text="Batangas State University emerged as the top performing school in the August 2021 Sanitary Engineer Licensure Examination given by the Professional Regulation Commission (PRC). Forty-three out of 51 examinees from BatStateU passed the exam, notching a passing rate of 84.31% for the University. At second place, and the only other university to qualify on the […]"
+                    app:layout_constraintEnd_toEndOf="@+id/textView22"
+                    app:layout_constraintStart_toStartOf="@+id/textView22"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="382dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="2dp"
+                    android:text="The post BatStateU is top performing school in sanitary engineering licensure exam first appeared on Batangas State University."
+                    app:layout_constraintEnd_toEndOf="@+id/textView25"
+                    app:layout_constraintStart_toStartOf="@+id/textView25"
+                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="382dp"
+                android:layout_height="32dp"
+                android:background="@drawable/rectangle_contacts"
+                android:text="Copyright © Batangas State University"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+        <!--End of editing-->
+
+
+    </ScrollView>
+
+    <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,20 +25,36 @@ public class MainActivity extends AppCompatActivity {
     *
     *
     *
+    * Create table for GRADES, SUBJECTS, liabilities.
     *
+    * Fragments for liabities, ID, Curriculum.
     *
-    * Create the fragments in menu widgets
-    * Onlick in listener in widgets
+    * NavButtons not changing color
     *
+    * fix the fab  design
     *
-    *
-    * Edit the UI for BSU theme PRIORITY
-    *
+    * Splash screen
     *
     *
     * put timer in onStop Nav activity
+    *
+    * UI for the buttons in Menu
+    *
+    * Subjects
+    *
+    * Grades  Pacis
+    *
+    * Liabilities
+    *
+    * Student ID same as jhonjhee
+    *
+    * Curriculum Pacis
+    *
+    *
     * Cant read dash in database
-    * Store image in DataBase  */
+    *
+    *
+    * */
 
 
 

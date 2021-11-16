@@ -23,6 +23,7 @@ public class ScheduleFragment extends Fragment {
     private ScheduleViewModel scheduleViewModel;
 
     private FragmentScheduleBinding binding;
+
 /*    previous version
     private FragmentGalleryBinding binding;*/
 

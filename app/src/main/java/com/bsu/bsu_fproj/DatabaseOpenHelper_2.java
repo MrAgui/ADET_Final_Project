@@ -50,7 +50,9 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
 
         DB.execSQL("insert into student_tbl Values "+
                 "( '1' , 'Aguilar', 'Karl', 'A', 'Computer Science', 'Second Year', 'asdada', '100' ),  " +
-                "( '2' , 'Patacsil', 'Jhone Jhee', 'M', 'Computer Science', 'Second Year', 'qwerty', '200')" );
+                "( '2' , 'Patacsil', 'JhoneJhee', 'M', 'Computer Science', 'Second Year', 'qwerty', '200')" );
+
+
 
     }
 

@@ -220,4 +220,60 @@
     <string name="row105"></string>
     <string name="row106">-do-</string>
     <!-- END PACIS_SCHEDULE STRINGS -->
+
+
+    <!-- START CARE LINKS STRINGS -->
+    <!--<string name="app_name">webpage</string>-->
+
+    <string name ="linkSSCPBC1">
+    <a href = "https://www.facebook.com/sscmain1">SSC Pablo Borbon Campus I (MAIN)</a>
+    </string>
+    <string name ="linkSSCPBC2">
+    <a href = "https://www.facebook.com/sscalangilan">SSC Pablo Borbon Campus II (MAIN)</a>
+    </string>
+    <string name ="linkSSCARASOF">
+    <a href = "https://www.facebook.com/sscnasugbu/">SSC ARASOF-Nasugbu</a>
+    </string>
+    <string name ="linkSSCBALAYAN">
+    <a href = "https://www.facebook.com/balayancampus/">SSC Balayan</a>
+    </string>
+    <string name ="linkSSCLEMERY">
+    <a href = "https://www.facebook.com/sscbatstateulem/">SSC Lemery</a>
+    </string>
+    <string name ="linkSSCROSARIO">
+    <a href = "https://www.facebook.com/SSC-BatStateu-Ros-348462122168526/">SSC Rosario</a>
+    </string>
+    <string name ="linkSSCLIPA">
+    <a href = "https://www.facebook.com/SSCLipaCampus/">SSC Lipa</a>
+    </string>
+    <string name ="linkSSCSANJUAN">
+    <a href = "https://www.facebook.com/sscsanjuancampus">SSC San juan</a>
+    </string>
+    <string name ="linkSSCLOBO">
+    <a href = "https://www.facebook.com/ssclobo">SSC Lobo</a>
+    </string>
+    <string name ="linkSSCJPLPCMALVAR">
+    <a href = "https://www.facebook.com/sscmalvar/">SSC JVPLPC-MALVAR</a>
+    </string>
+
+    <!--strings Student Organization Facebook Page -->
+    <string name ="linkSOFPCAMERACLUB">
+    <a href = "https://www.facebook.com/focusbatcc"> FOCUS BatStateU Camera Club</a>
+    </string>
+    <string name ="linkSOFPKAMARA">
+    <a href = "https://www.facebook.com/kamaradevcombatsu">KAMARA – Kamera, Kamay at Kultura</a>
+    </string>
+    <string name ="linkSOFPSONS">
+    <a href = "https://www.facebook.com/batstateuSONs">SONS- Seeds of the Nation</a>
+    </string>
+    <string name ="linkSOFPCEAFA">
+    <a href = "https://www.facebook.com/CEAFASC">CEAFA Student Council</a>
+    </string>
+    <string name ="linkSOFPJIECEP">
+    <a href = "https://www.facebook.com/JIECEPBatSU">JIECEP – Junior Institute of Electronics Engineers of the Philippines</a>
+    </string>
+    <string name ="linkSOFPJIIEE">
+    <a href = "https://www.facebook.com/JIIEEBatStateUChapter">JIIEE – Junior Institute of Integrated Electrical Engineers</a>
+    </string>
+    <!-- END CARE LINKS STRINGS -->
 </resources>

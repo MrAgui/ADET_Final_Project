@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel;
 public class LinksViewModel extends ViewModel {
     private MutableLiveData<String> mText;
 
+
     public LinksViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is links fragment");
