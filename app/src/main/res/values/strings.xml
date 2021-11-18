@@ -27,6 +27,8 @@
     <string name="menu_contacts">Contacts</string>
     <string name="menu_logout">Logout</string>
 
+    <string name="title_activity_splash">SplashActivity</string>
+
     <string name="title_activity_nav">NavActivity</string>
     <string name="student_id">Student ID</string>
     <string name="curriculum">Curriculum</string>

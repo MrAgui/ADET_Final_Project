@@ -31,23 +31,23 @@ public class MainActivity extends AppCompatActivity {
     *
     * NavButtons not changing color
     *
-    * fix the fab  design
+    * fix the fab design
     *
-    * Splash screen
+    *
     *
     *
     * put timer in onStop Nav activity
     *
-    * UI for the buttons in Menu
+    *
     *
     * Subjects
-    *
-    * Grades  Pacis
-    *
     * Liabilities
+    *
+    *
     *
     * Student ID same as jhonjhee
     *
+    * Grades  Pacis
     * Curriculum Pacis
     *
     *
