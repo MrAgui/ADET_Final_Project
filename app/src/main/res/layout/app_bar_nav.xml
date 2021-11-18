@@ -24,14 +24,16 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:backgroundTint="@color/lightred"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/logout"
-        android:contentDescription="@string/menu_logout" />
+        android:backgroundTint="#d3d3d3"
+        android:contentDescription="@string/menu_logout"
+        android:scaleType="fitXY"
+        app:maxImageSize="48dp"
+        app:srcCompat="@drawable/logout" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

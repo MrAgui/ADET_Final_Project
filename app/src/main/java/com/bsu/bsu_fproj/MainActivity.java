@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     *
     * NavButtons not changing color
     *
-    * fix the fab design
     *
     *
     *
@@ -40,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
     *
     *
     *
-    * Subjects
+    * Subjects Care
+    *
     * Liabilities
     *
     *
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
     // Storing Data inside an array to be used in the user profile
-    public String[] student_data = {"","","","","","","",""};
+    public String[] student_data = {"","","","","","","","",""};
 
 
     private static final String TAG = "MainActivity";
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                         do {
                             // https://stackoverflow.com/questions/3105080/output-values-found-in-cursor-to-logcat-android/13106260
                             System.out.println("--------");
-                            for (int i = 0; i < 8; i++) {
+                            for (int i = 0; i < 9; i++) {
 //                                student_data[i] = c.getString(i);
 //                                System.out.println(student_data[i]);
                             }

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ import com.bsu.bsu_fproj.ui.links.LinksFragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -186,7 +188,25 @@ public class NavActivity extends AppCompatActivity {
         navProgram.setText(received_data[2]);
         navYearLvl.setText(received_data[3]);
 
+        setupSetMessage();
+
+
     }
+
+    private void setupSetMessage(){
+        ImageButton btn = (ImageButton) findViewById(R.id.liabilities_btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager manager=getSupportFragmentManager();
+                liabilities_class dialog = new liabilities_class();
+
+                dialog.show(manager, "msgDial");
+
+            }
+        });
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

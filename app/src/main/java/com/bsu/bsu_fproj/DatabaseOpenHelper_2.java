@@ -39,47 +39,59 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
 
         DB.execSQL ("create table student_tbl ("+
                 "sr_code VARCHAR(8) NOT NULL UNIQUE,"+
-                "last_Name	TEXT NOT NULL,"+
-                "first_Name	TEXT NOT NULL,"+
+                "last_Name	    TEXT NOT NULL,"+
+                "first_Name	    TEXT NOT NULL,"+
                 "middle_Initial	TEXT,"+
-                "program	TEXT NOT NULL,"+
-                "yr_Level	NUMERIC NOT NULL,"+
-                "password	TEXT NOT NULL,"+
+                "program	    TEXT NOT NULL,"+
+                "yr_Level	    NUMERIC NOT NULL,"+
+                "password	    TEXT NOT NULL,"+
                 "liabilities	INTEGER NOT NULL,"+
+                "liabilities    TEXT,"+
                 "PRIMARY KEY ('sr_code'))");
 
         DB.execSQL("insert into student_tbl Values "+
-                "( '1' , 'Aguilar', 'Karl', 'A', 'Computer Science', 'Second Year', 'asdada', '100' ),  " +
-                "( '2' , 'Patacsil', 'JhoneJhee', 'M', 'Computer Science', 'Second Year', 'qwerty', '200')" );
+                "( '1' , 'Aguilar', 'Karl', 'A', 'Computer Science', 'Second Year', 'asdada', '100' ,'40PHP' ),  " +
+                "( '2' , 'Patacsil', 'JhoneJhee', 'M', 'Computer Science', 'Second Year', 'qwerty', '200','45PHP' )" );
 /*
         Create table for GRADES, SUBJECTS, liabilities.
 */
-        /*START UPDATE CODES HERE*/
-//        DB.execSQL("create table subjects_tbl ("+
-//                    "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
-//                    "subject_1 TEXT NOT NULL," +
-//                    "subject_2 TEXT NOT NULL," +
-//                    "subject_3 TEXT NOT NULL," +
-//                    "subject_4 TEXT NOT NULL," +
-//                    "subject_5 TEXT NOT NULL," +
-//                    "subject_6 TEXT NOT NULL," +
-//                    "subject_7 TEXT NOT NULL )");
-//
-//        DB.execSQL("insert into subjects_tbl VALUES " +
-//                "('1', 'Automata Theory and Formal Languages', 'Mobile Computing', 'Human-Computer Interaction', 'Web Systems and Technologies', 'Application Development and Emerging Technologies', 'Data Analysis', 'The Contemporary World'),"+
-//                "('2', 'Automata Theory and Formal Languages', 'Mobile Computing', 'Human-Computer Interaction', 'Web Systems and Technologies', 'Application Development and Emerging Technologies', 'Data Analysis', 'The Contemporary World')");
-//
-//        DB.execSQL("create table grades_tbl("+
-//                "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
-//                "grades_1 TEXT NOT NULL," +
-//                "grades_2 TEXT NOT NULL," +
-//                "grades_3 TEXT NOT NULL," +
-//                "grades_4 TEXT NOT NULL," +
-//                "grades_5 TEXT NOT NULL," +
-//                "grades_6 TEXT NOT NULL," +
-//                "grades_7 TEXT NOT NULL )");
-
         /*END UPDATE CODES HERE*/
+
+        /* LIABILITIES */
+//        DB.execSQL("create table liabilities_tbl("+
+//        ""
+//                );
+        /* LIABILITIES */
+
+
+
+        /*START UPDATE CODES HERE*/
+/*        DB.execSQL("create table subjects_tbl ("+
+                    "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
+                    "subject_1 TEXT NOT NULL," +
+                    "subject_2 TEXT NOT NULL," +
+                    "subject_3 TEXT NOT NULL," +
+                    "subject_4 TEXT NOT NULL," +
+                    "subject_5 TEXT NOT NULL," +
+                    "subject_6 TEXT NOT NULL," +
+                    "subject_7 TEXT NOT NULL )");
+
+        DB.execSQL("insert into subjects_tbl VALUES " +
+                "('1', 'Automata Theory and Formal Languages', 'Mobile Computing', 'Human-Computer Interaction', 'Web Systems and Technologies', 'Application Development and Emerging Technologies', 'Data Analysis', 'The Contemporary World'),"+
+                "('2', 'Automata Theory and Formal Languages', 'Mobile Computing', 'Human-Computer Interaction', 'Web Systems and Technologies', 'Application Development and Emerging Technologies', 'Data Analysis', 'The Contemporary World')");
+
+        DB.execSQL("create table grades_tbl("+
+                "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
+                "grades_1 TEXT NOT NULL," +
+                "grades_2 TEXT NOT NULL," +
+                "grades_3 TEXT NOT NULL," +
+                "grades_4 TEXT NOT NULL," +
+                "grades_5 TEXT NOT NULL," +
+                "grades_6 TEXT NOT NULL," +
+                "grades_7 TEXT NOT NULL )");
+
+        */
+
 
     }
 
