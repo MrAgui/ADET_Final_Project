@@ -1,27 +1,17 @@
 package com.bsu.bsu_fproj.ui.home;
 
-import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
-import com.bsu.bsu_fproj.NavActivity;
 import com.bsu.bsu_fproj.R;
 import com.bsu.bsu_fproj.databinding.FragmentHomeBinding;
-import com.bsu.bsu_fproj.ui.dialogStudID;
 import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
 import com.bsu.bsu_fproj.ui.menu_liabilities.LiabilitiesFragment;
 import com.bsu.bsu_fproj.ui.menu_subjects.SubjectsFragment;

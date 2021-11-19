@@ -34,21 +34,17 @@ public class MainActivity extends AppCompatActivity {
     * put timer in onStop Nav activity
     *
     *
-    *
+    *  NEXT MEET FIX THE STUDENT ID
     * Subjects Care
     *
-    * Liabilities
-    *
-    *
-    *
-    * Student ID same as jhonjhee
     *
     * Grades  Pacis
     *
     * Curriculum Pacis
     *
-    *
+    * Edit the dialog box for the liabilities
     * Add another profiles
+    * Student ID same as jhonjhee
     *
     *
     * */

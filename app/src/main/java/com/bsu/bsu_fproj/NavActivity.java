@@ -2,21 +2,14 @@ package com.bsu.bsu_fproj;
 
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bsu.bsu_fproj.ui.links.LinksFragment;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.fragment.app.FragmentManager;
@@ -28,19 +21,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.widget.Toast;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
-
-import android.text.method.LinkMovementMethod;
-import android.widget.TextView;
-
-
-
-import org.w3c.dom.Text;
-
-import java.util.Locale;
 
 public class NavActivity extends AppCompatActivity {
 
@@ -55,10 +38,10 @@ public class NavActivity extends AppCompatActivity {
     public String[] received_data = {"","","","",""};
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
+    //for profile pic
+    int srcID;
 
     // declaration for menu buttons
-
-
 
 
     @Override
@@ -189,7 +172,7 @@ public class NavActivity extends AppCompatActivity {
 
         //get the int ID of the resource
         int id = getResources().getIdentifier(tempName.toLowerCase().trim(), "drawable", getPackageName());
-
+        srcID = id;
 
         //plug it in setImageResource
         navStud_img.setImageResource(id);
@@ -200,9 +183,17 @@ public class NavActivity extends AppCompatActivity {
         navProgram.setText(received_data[2]);
         navYearLvl.setText(received_data[3]);
 
+
+
+
+
+
+        /*Display the pic in student id dialog*/
+        /*ImageView n = (ImageView) findViewById(R.id.dialog_studentid_img);
+        n.setImageResource(id);*/
         /*Calling the Liabilities Method*/
         setupSetMessage();
-
+        setupID();
 
     }
 
@@ -213,13 +204,28 @@ public class NavActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentManager manager=getSupportFragmentManager();
-                liabilities_class dialog = new liabilities_class().newInstance(received_data[4]);
+                dialog_liabilities_class dialog = new dialog_liabilities_class().newInstance(received_data[4]);
 
                 dialog.show(manager, "msgDial");
 
             }
         });
     }
+
+    private void setupID(){
+        ImageButton btn = (ImageButton) findViewById(R.id.student_id_btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager manager=getSupportFragmentManager();
+                dialog_studentID_class dialog = new dialog_studentID_class().newInstance(srcID);
+
+                dialog.show(manager, "msgDial");
+
+            }
+        });
+    }
+
 
     /* Get payment */
     public String getPayment(){

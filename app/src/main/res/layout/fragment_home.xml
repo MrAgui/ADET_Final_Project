@@ -103,7 +103,7 @@
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
-                    android:id="@+id/student_id"
+                    android:id="@+id/student_id_btn"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginStart="48dp"
@@ -132,7 +132,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/student_id"
+                    app:layout_constraintStart_toEndOf="@+id/student_id_btn"
                     app:layout_constraintTop_toBottomOf="@+id/grades"
                     tools:ignore="SpeakableTextPresentCheck" />
 
@@ -171,9 +171,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Student ID"
-                    app:layout_constraintEnd_toEndOf="@+id/student_id"
-                    app:layout_constraintStart_toStartOf="@+id/student_id"
-                    app:layout_constraintTop_toBottomOf="@+id/student_id"
+                    app:layout_constraintEnd_toEndOf="@+id/student_id_btn"
+                    app:layout_constraintStart_toStartOf="@+id/student_id_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/student_id_btn"
                     tools:ignore="HardcodedText"/>
 
                 <TextView

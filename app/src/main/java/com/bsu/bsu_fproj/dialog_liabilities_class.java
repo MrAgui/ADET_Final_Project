@@ -10,13 +10,13 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
-public class liabilities_class extends AppCompatDialogFragment {
+public class dialog_liabilities_class extends AppCompatDialogFragment {
 
     private String payment;
 
     /* Made a method called newInstance to create an instance with arguments */
-    static liabilities_class newInstance(String s){
-        liabilities_class f = new liabilities_class();
+    static dialog_liabilities_class newInstance(String s){
+        dialog_liabilities_class f = new dialog_liabilities_class();
 
         Bundle args = new Bundle();
         args.putString("payment", s);
