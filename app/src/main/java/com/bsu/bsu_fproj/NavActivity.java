@@ -173,26 +173,37 @@ public class NavActivity extends AppCompatActivity {
         // Setting TextView as the data inside the database
         /*https://stackoverflow.com/questions/34973456/how-to-change-text-of-a-textview-in-navigation-drawer-header#comment117348821_38418531*/
         NavigationView stack_navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         View headerView = stack_navigationView.getHeaderView(0);
         ImageView navStud_img = (ImageView) headerView.findViewById(R.id.navStud_img);
         TextView navUsername = (TextView) headerView.findViewById(R.id.navName);
         TextView navProgram = (TextView) headerView.findViewById(R.id.navProgram);
         TextView navYearLvl= (TextView) headerView.findViewById(R.id.navYearLvl);
-//        Uri imgUri = Uri.parse("file:///data/data/com.bsu.bsu_fproj/res/bsu_icon");
-//        Uri imgUri = Uri.parse("src/main/res/drawable/bsu_icon.png");
-//        navStud_img.setImageURI(imgUri);
-        String tempName = received_data[0]+"_"+received_data[1];
+
+
+        //parse name+sr_code
+        String tempName = "profile_" + received_data[1] + "_" + sr_codeHolder; //Aguilar19-06341
+
+
+        //get the int ID of the resource
         int id = getResources().getIdentifier(tempName.toLowerCase().trim(), "drawable", getPackageName());
+
+
+        //plug it in setImageResource
         navStud_img.setImageResource(id);
+
+        /*Displaying the data based from the specific name+sr_code */
         navUsername.setText(received_data[0] + " " + received_data[1]);
+        navProgram.setText(received_data[2]);
         navProgram.setText(received_data[2]);
         navYearLvl.setText(received_data[3]);
 
+        /*Calling the Liabilities Method*/
         setupSetMessage();
 
 
     }
-
+    /*Method for showing a dialog box in  Liabilities */
     private void setupSetMessage(){
         ImageButton btn = (ImageButton) findViewById(R.id.liabilities_btn);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -231,9 +242,5 @@ public class NavActivity extends AppCompatActivity {
         NavActivity.this.finish();
     }
 
-    protected void showSubjects(){
-
-
-    }
 
 }

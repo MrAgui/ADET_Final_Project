@@ -31,10 +31,6 @@ public class MainActivity extends AppCompatActivity {
     *
     * NavButtons not changing color
     *
-    *
-    *
-    *
-    *
     * put timer in onStop Nav activity
     *
     *
@@ -48,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     * Student ID same as jhonjhee
     *
     * Grades  Pacis
+    *
     * Curriculum Pacis
     *
     *
