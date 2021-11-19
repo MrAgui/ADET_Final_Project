@@ -45,13 +45,12 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "program	    TEXT NOT NULL,"+
                 "yr_Level	    NUMERIC NOT NULL,"+
                 "password	    TEXT NOT NULL,"+
-                "liabilities	INTEGER NOT NULL,"+
-                "liabilities    TEXT,"+
+                "liabilities	TEXT NOT NULL,"+
                 "PRIMARY KEY ('sr_code'))");
 
         DB.execSQL("insert into student_tbl Values "+
-                "( '1' , 'Aguilar', 'Karl', 'A', 'Computer Science', 'Second Year', 'asdada', '100' ,'40PHP' ),  " +
-                "( '2' , 'Patacsil', 'JhoneJhee', 'M', 'Computer Science', 'Second Year', 'qwerty', '200','45PHP' )" );
+                "( '1908638' , 'Aguilar', 'Karl', 'A', 'Computer Science', 'Second Year', 'AGUILAR', 'paid'),  " +
+                "( '1906341' , 'Patacsil', 'JhoneJhee', 'M', 'Computer Science', 'Second Year', 'PATACSIL', 'unpaid')" );
 /*
         Create table for GRADES, SUBJECTS, liabilities.
 */

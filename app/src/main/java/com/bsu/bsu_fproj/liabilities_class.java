@@ -12,13 +12,45 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class liabilities_class extends AppCompatDialogFragment {
 
+    private String payment;
+
+    /* Made a method called newInstance to create an instance with arguments */
+    static liabilities_class newInstance(String s){
+        liabilities_class f = new liabilities_class();
+
+        Bundle args = new Bundle();
+        args.putString("payment", s);
+        f.setArguments(args);
+
+        return f;
+    }
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
+        System.out.println("checking statement");
+        payment = getArguments().getString("payment");
+
+        int id = getResources().getIdentifier("dialog_liabilities_"+payment, "layout", getActivity().getPackageName());
+        View v = LayoutInflater.from(getActivity()).inflate(id, null);
+//
+
+
+        System.out.println(payment + "liability");
+
 
         // view
-        View v= LayoutInflater.from(getActivity())
-                .inflate(R.layout.liabilities_dialog, null);
+        System.out.println("entering statements");
+        /*if (payment == "paid"){
+            v = LayoutInflater.from(getActivity())
+                    .inflate(R.layout.dialog_liabilities_paid, null);
+            System.out.println("THIS IS PAID");
+        }
+        else if (payment == "unpaid"){
+            v = LayoutInflater.from(getActivity())
+                    .inflate(R.layout.dialog_liabilities_unpaid, null);
+            System.out.println("THIS IS UNPAID");
+        }*/
 
 
         //btn listener
@@ -32,7 +64,7 @@ public class liabilities_class extends AppCompatDialogFragment {
 
         // alert dialog
         return new AlertDialog.Builder(getActivity())
-                .setTitle("Changin msg")
+                .setTitle("Liabilities")
                 .setView(v)
                 .setPositiveButton(android.R.string.ok, listener)
                 .create();

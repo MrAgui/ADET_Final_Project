@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     * Curriculum Pacis
     *
     *
-    * Cant read dash in database
+    * Add another profiles
     *
     *
     * */
@@ -108,8 +108,16 @@ public class MainActivity extends AppCompatActivity {
 
                 System.out.println("getting inputs");
 
-                sr_code = ESr_code.toString().replaceAll("\\s+$", ""); //removes end spaces (search replaceall syntax if have questions)
+                System.out.println( inputSrcode.getText() +"initail");
+
+                String temp;
+                /* Replaces "-" to space and clearing the space using .replaceAll */
+                temp = ESr_code.toString().replace('-',' ').replaceAll("\\s+", "");
+
+                sr_code = temp.replaceAll("\\s+$", ""); // .replaceall() removes end spaces (search replaceall syntax if have questions)
                 password = EPassword.toString();
+
+                System.out.println(sr_code+"final");
                 try {
                     db = dbHelper.getReadableDatabase();
                     c = db.rawQuery("select * from student_tbl where sr_code='" + sr_code + "' AND password='" + password + "'", new String[]{});

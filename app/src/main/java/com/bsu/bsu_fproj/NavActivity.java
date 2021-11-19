@@ -52,7 +52,7 @@ public class NavActivity extends AppCompatActivity {
     // DATABASE
     public String sr_codeHolder;
     TextView Name;
-    public String[] received_data = {"","","",""};
+    public String[] received_data = {"","","","",""};
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
 
@@ -144,11 +144,13 @@ public class NavActivity extends AppCompatActivity {
                 System.out.println(c.getString(1));
                 System.out.println(c.getString(4));
                 System.out.println(c.getString(5));
+                System.out.println(c.getString(7));
 
                 received_data[0] = c.getString(2);
                 received_data[1] = c.getString(1);
                 received_data[2] = c.getString(4);
                 received_data[3] = c.getString(5);
+                received_data[4] = c.getString(7);
 
 
 
@@ -182,7 +184,7 @@ public class NavActivity extends AppCompatActivity {
 
 
         //parse name+sr_code
-        String tempName = "profile_" + received_data[1] + "_" + sr_codeHolder; //Aguilar19-06341
+        String tempName = "profile_" + received_data[1] + "_" + sr_codeHolder; //Aguilar_1906341
 
 
         //get the int ID of the resource
@@ -203,6 +205,7 @@ public class NavActivity extends AppCompatActivity {
 
 
     }
+
     /*Method for showing a dialog box in  Liabilities */
     private void setupSetMessage(){
         ImageButton btn = (ImageButton) findViewById(R.id.liabilities_btn);
@@ -210,7 +213,7 @@ public class NavActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FragmentManager manager=getSupportFragmentManager();
-                liabilities_class dialog = new liabilities_class();
+                liabilities_class dialog = new liabilities_class().newInstance(received_data[4]);
 
                 dialog.show(manager, "msgDial");
 
@@ -218,6 +221,11 @@ public class NavActivity extends AppCompatActivity {
         });
     }
 
+    /* Get payment */
+    public String getPayment(){
+        System.out.println(received_data[4] + "sender");
+        return received_data[4];
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

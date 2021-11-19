@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/liabilities_dialog"
+        android:layout_width="406dp"
+        android:layout_height="176dp"
+        android:text="Please pay your SSC Membership Fee for AY 2021-2022 FIRST SEMESTER amounting to Php 450.00. Kindly coordinate with your respective organization treasurer for the procedure of payment. Thank you!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/2"-->
+<!--        android:layout_width="406dp"-->
+<!--        android:layout_height="176dp"-->
+<!--        android:text="Please pay your SSC Membership Fee for AY 2021-2022 FIRST SEMESTER amounting to Php 450.00. Kindly coordinate with your respective organization treasurer for the procedure of payment. Thank you!"-->
+<!--        tools:layout_editor_absoluteX="2dp"-->
+<!--        tools:layout_editor_absoluteY="149dp" />-->
+
+    <!--add padding in sides
+        round corners -->
+</androidx.constraintlayout.widget.ConstraintLayout>
