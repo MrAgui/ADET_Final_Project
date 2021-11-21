@@ -1,5 +1,4 @@
 package com.bsu.bsu_fproj.ui.schedules;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +12,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bsu.bsu_fproj.R;
-import com.bsu.bsu_fproj.databinding.FragmentContactsBinding;
 import com.bsu.bsu_fproj.databinding.FragmentScheduleBinding;
-import com.bsu.bsu_fproj.ui.contacts.ContactsViewModel;
 
 
 public class ScheduleFragment extends Fragment {

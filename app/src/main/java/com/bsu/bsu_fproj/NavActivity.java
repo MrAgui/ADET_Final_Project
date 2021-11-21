@@ -2,28 +2,26 @@ package com.bsu.bsu_fproj;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
-import android.view.View;
+import android.view.Gravity;
 import android.view.Menu;
-import android.widget.ImageButton;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
-
-import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.database.sqlite.SQLiteDatabase;
-import android.widget.Toast;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class NavActivity extends AppCompatActivity {
 
@@ -41,13 +39,16 @@ public class NavActivity extends AppCompatActivity {
     //for profile pic
     int srcID;
 
+
+//    timer
+    CountDownTimer ctimer = null;
     // declaration for menu buttons
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i(TAG, "On create Nav_activity");
+        Log.i(TAG, "On create");
 
         setContentView(R.layout.nav_header_nav);
 
@@ -188,50 +189,128 @@ public class NavActivity extends AppCompatActivity {
 
 
 
+
         /*Display the pic in student id dialog*/
         /*ImageView n = (ImageView) findViewById(R.id.dialog_studentid_img);
         n.setImageResource(id);*/
         /*Calling the Liabilities Method*/
-        setupSetMessage();
-        setupID();
+//        setupSetMessage();
+//        setupID();
+//        System.out.println("Before clicking Liabities");
+//        ImageButton btn_liabilities = (ImageButton) findViewById(R.id.liabilities_btn);
+//        btn_liabilities.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentManager manager=getSupportFragmentManager();
+//                dialog_liabilities_class dialog = new dialog_liabilities_class().newInstance(received_data[4]);
+//                System.out.println("clicking Liabities");
+//                dialog.show(manager, "msgDial");
+//
+//            }
+//        });
+//
+//        System.out.println("Before clicking stud_ID");
+//        ImageButton btn_studentid = (ImageButton) findViewById(R.id.student_id_btn);
+//        btn_studentid.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentManager manager=getSupportFragmentManager();
+//                dialog_studentID_class dialog = new dialog_studentID_class().newInstance(srcID);
+//                System.out.println(" clicking stud_ID");
+//                dialog.show(manager, "msgDial");
+//
+//            }
+//        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        HomeFragment data = HomeFragment.newInstance(received_data[4]);
+//        new dialog_liabilities_class();
+//        dialog_liabilities_class.newInstance(received_data[4]);
+
+
+
+
+        /*BUNDLE ARGUMENT SENDER*/
+//        Bundle payArgs = new Bundle();
+//        payArgs.putString("pay", received_data[4]);
+//        HomeFragment home = new HomeFragment();
+//        home.setArguments(payArgs);
+//        System.out.println(payArgs.getString("pay") + "DATA TO BE SENT");
+
+
 
     }
 
-    /*Method for showing a dialog box in  Liabilities */
-    private void setupSetMessage(){
-        ImageButton btn = (ImageButton) findViewById(R.id.liabilities_btn);
-        btn.setOnClickListener(new View.OnClickListener() {
+    void startTimer(){
+        ctimer = new CountDownTimer(5000,1000) {
             @Override
-            public void onClick(View view) {
-                FragmentManager manager=getSupportFragmentManager();
-                dialog_liabilities_class dialog = new dialog_liabilities_class().newInstance(received_data[4]);
-
-                dialog.show(manager, "msgDial");
+            public void onTick(long l) {
 
             }
-        });
-    }
 
-    private void setupID(){
-        ImageButton btn = (ImageButton) findViewById(R.id.student_id_btn);
-        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                FragmentManager manager=getSupportFragmentManager();
-                dialog_studentID_class dialog = new dialog_studentID_class().newInstance(srcID);
-
-                dialog.show(manager, "msgDial");
-
+            public void onFinish() {
+                NavActivity.this.finish();
+                Toast t = Toast.makeText(NavActivity.this,"You've been logged out due to inactivity",Toast.LENGTH_LONG);
+                t.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                t.show();
             }
-        });
+        };
+        ctimer.start();
     }
+
+    void cancelTimer(){
+        if(ctimer!=null){
+            ctimer.cancel();
+        }
+    }
+//    /*Method for showing a dialog box in  Liabilities */
+//    public void setupSetMessage(){
+//        ImageButton btn = (ImageButton) findViewById(R.id.liabilities_btn);
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentManager manager=getSupportFragmentManager();
+//                dialog_liabilities_class dialog = new dialog_liabilities_class().newInstance(received_data[4]);
+//
+//                dialog.show(manager, "msgDial");
+//
+//            }
+//        });
+//    }
+//
+//    private void setupID(){
+//        ImageButton btn = (ImageButton) findViewById(R.id.student_id_btn);
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FragmentManager manager=getSupportFragmentManager();
+//                dialog_studentID_class dialog = new dialog_studentID_class().newInstance(srcID);
+//
+//                dialog.show(manager, "msgDial");
+//
+//            }
+//        });
+//    }
 
 
     /* Get payment */
-    public String getPayment(){
-        System.out.println(received_data[4] + "sender");
-        return received_data[4];
-    }
+//    public String getPayment(){
+//        System.out.println(received_data[4] + "sender");
+//        return received_data[4];
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -247,13 +326,33 @@ public class NavActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cancelTimer();
+    }
     // Returns the user
     @Override
     protected void onStop() {
         super.onStop();
         // Timer
         Log.d(TAG, "onStop");
-        NavActivity.this.finish();
+
+        startTimer();
+        /*final Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 100ms
+                NavActivity.this.finish();
+            }
+        }, 5000);*/
+
+        /*if onResume calls
+                cancel the timer and proceed to navactivity
+        */
+        /* will not run splsh if activity is not destroyed only view the login UI */
+//        NavActivity.this.finish();
     }
 
 

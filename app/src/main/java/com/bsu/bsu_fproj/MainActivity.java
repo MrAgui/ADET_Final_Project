@@ -1,7 +1,5 @@
 package com.bsu.bsu_fproj;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,12 +15,19 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
 
     /*
     *Things to do :
     *
+    *
+    * ERROR
+    * NEXT MEET FIX THE STUDENT ID
+    * WHEN OPENING LIABILITIES FROM OTHER MENU
+    * CHECK homefrag line 111 and Nav act 240
     *
     *
     * Create table for GRADES, SUBJECTS, liabilities.
@@ -34,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
     * put timer in onStop Nav activity
     *
     *
-    *  NEXT MEET FIX THE STUDENT ID
+    *
+    *
     * Subjects Care
     *
     *
@@ -45,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     * Edit the dialog box for the liabilities
     * Add another profiles
     * Student ID same as jhonjhee
+    *
+    * FIX THE UI
     *
     *
     * */
@@ -83,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         contact_us_btn = findViewById(R.id.contactUs);
         contact_us_btn.setOnClickListener(view -> showContactUs());
 
-        new_student_btn = findViewById(R.id.new_Students);
+        new_student_btn = findViewById(R.id.menu_new_Students_btn);
         new_student_btn.setOnClickListener(view -> showDialog());
 
         btn_sign_in = findViewById(R.id.btn_sign_in);
@@ -101,6 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 Cursor c = null;
                 Editable ESr_code = inputSrcode.getText();
                 Editable EPassword = inputPassword.getText();
+
+                inputSrcode.setText("");
+                inputPassword.setText("");
+
+
 
                 System.out.println("getting inputs");
 
@@ -156,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                     } finally {
 
                         // Quits the MainActivity
-                        finish();
+//                        finish();
                     }
                     // proceeds to the success login
                     openPortal();

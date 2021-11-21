@@ -12,16 +12,28 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.bsu.bsu_fproj.R;
 import com.bsu.bsu_fproj.databinding.FragmentHomeBinding;
+import com.bsu.bsu_fproj.dialog_liabilities_class;
+import com.bsu.bsu_fproj.ui.menu_curriculum.CurriculumFragment;
 import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
-import com.bsu.bsu_fproj.ui.menu_liabilities.LiabilitiesFragment;
 import com.bsu.bsu_fproj.ui.menu_subjects.SubjectsFragment;
+
+
 
 public class HomeFragment extends Fragment {
 
     /*private HomeViewModel homeViewModel;*/
     private FragmentHomeBinding binding;
+    private String payment;
 
-
+//    public static HomeFragment newInstance(String s){
+//        HomeFragment f = new HomeFragment();
+//
+//        Bundle args = new Bundle();
+//        args.putString("payment", s);
+//        f.setArguments(args);
+//        return f;
+//    }
+//
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -82,11 +94,10 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
         binding.curriculum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment curriculumFragment = new LiabilitiesFragment();
+                Fragment curriculumFragment = new CurriculumFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frag_home,curriculumFragment );
@@ -97,7 +108,26 @@ public class HomeFragment extends Fragment {
         });
 
 
+        /*BUNDLE ARGUMENT RECEIVER*/
+//        Bundle payArgs = this.getArguments();
+//        if (payArgs != null){
+//            this.payment = payArgs.getString("pay");
+//        }
 
+
+//        payment = getArguments().getString("payment");
+        System.out.println(payment + "after Nav to HomeFrag");
+        binding.liabilitiesBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                payment = getArguments().getString("payment");
+                System.out.println(payment + "after Nav to HomeFrag clicked");
+//                dialog_liabilities_class lia_dialog = new dialog_liabilities_class().newInstance(payment);
+//                dialog_liabilities_class lia_dialog = new dialog_liabilities_class();
+//                lia_dialog.show(getChildFragmentManager(),"Dialog Liabilities");
+                new dialog_liabilities_class().newInstance("unpaid").show(getChildFragmentManager(),"Liabilities Dialog");
+            }
+        });
 
 /*        binding.studentId.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,12 +139,29 @@ public class HomeFragment extends Fragment {
             }
         });*/
 
-
-
+//        NavActivity dia = new NavActivity();
+//        dia.setupSetMessage();
 
 
     }
 
+
+
+//    View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_home, null);
+//    private void setupSetMessage(){
+//        ImageButton btn = (ImageButton) v.findViewById(R.id.liabilities_btn);
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                payment = getArguments().getString("payment");
+//                FragmentManager manager = getActivity().getSupportFragmentManager();
+//                HomeFragment dialog = new HomeFragment();
+//
+//                dialog.show(manager, "msgDial");
+//                dialog.
+//            }
+//        });
+//    }
 
 
 

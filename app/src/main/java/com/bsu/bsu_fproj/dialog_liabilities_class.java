@@ -8,18 +8,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatDialogFragment;
+import androidx.fragment.app.DialogFragment;
 
-public class dialog_liabilities_class extends AppCompatDialogFragment {
+public class dialog_liabilities_class extends DialogFragment {
 
     private String payment;
 
     /* Made a method called newInstance to create an instance with arguments */
-    static dialog_liabilities_class newInstance(String s){
+    public static dialog_liabilities_class newInstance(String recieved_payment_from_home){
         dialog_liabilities_class f = new dialog_liabilities_class();
 
         Bundle args = new Bundle();
-        args.putString("payment", s);
+        args.putString("payment", recieved_payment_from_home);
         f.setArguments(args);
 
         return f;
@@ -30,6 +30,8 @@ public class dialog_liabilities_class extends AppCompatDialogFragment {
 
         System.out.println("checking statement");
         payment = getArguments().getString("payment");
+
+        System.out.print("Successfully passed the "+payment);
 
         int id = getResources().getIdentifier("dialog_liabilities_"+payment, "layout", getActivity().getPackageName());
         View v = LayoutInflater.from(getActivity()).inflate(id, null);

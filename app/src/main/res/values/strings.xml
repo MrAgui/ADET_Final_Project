@@ -1,16 +1,29 @@
 <resources>
 
-    <string name="app_name">bsu_Fproj</string>
+    <!--IN SPLASH ACTIVITY-->
+    <string name="title_activity_splash">SplashActivity</string>
+    <!--IN SPLASH ACTIVITY-->
+
+    <!--IN MAIN ACTIVITY -->
+
+    <string name="main_header">main_header</string>
     <string name="username">Username</string>
+    <string name="app_name">bsu_Fproj</string>
     <string name="password">Password</string>
     <string name="student_portal">STUDENT PORTAL</string>
     <string name="password_is_case_sensitive">* Password is case Sensitive</string>
-    <string name="for_new_students">For New Students</string>
+    <string name="For_new_Students">For New Students</string>
     <string name="contact_us">Contact Us</string>
     <string name="forgot_password_click_here">Forgot Password? Click here</string>
     <string name="sign_in">Sign in</string>
     <string name="bsu_top_img">bsu_top_img</string>
+
+
     <string name="information_new_student">information_new_student</string>
+
+    <!--IN MAIN ACTIVITY-->
+
+    <!--IN NAV ACTIVITY-->
     <string name="success_login">Success Login</string>
     <string name="title_activity_navbar">activity_navbar</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -27,7 +40,7 @@
     <string name="menu_contacts">Contacts</string>
     <string name="menu_logout">Logout</string>
 
-    <string name="title_activity_splash">SplashActivity</string>
+
 
     <string name="title_activity_nav">NavActivity</string>
     <string name="student_id">Student ID</string>
@@ -130,6 +143,10 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <!--IN NAV ACTIVITY-->
+
+
+
 
     <!-- START PACIS_SCHEDULE STRINGS -->
     <string name="col1">Time</string>
@@ -224,6 +241,568 @@
     <!-- END PACIS_SCHEDULE STRINGS -->
 
 
+    <!--STAR OF PACIS CURRICULUM -->
+
+    <string name="curr_app_name">Sched</string>
+    <string name="curr_col1">Code</string>
+    <string name="curr_col2">Description</string>
+    <string name="curr_col3">Units</string>
+    <string name="curr_col4">Year Level</string>
+    <string name="curr_col5">Semester</string>
+    <string name="curr_col6">Grade</string>
+
+
+    <!--1ST-->
+    <string name="curr_row1">IT 111</string>
+    <string name="curr_row2">Introduction to Computing</string>
+    <string name="curr_row3">3</string>
+    <string name="curr_row4">FIRST</string>
+    <string name="curr_row5">FIRST</string>
+    <string name="curr_row6"></string>
+
+    <!--2ND-->
+    <string name="curr_row21">CS 111</string>
+    <string name="curr_row22">Computer Programming</string>
+    <string name="curr_row23">3</string>
+    <string name="curr_row24">FIRST</string>
+    <string name="curr_row25">FIRST</string>
+    <string name="curr_row26"></string>
+
+    <!--3RD-->
+    <string name="curr_row31">Fili 101</string>
+    <string name="curr_row32">Kontekstwalisadong Komunikasyon sa Filipino</string>
+    <string name="curr_row33">3</string>
+    <string name="curr_row34">FIRST</string>
+    <string name="curr_row35">FIRST</string>
+    <string name="curr_row36"></string>
+
+    <!--4TH-->
+    <string name="curr_row41">GEd 101</string>
+    <string name="curr_row42">Understanding the Self</string>
+    <string name="curr_row43">3</string>
+    <string name="curr_row44">FIRST</string>
+    <string name="curr_row45">FIRST</string>
+    <string name="curr_row46"></string>
+
+    <!--5TH-->
+    <string name="curr_row51">GEd 102</string>
+    <string name="curr_row52">Mathematics in the Modern World</string>
+    <string name="curr_row53">3</string>
+    <string name="curr_row54">FIRST</string>
+    <string name="curr_row55">FIRST</string>
+    <string name="curr_row56"></string>
+
+    <!--6TH-->
+    <string name="curr_row61">   MATH 111</string>
+    <string name="curr_row62">Linear Algebra</string>
+    <string name="curr_row63">3</string>
+    <string name="curr_row64">FIRST</string>
+    <string name="curr_row65">FIRST</string>
+    <string name="curr_row66"></string>
+
+    <!--7TH-->
+    <string name="curr_row71">PE 101</string>
+    <string name="curr_row72">Physical Fitness, Gymnastics and Aerobics</string>
+    <string name="curr_row73">2</string>
+    <string name="curr_row74">FIRST</string>
+    <string name="curr_row75">FIRST</string>
+    <string name="curr_row76"></string>
+
+    <!--8TH-->
+    <string name="curr_row81">NSTP 111</string>
+    <string name="curr_row82">National Service Training Program 1</string>
+    <string name="curr_row83">3</string>
+    <string name="curr_row84">FIRST</string>
+    <string name="curr_row85">FIRST</string>
+    <string name="curr_row86"></string>
+
+    <!--9TH-->
+    <string name="curr_row91">NSTP 111CW</string>
+    <string name="curr_row92">NSTP - Civic Welfare Training Service 1</string>
+    <string name="curr_row93">3</string>
+    <string name="curr_row94">FIRST</string>
+    <string name="curr_row95">FIRST</string>
+    <string name="curr_row96"></string>
+
+    <!--10TH-->
+    <string name="curr_row101">NSTP 111LT</string>
+    <string name="curr_row102">NSTP - Literacy Training Service 1</string>
+    <string name="curr_row103">3</string>
+    <string name="curr_row104">FIRST</string>
+    <string name="curr_row105">FIRST</string>
+    <string name="curr_row106"></string>
+
+    <!--11TH-->
+    <string name="curr_row111">NSTP 111RO</string>
+    <string name="curr_row112">NSTP - Reserve Officers Training Corps 1</string>
+    <string name="curr_row113">3</string>
+    <string name="curr_row114">FIRST</string>
+    <string name="curr_row115">FIRST</string>
+    <string name="curr_row116"></string>
+
+    <!--12TH-->
+    <string name="curr_row121">NSTP 121</string>
+    <string name="curr_row122">National Service Training Program 2</string>
+    <string name="curr_row123">3</string>
+    <string name="curr_row124">FIRST</string>
+    <string name="curr_row125">FIRST</string>
+    <string name="curr_row126"></string>
+
+
+    <!--13TH-->
+    <string name="curr_row131">NSTP 121CW</string>
+    <string name="curr_row132">NSTP - Civil Welfare Training Service 2</string>
+    <string name="curr_row133">3</string>
+    <string name="curr_row134">FIRST</string>
+    <string name="curr_row135">SECOND</string>
+    <string name="curr_row136"></string>
+
+
+    <!--14TH-->
+    <string name="curr_row141">NSTP 121LT</string>
+    <string name="curr_row142">NSTP - Literacy Training Service 2</string>
+    <string name="curr_row143">3</string>
+    <string name="curr_row144">FIRST</string>
+    <string name="curr_row145">SECOND</string>
+    <string name="curr_row146"></string>
+
+
+    <!--15TH-->
+    <string name="curr_row151">NSTP 121RO</string>
+    <string name="curr_row152">NSTP - Reserve Officers Training Corps 2</string>
+    <string name="curr_row153">3</string>
+    <string name="curr_row154">FIRST</string>
+    <string name="curr_row155">SECOND</string>
+    <string name="curr_row156"></string>
+
+
+    <!--16TH-->
+    <string name="curr_row161">CS 121</string>
+    <string name="curr_row162">Advanced Computer Programming</string>
+    <string name="curr_row163">3</string>
+    <string name="curr_row164">FIRST</string>
+    <string name="curr_row165">SECOND</string>
+    <string name="curr_row166"></string>
+
+
+    <!--17TH-->
+    <string name="curr_row171">Fili 102</string>
+    <string name="curr_row172">Filipino sa Ibat-ibang Disiplina</string>
+    <string name="curr_row173">3</string>
+    <string name="curr_row174">FIRST</string>
+    <string name="curr_row175">SECOND</string>
+    <string name="curr_row176"></string>
+
+
+    <!--18TH-->
+    <string name="curr_row181">GEd 105</string>
+    <string name="curr_row182">Readings in Philippine History</string>
+    <string name="curr_row183">3</string>
+    <string name="curr_row184">FIRST</string>
+    <string name="curr_row185">SECOND</string>
+    <string name="curr_row186"></string>
+
+
+    <!--19TH-->
+    <string name="curr_row191">GEd 108</string>
+    <string name="curr_row192">Art Appreciation</string>
+    <string name="curr_row193">3</string>
+    <string name="curr_row194">FIRST</string>
+    <string name="curr_row195">SECOND</string>
+    <string name="curr_row196"></string>
+
+
+    <!--20TH-->
+    <string name="curr_row201">MATH 401</string>
+    <string name="curr_row202">Differential Calculus</string>
+    <string name="curr_row203">3</string>
+    <string name="curr_row204">FIRST</string>
+    <string name="curr_row205">SECOND</string>
+    <string name="curr_row206"></string>
+
+
+    <!--21ST-->
+    <string name="curr_row211">MATH 407</string>
+    <string name="curr_row212">Number Theory</string>
+    <string name="curr_row213">3</string>
+    <string name="curr_row214">FIRST</string>
+    <string name="curr_row215">SECOND</string>
+    <string name="curr_row216"></string>
+
+
+    <!--22ND-->
+    <string name="curr_row221">PE 102</string>
+    <string name="curr_row222">Rhytmic Activities</string>
+    <string name="curr_row223">3</string>
+    <string name="curr_row224">FIRST</string>
+    <string name="curr_row225">SECOND</string>
+    <string name="curr_row226"></string>
+
+
+    <!--23RD-->
+    <string name="curr_row231">CS 131</string>
+    <string name="curr_row232">Data Structure and Algorithms</string>
+    <string name="curr_row233">3</string>
+    <string name="curr_row234">FIRST</string>
+    <string name="curr_row235">SUMMER</string>
+    <string name="curr_row236"></string>
+
+    <!--24TH-->
+    <string name="curr_row241">MATH 402</string>
+    <string name="curr_row242">Integral Calculus</string>
+    <string name="curr_row243">3</string>
+    <string name="curr_row244">FIRST</string>
+    <string name="curr_row245">SUMMER</string>
+    <string name="curr_row246"></string>
+
+    <!--25TH-->
+    <string name="curr_row251">Litr 102</string>
+    <string name="curr_row252">ASEAN Literature</string>
+    <string name="curr_row253">3</string>
+    <string name="curr_row254">FIRST</string>
+    <string name="curr_row255">SUMMER</string>
+    <string name="curr_row256"></string>
+
+    <!--26TH-->
+    <string name="curr_row261">CS 211</string>
+    <string name="curr_row262">Object-Oriented Programming</string>
+    <string name="curr_row263">3</string>
+    <string name="curr_row264">SECOND</string>
+    <string name="curr_row265">FIRST</string>
+    <string name="curr_row266"></string>
+
+    <!--27TH-->
+    <string name="curr_row271">CS 212</string>
+    <string name="curr_row272">Computer Organization with Assembly Language</string>
+    <string name="curr_row273">3</string>
+    <string name="curr_row274">SECOND</string>
+    <string name="curr_row275">FIRST</string>
+    <string name="curr_row276"></string>
+
+    <!--28TH-->
+    <string name="curr_row281">IT 211</string>
+    <string name="curr_row282">Database Management System</string>
+    <string name="curr_row283">3</string>
+    <string name="curr_row284">SECOND</string>
+    <string name="curr_row285">FIRST</string>
+    <string name="curr_row286"></string>
+
+    <!--29TH-->
+    <string name="curr_row291">IT 212</string>
+    <string name="curr_row292">Computer Networking 1</string>
+    <string name="curr_row293">3</string>
+    <string name="curr_row294">SECOND</string>
+    <string name="curr_row295">FIRST</string>
+    <string name="curr_row296"></string>
+
+    <!--30TH-->
+    <string name="curr_row301">Phy 101</string>
+    <string name="curr_row302">Calculus-Based Physics</string>
+    <string name="curr_row303">3</string>
+    <string name="curr_row304">SECOND</string>
+    <string name="curr_row305">FIRST</string>
+    <string name="curr_row306"></string>
+
+    <!--31ST-->
+    <string name="curr_row311">CpE 405</string>
+    <string name="curr_row312">Discrete Mathematics</string>
+    <string name="curr_row313">3</string>
+    <string name="curr_row314">SECOND</string>
+    <string name="curr_row315">FIRST</string>
+    <string name="curr_row316"></string>
+
+    <!--32ND-->
+    <string name="curr_row321">GEd 109</string>
+    <string name="curr_row322">Science, Technology and Society</string>
+    <string name="curr_row323">3</string>
+    <string name="curr_row324">SECOND</string>
+    <string name="curr_row325">FIRST</string>
+    <string name="curr_row326"></string>
+
+    <!--33RD-->
+    <string name="curr_row331">PE 103</string>
+    <string name="curr_row332">Individual and Dual Sports</string>
+    <string name="curr_row333">2</string>
+    <string name="curr_row334">SECOND</string>
+    <string name="curr_row335">FIRST</string>
+    <string name="curr_row336"></string>
+
+    <!--34TH-->
+    <string name="curr_row341">CS 221</string>
+    <string name="curr_row342">Design and Analysis of Algorithms</string>
+    <string name="curr_row343">3</string>
+    <string name="curr_row344">SECOND</string>
+    <string name="curr_row345">SECOND</string>
+    <string name="curr_row346"></string>
+
+    <!--35TH-->
+    <string name="curr_row351">CS 222</string>
+    <string name="curr_row352">Adcanced Object-Oriented Programming</string>
+    <string name="curr_row353">3</string>
+    <string name="curr_row354">SECOND</string>
+    <string name="curr_row355">SECOND</string>
+    <string name="curr_row356"></string>
+
+    <!--36TH-->
+    <string name="curr_row361">IT 221</string>
+    <string name="curr_row362">Information Management</string>
+    <string name="curr_row363">3</string>
+    <string name="curr_row364">SECOND</string>
+    <string name="curr_row365">SECOND</string>
+    <string name="curr_row366"></string>
+
+    <!--37TH-->
+    <string name="curr_row371">GEd 106</string>
+    <string name="curr_row372">Purposive Communication</string>
+    <string name="curr_row373">3</string>
+    <string name="curr_row374">SECOND</string>
+    <string name="curr_row375">SECOND</string>
+    <string name="curr_row376"></string>
+
+    <!--38TH-->
+    <string name="curr_row381">GEd 107</string>
+    <string name="curr_row382">Ethics</string>
+    <string name="curr_row383">3</string>
+    <string name="curr_row384">SECOND</string>
+    <string name="curr_row385">SECOND</string>
+    <string name="curr_row386"></string>
+
+    <!--39TH-->
+    <string name="curr_row391">ES 101</string>
+    <string name="curr_row392">Environmental Sciences</string>
+    <string name="curr_row393">3</string>
+    <string name="curr_row394">SECOND</string>
+    <string name="curr_row395">SECOND</string>
+    <string name="curr_row396"></string>
+
+    <!--40TH-->
+    <string name="curr_row401">ENGG 414</string>
+    <string name="curr_row402">Numerical Methods</string>
+    <string name="curr_row403">3</string>
+    <string name="curr_row404">SECOND</string>
+    <string name="curr_row405">SECOND</string>
+    <string name="curr_row406"></string>
+
+    <!--41ST-->
+    <string name="curr_row411">PE 104</string>
+    <string name="curr_row412">Team Sports</string>
+    <string name="curr_row413">3</string>
+    <string name="curr_row414">SECOND</string>
+    <string name="curr_row415">SECOND</string>
+    <string name="curr_row416"></string>
+
+    <!--42ND-->
+    <string name="curr_row421">CS 311</string>
+    <string name="curr_row422">Automata Theory and Formal Languages</string>
+    <string name="curr_row423">3</string>
+    <string name="curr_row424">THIRD</string>
+    <string name="curr_row425">FIRST</string>
+    <string name="curr_row426"></string>
+
+    <!--43RD-->
+    <string name="curr_row431">CS 312</string>
+    <string name="curr_row432">Mobile Computing</string>
+    <string name="curr_row433">3</string>
+    <string name="curr_row434">THIRD</string>
+    <string name="curr_row435">FIRST</string>
+    <string name="curr_row436"></string>
+
+    <!--44TH-->
+    <string name="curr_row441">IT 321</string>
+    <string name="curr_row442">Human-Computer Interaction</string>
+    <string name="curr_row443">3</string>
+    <string name="curr_row444">THIRD</string>
+    <string name="curr_row445">FIRST</string>
+    <string name="curr_row446"></string>
+
+    <!--45TH-->
+    <string name="curr_row451">IT 314</string>
+    <string name="curr_row452">Web Systems and Technologies</string>
+    <string name="curr_row453">3</string>
+    <string name="curr_row454">THIRD</string>
+    <string name="curr_row455">FIRST</string>
+    <string name="curr_row456"></string>
+
+    <!--46TH-->
+    <string name="curr_row461">IT 331</string>
+    <string name="curr_row462">Application Development and Emerging Technologies</string>
+    <string name="curr_row463">3</string>
+    <string name="curr_row464">THIRD</string>
+    <string name="curr_row465">FIRST</string>
+    <string name="curr_row466"></string>
+
+    <!--47TH-->
+    <string name="curr_row471">MATH 408</string>
+    <string name="curr_row472">Data Analysis</string>
+    <string name="curr_row473">3</string>
+    <string name="curr_row474">THIRD</string>
+    <string name="curr_row475">FIRST</string>
+    <string name="curr_row476"></string>
+
+    <!--48TH-->
+    <string name="curr_row481">GEd 104</string>
+    <string name="curr_row482">The Contemporary World</string>
+    <string name="curr_row483">3</string>
+    <string name="curr_row484">THIRD</string>
+    <string name="curr_row485">FIRST</string>
+    <string name="curr_row486"></string>
+
+    <!--49TH-->
+    <string name="curr_row491">CS 321</string>
+    <string name="curr_row492">Programming Languages</string>
+    <string name="curr_row493">3</string>
+    <string name="curr_row494">THIRD</string>
+    <string name="curr_row495">SECOND</string>
+    <string name="curr_row496"></string>
+
+    <!--50TH-->
+    <string name="curr_row501">CS 322</string>
+    <string name="curr_row502">Software Engineering</string>
+    <string name="curr_row503">3</string>
+    <string name="curr_row504">THIRD</string>
+    <string name="curr_row505">SECOND</string>
+    <string name="curr_row506"></string>
+
+    <!--51ST-->
+    <string name="curr_row511">CS 324</string>
+    <string name="curr_row512">Modeling and Simulation</string>
+    <string name="curr_row513">3</string>
+    <string name="curr_row514">THIRD</string>
+    <string name="curr_row515">SECOND</string>
+    <string name="curr_row516"></string>
+
+    <!--52ND-->
+    <string name="curr_row521">GEd 103</string>
+    <string name="curr_row522">Life and Works of Rizal</string>
+    <string name="curr_row523">3</string>
+    <string name="curr_row524">THIRD</string>
+    <string name="curr_row525">SECOND</string>
+    <string name="curr_row526"></string>
+
+    <!--53RD-->
+    <string name="curr_row531">MATH 409</string>
+    <string name="curr_row532">Symbolic Logic</string>
+    <string name="curr_row533">3</string>
+    <string name="curr_row534">THIRD</string>
+    <string name="curr_row535">SECOND</string>
+    <string name="curr_row536"></string>
+
+    <!--54TH-->
+    <string name="curr_row541">CSE 401</string>
+    <string name="curr_row542">CS Professional Elective 1</string>
+    <string name="curr_row543">3</string>
+    <string name="curr_row544">THIRD</string>
+    <string name="curr_row545">SECOND</string>
+    <string name="curr_row546"></string>
+
+    <!--55TH-->
+    <string name="curr_row551">CS 331</string>
+    <string name="curr_row552">CS Internship</string>
+    <string name="curr_row553">3</string>
+    <string name="curr_row554">THIRD</string>
+    <string name="curr_row555">SUMMER</string>
+    <string name="curr_row556"></string>
+
+    <!--56TH-->
+    <string name="curr_row561">CS 411</string>
+    <string name="curr_row562">CS Thesis 1</string>
+    <string name="curr_row563">3</string>
+    <string name="curr_row564">FOURTH</string>
+    <string name="curr_row565">FIRST</string>
+    <string name="curr_row566"></string>
+
+    <!--57TH-->
+    <string name="curr_row571">CS 412</string>
+    <string name="curr_row572">Fundamentals of Data Science</string>
+    <string name="curr_row573">3</string>
+    <string name="curr_row574">FOURTH</string>
+    <string name="curr_row575">FIRST</string>
+    <string name="curr_row576"></string>
+
+    <!--58TH-->
+    <string name="curr_row581">CS 413</string>
+    <string name="curr_row582">Advanced Software Engineering</string>
+    <string name="curr_row583">3</string>
+    <string name="curr_row584">FOURTH</string>
+    <string name="curr_row585">FIRST</string>
+    <string name="curr_row586"></string>
+
+    <!--59TH-->
+    <string name="curr_row591">CS 414</string>
+    <string name="curr_row592">Artificial Intelligence</string>
+    <string name="curr_row593">3</string>
+    <string name="curr_row594">FOURTH</string>
+    <string name="curr_row595">FIRST</string>
+    <string name="curr_row596"></string>
+
+    <!--60TH-->
+    <string name="curr_row601">CS 4115</string>
+    <string name="curr_row602">Principles of Operating Systems</string>
+    <string name="curr_row603">3</string>
+    <string name="curr_row604">FOURTH</string>
+    <string name="curr_row605">FIRST</string>
+    <string name="curr_row606"></string>
+
+    <!--61ST-->
+    <string name="curr_row611">CSE 402</string>
+    <string name="curr_row612">CS Professional Elective 2</string>
+    <string name="curr_row613">3</string>
+    <string name="curr_row614">FOURTH</string>
+    <string name="curr_row615">FIRST</string>
+    <string name="curr_row616"></string>
+
+    <!--62ND-->
+    <string name="curr_row621">CS 421</string>
+    <string name="curr_row622">CS Thesis 2</string>
+    <string name="curr_row623">3</string>
+    <string name="curr_row624">FOURTH</string>
+    <string name="curr_row625">SECOND</string>
+    <string name="curr_row626"></string>
+
+    <!--63RD-->
+    <string name="curr_row631">CS 422</string>
+    <string name="curr_row632">Machine Learning</string>
+    <string name="curr_row633">3</string>
+    <string name="curr_row634">FOURTH</string>
+    <string name="curr_row635">SECOND</string>
+    <string name="curr_row636"></string>
+
+    <!--64TH-->
+    <string name="curr_row641">CS 423</string>
+    <string name="curr_row642">Social Issues and Professional Practice</string>
+    <string name="curr_row643">3</string>
+    <string name="curr_row644">FOURTH</string>
+    <string name="curr_row645">SECOND</string>
+    <string name="curr_row646"></string>
+
+    <!--65TH-->
+    <string name="curr_row651">IT 323</string>
+    <string name="curr_row652">Information Assurance and Security</string>
+    <string name="curr_row653">3</string>
+    <string name="curr_row654">FOURTH</string>
+    <string name="curr_row655">SECOND</string>
+    <string name="curr_row656"></string>
+
+    <!--66TH-->
+    <string name="curr_row661">ENGG 405</string>
+    <string name="curr_row662">tECHNOPRENEURSHIP</string>
+    <string name="curr_row663">3</string>
+    <string name="curr_row664">FOURTH</string>
+    <string name="curr_row665">SECOND</string>
+    <string name="curr_row666"></string>
+
+    <!--67TH-->
+    <string name="curr_row671">CSE 403</string>
+    <string name="curr_row672">CS Professional Elective 3</string>
+    <string name="curr_row673">3</string>
+    <string name="curr_row674">FOURTH</string>
+    <string name="curr_row675">SECOND</string>
+    <string name="curr_row676"></string>
+
+
+
+    <!--END-->
+
     <!-- START CARE LINKS STRINGS -->
     <!--<string name="app_name">webpage</string>-->
 
@@ -277,5 +856,9 @@
     <string name ="linkSOFPJIIEE">
     <a href = "https://www.facebook.com/JIIEEBatStateUChapter">JIIEE – Junior Institute of Integrated Electrical Engineers</a>
     </string>
+    <string name="for_new_students">For new Students</string>
+    <string name="login">LOGIN</string>
+    <string name="sr_code">Sr_code</string>
+
     <!-- END CARE LINKS STRINGS -->
 </resources>
