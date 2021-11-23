@@ -21,6 +21,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
+import com.bsu.bsu_fproj.ui.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavActivity extends AppCompatActivity {
@@ -184,8 +185,8 @@ public class NavActivity extends AppCompatActivity {
         navProgram.setText(received_data[2]);
         navYearLvl.setText(received_data[3]);
 
-
-
+        // saved the data in HomeFragment using instance (same as sending data in Homefragment)
+        new HomeFragment().newInstance(received_data[4]);
 
 
 
@@ -228,29 +229,6 @@ public class NavActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-//        HomeFragment data = HomeFragment.newInstance(received_data[4]);
-//        new dialog_liabilities_class();
-//        dialog_liabilities_class.newInstance(received_data[4]);
-
-
-
-
-        /*BUNDLE ARGUMENT SENDER*/
-//        Bundle payArgs = new Bundle();
-//        payArgs.putString("pay", received_data[4]);
-//        HomeFragment home = new HomeFragment();
-//        home.setArguments(payArgs);
-//        System.out.println(payArgs.getString("pay") + "DATA TO BE SENT");
-
-
-
     }
 
     void startTimer(){
@@ -276,20 +254,7 @@ public class NavActivity extends AppCompatActivity {
             ctimer.cancel();
         }
     }
-//    /*Method for showing a dialog box in  Liabilities */
-//    public void setupSetMessage(){
-//        ImageButton btn = (ImageButton) findViewById(R.id.liabilities_btn);
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentManager manager=getSupportFragmentManager();
-//                dialog_liabilities_class dialog = new dialog_liabilities_class().newInstance(received_data[4]);
-//
-//                dialog.show(manager, "msgDial");
-//
-//            }
-//        });
-//    }
+
 //
 //    private void setupID(){
 //        ImageButton btn = (ImageButton) findViewById(R.id.student_id_btn);
@@ -306,11 +271,7 @@ public class NavActivity extends AppCompatActivity {
 //    }
 
 
-    /* Get payment */
-//    public String getPayment(){
-//        System.out.println(received_data[4] + "sender");
-//        return received_data[4];
-//    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -332,28 +293,22 @@ public class NavActivity extends AppCompatActivity {
         cancelTimer();
     }
     // Returns the user
+
+    @Override
+    protected  void onDestroy(){
+        super.onDestroy();
+
+    }
+
     @Override
     protected void onStop() {
         super.onStop();
-        // Timer
+
         Log.d(TAG, "onStop");
-
+        //  Logout the user due to inactivity
+        // Timer
         startTimer();
-        /*final Handler handler = new Handler(Looper.getMainLooper());
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Do something after 100ms
-                NavActivity.this.finish();
-            }
-        }, 5000);*/
 
-        /*if onResume calls
-                cancel the timer and proceed to navactivity
-        */
-        /* will not run splsh if activity is not destroyed only view the login UI */
-//        NavActivity.this.finish();
     }
-
 
 }

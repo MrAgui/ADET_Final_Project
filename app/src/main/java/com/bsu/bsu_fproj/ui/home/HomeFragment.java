@@ -23,17 +23,31 @@ public class HomeFragment extends Fragment {
 
     /*private HomeViewModel homeViewModel;*/
     private FragmentHomeBinding binding;
-    private String payment;
+    private static String payment;
+//    public String paymentValue;
+//    public String data[];
 
-//    public static HomeFragment newInstance(String s){
-//        HomeFragment f = new HomeFragment();
+    // Getting the data from NavActivity (line  189)
+    public static HomeFragment newInstance(String s){
+        payment = s;
+        HomeFragment f = new HomeFragment();
+        Bundle args = new Bundle();
+        args.putString("payment", s);
+        f.setArguments(args);
+        System.out.println("SUCCESS" + s);
+        return f;
+//        return HomeFragment.newInstance(payment);
+    }
+
 //
-//        Bundle args = new Bundle();
-//        args.putString("payment", s);
-//        f.setArguments(args);
-//        return f;
-//    }
-//
+
+/*
+
+    public HomeFragment() {
+        //this.setPaymentValue(data[4]);
+    }
+*/
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -51,6 +65,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
         return root;*/
 
 
@@ -59,11 +74,10 @@ public class HomeFragment extends Fragment {
     }
 
 
-//    Made a new method onViewCreated create all the click listener fot the buttons
+//    Made a new method onViewCreated create all the click listener for the buttons
 //    When the view is displayed,
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
-
 
         /* OnClick Listener methods */
 
@@ -108,24 +122,14 @@ public class HomeFragment extends Fragment {
         });
 
 
-        /*BUNDLE ARGUMENT RECEIVER*/
-//        Bundle payArgs = this.getArguments();
-//        if (payArgs != null){
-//            this.payment = payArgs.getString("pay");
-//        }
-
-
-//        payment = getArguments().getString("payment");
-        System.out.println(payment + "after Nav to HomeFrag");
         binding.liabilitiesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                payment = getArguments().getString("payment");
-                System.out.println(payment + "after Nav to HomeFrag clicked");
-//                dialog_liabilities_class lia_dialog = new dialog_liabilities_class().newInstance(payment);
-//                dialog_liabilities_class lia_dialog = new dialog_liabilities_class();
-//                lia_dialog.show(getChildFragmentManager(),"Dialog Liabilities");
-                new dialog_liabilities_class().newInstance("unpaid").show(getChildFragmentManager(),"Liabilities Dialog");
+                System.out.println(payment + " after Nav to HomeFrag clicked");
+                dialog_liabilities_class lia_dialog = new dialog_liabilities_class().newInstance(payment);
+                lia_dialog.show(getChildFragmentManager(),"Dialog Liabilities");
+                new dialog_liabilities_class().newInstance(payment).show(getChildFragmentManager(),"Liabilities Dialog");
+                System.out.println(payment);
             }
         });
 
