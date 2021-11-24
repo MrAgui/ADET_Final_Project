@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+
     <group android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home"
             android:title="@string/menu_home" />
+
         <item
             android:id="@+id/nav_news"
             android:icon="@drawable/announcement"
@@ -17,22 +19,27 @@
             android:id="@+id/nav_schedule"
             android:icon="@drawable/schedule"
             android:title="@string/menu_schedule" />
-        <item
-            android:id="@+id/nav_links"
-            android:icon="@drawable/link"
-            android:title="@string/menu_links" />
-        <item
-            android:id="@+id/nav_contacts"
-            android:icon="@drawable/contact"
-            android:title="@string/menu_contacts" />
 
-        <item
-            android:id="@+id/nav_googleClass"
-            android:icon="@drawable/classroom_2"
-            android:title="Google Classroom"
-            tools:ignore="HardcodedText" />
+<!--        <item android:title="">
 
+            <menu>-->
+                <item
+                    android:id="@+id/nav_links"
+                    android:icon="@drawable/link"
+                    android:title="@string/menu_links" />
+                <item
+                    android:id="@+id/nav_contacts"
+                    android:icon="@drawable/contact"
+                    android:title="@string/menu_contacts" />
 
+                <item
+                    android:id="@+id/nav_googleClass"
+                    android:icon="@drawable/classroom_2"
+                    android:title="Google Classroom"
+                    tools:ignore="HardcodedText" />
+<!--            </menu>
+
+        </item>-->
 
     </group>
 </menu>

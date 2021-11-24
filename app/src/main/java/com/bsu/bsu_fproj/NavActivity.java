@@ -323,11 +323,14 @@ public class NavActivity extends AppCompatActivity{
         super.onResume();
         cancelTimer();
     }
-    // Returns the user
 
+    // Returns the user
+    // should cancel the timer method here
     @Override
     protected  void onDestroy(){
+        Log.d(TAG, "onDestroy");
         super.onDestroy();
+        cancelTimer();
 
     }
 

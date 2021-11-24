@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/nav_header_height"
+    android:layout_height="225dp"
     android:background="@drawable/side_nav_bar_iii"
     android:gravity="bottom"
     android:orientation="vertical"
@@ -13,34 +14,75 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <!--/ profile/ -->
-    <ImageView
-        android:id="@+id/navStud_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:scaleType="fitXY"
-        android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+    <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001">
+
+        <ImageView
+            android:id="@+id/navStud_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/nav_header_desc"
+            android:scaleType="fitXY"
+
+
+            app:srcCompat="@mipmap/ic_launcher_round" />
+    </androidx.cardview.widget.CardView>
+
 
     <TextView
         android:id="@+id/navName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text=" "
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:text="STUDENT_NAME"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
         android:id="@+id/navProgram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text= " " />
+        android:layout_marginTop="4dp"
+        android:text="PROGRAM "
+        app:layout_constraintEnd_toEndOf="@+id/navYearLvl"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/navYearLvl"
+        app:layout_constraintTop_toBottomOf="@+id/navYearLvl" />
 
     <TextView
         android:id="@+id/navYearLvl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text= " "/>
+        android:layout_marginTop="5dp"
+        android:text="YEAR LEVEL"
+        app:layout_constraintEnd_toEndOf="@+id/navName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/navName"
+        app:layout_constraintTop_toBottomOf="@+id/navName" />
+
+    <ImageView
+        android:id="@+id/nav_bsu_logo"
+        android:layout_width="141dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288"
+        app:srcCompat="@drawable/bsu_icon" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

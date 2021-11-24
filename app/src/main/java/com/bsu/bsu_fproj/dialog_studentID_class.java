@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
 
@@ -31,12 +30,15 @@ public class dialog_studentID_class extends AppCompatDialogFragment {
 
         System.out.println("checking statement");
        /* profileName = getArguments().getString("profile");*/
+/* START EDIT*/
 
+//        int id = getResources().getIdentifier("dialog_studentID_"+sr_code, "layout", getActivity().getPackageName());
 
+/*END EDIT*/
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_studentid, null);
 //
-        ImageView n = (ImageView) v.findViewById(R.id.dialog_studentid_img);
-        n.setImageResource(profileID);
+//         n = (ImageView) v.findViewById(R.layout.dialog_studentid_img);
+//        n.setImageResource(profileID);
 
 
 
@@ -57,4 +59,5 @@ public class dialog_studentID_class extends AppCompatDialogFragment {
                 .create();
 
     }
+
 }
