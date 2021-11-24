@@ -17,7 +17,7 @@
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/drawable/rounded_dialog_bg.xml" value="0.13802083333333334" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/drawable/sing_in_btn.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/activity_bar.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/activity_main.xml" value="0.49385245901639346" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/activity_main2.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/activity_nav.xml" value="0.264" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/activity_portal.xml" value="0.1" />
@@ -27,7 +27,7 @@
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/contact_us_dialog.xml" value="0.33" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/contact_us_pop_up.xml" value="0.33" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/content_activity_navbar.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/content_nav.xml" value="0.264" />
+        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/content_nav.xml" value="0.4" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/dialog_liabilities.xml" value="0.4" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/dialog_liabilities_paid.xml" value="0.1" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/dialog_liabilities_unpaid.xml" value="0.2" />
@@ -41,8 +41,8 @@
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/fragment_schedule.xml" value="0.536" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/fragment_slideshow.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/liabilities_dialog.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/menu_curriculum_fragment.xml" value="0.23119868637110016" />
-        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/menu_grades_fragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/menu_curriculum_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/menu_grades_fragment.xml" value="0.264" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/menu_liabilities_fragment.xml" value="0.1" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/menu_subjects_fragment.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Gigabyte/Documents/SY2021-2022/bsu_Fproj/app/src/main/res/layout/nav_header_nav.xml" value="0.4" />

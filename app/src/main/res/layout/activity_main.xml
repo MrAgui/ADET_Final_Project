@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/background"
@@ -40,16 +40,16 @@
        app:layout_constraintTop_toBottomOf="@+id/menu_new_Students_btn"
        tools:ignore="TextContrastCheck" />
 
-<!--   <com.google.android.material.textfield.TextInputEditText-->
-<!--       android:layout_width="match_parent"-->
-<!--       android:layout_height="48dp"-->
-<!--       android:background="@drawable/input_bg"-->
-<!--       app:passwordToggleEnabled="true"-->
-<!--       tools:layout_editor_absoluteX="-16dp"-->
-<!--       tools:layout_editor_absoluteY="394dp">-->
+   <!--   <com.google.android.material.textfield.TextInputEditText-->
+   <!--       android:layout_width="match_parent"-->
+   <!--       android:layout_height="48dp"-->
+   <!--       android:background="@drawable/input_bg"-->
+   <!--       app:passwordToggleEnabled="true"-->
+   <!--       tools:layout_editor_absoluteX="-16dp"-->
+   <!--       tools:layout_editor_absoluteY="394dp">-->
 
 
-<!--   </com.google.android.material.textfield.TextInputEditText>-->
+   <!--   </com.google.android.material.textfield.TextInputEditText>-->
 
    <EditText
        android:id="@+id/inputPassword"
@@ -77,50 +77,50 @@
        android:layout_width="match_parent"
        android:layout_height="51dp"
        android:layout_marginStart="32dp"
-       android:layout_marginTop="40dp"
        android:layout_marginEnd="32dp"
        android:background="@drawable/btn_sign_in"
-       android:text="@string/sign_in"
 
+       android:text="@string/sign_in"
        android:textColor="@color/white"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-       app:layout_constraintVertical_bias="0.342" />
+       app:layout_constraintVertical_bias="0.258" />
+
+   <TextView
+       android:id="@+id/contactUs"
+       android:layout_width="91dp"
+       android:layout_height="23dp"
+       android:layout_marginTop="3dp"
+       android:layout_marginBottom="78dp"
+       android:alpha=".8"
+       android:text="@string/contact_us"
+       android:textColor="@color/white"
+       android:textSize="16sp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toEndOf="@+id/forgotPassword"
+       app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
+       app:layout_constraintVertical_bias="0.0" />
 
    <TextView
        android:id="@+id/forgotPassword"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:layout_marginBottom="78dp"
+       android:alpha=".8"
        android:paddingTop="4dp"
        android:text="@string/forgot_password_click_here"
        android:textColor="@color/white"
        android:textSize="16sp"
-       android:alpha = ".5"
        app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-       app:layout_constraintHorizontal_bias="0.0"
-       app:layout_constraintStart_toStartOf="@+id/inputPassword"
-       app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-       app:layout_constraintVertical_bias="0.049" />
-
-   <TextView
-       android:id="@+id/contactUs"
-       android:layout_width="89dp"
-       android:layout_height="19dp"
-       android:layout_marginStart="304dp"
-       android:layout_marginTop="12dp"
-       android:text="@string/contact_us"
-       android:textColor="@color/white"
-       android:textSize="16sp"
-       android:alpha = ".5"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-       app:layout_constraintHorizontal_bias="1.0"
-       app:layout_constraintStart_toStartOf="@+id/inputPassword"
-       app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+       app:layout_constraintEnd_toStartOf="@+id/contactUs"
+       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
        app:layout_constraintVertical_bias="0.0" />
 
    <!--   <ImageView
@@ -275,7 +275,6 @@
           app:layout_constraintTop_toBottomOf="@+id/imageView2"
           app:layout_constraintVertical_bias="0.527"
           tools:ignore="SpeakableTextPresentCheck" />-->
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

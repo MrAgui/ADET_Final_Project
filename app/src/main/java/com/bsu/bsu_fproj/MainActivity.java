@@ -36,9 +36,7 @@ public class MainActivity extends AppCompatActivity {
     *
     * Fragments for liabities, ID, Curriculum.
     *
-    * NavButtons not changing color
     *
-    * put timer in onStop Nav activity
     *
     *
     *

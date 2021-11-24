@@ -807,7 +807,331 @@
 
     <!--END-->
 
+
+    <!--PACIS GRADES-->
+
+    <!--1ST-->
+    <string name="grd_row1">CS 222</string>
+    <string name="grd_row2">Advanced Object-Oriented Programming</string>
+    <string name="grd_row3">3</string>
+    <string name="grd_row4"></string>
+    <string name="grd_row5">✔</string>
+    <string name="grd_row6">SECOND</string>
+    <string name="grd_row7">2020-2021</string>
+
+    <!--2nd-->
+    <string name="grd_row21">CS 221</string>
+    <string name="grd_row22">Design and Analysis of Algorithms</string>
+    <string name="grd_row23">3</string>
+    <string name="grd_row24"></string>
+    <string name="grd_row25">✔</string>
+    <string name="grd_row26">SECOND</string>
+    <string name="grd_row27">2020-2021</string>
+
+    <!--3rd-->
+    <string name="grd_row31">ES 101</string>
+    <string name="grd_row32">Environmental Sciences</string>
+    <string name="grd_row33">3</string>
+    <string name="grd_row34"></string>
+    <string name="grd_row35">✔</string>
+    <string name="grd_row36">SECOND</string>
+    <string name="grd_row37">2020-2021</string>
+
+    <!--4th-->
+    <string name="grd_row41">GEd 107</string>
+    <string name="grd_row42">Ethics</string>
+    <string name="grd_row43">3</string>
+    <string name="grd_row44"></string>
+    <string name="grd_row45">✔</string>
+    <string name="grd_row46">SECOND</string>
+    <string name="grd_row47">2020-2021</string>
+
+    <!--5th-->
+    <string name="grd_row51">IT 221</string>
+    <string name="grd_row52">Information Management</string>
+    <string name="grd_row53">3</string>
+    <string name="grd_row54"></string>
+    <string name="grd_row55">✔</string>
+    <string name="grd_row56">SECOND</string>
+    <string name="grd_row57">2020-2021</string>
+
+    <!--6th-->
+    <string name="grd_row61">ENGG 414</string>
+    <string name="grd_row62">Numerical Methods</string>
+    <string name="grd_row63">3</string>
+    <string name="grd_row64"></string>
+    <string name="grd_row65">✔</string>
+    <string name="grd_row66">SECOND</string>
+    <string name="grd_row67">2020-2021</string>
+
+    <!--7th-->
+    <string name="grd_row71">GEd 106</string>
+    <string name="grd_row72">Purposive Communication</string>
+    <string name="grd_row73">3</string>
+    <string name="grd_row74"></string>
+    <string name="grd_row75">✔</string>
+    <string name="grd_row76">SECOND</string>
+    <string name="grd_row77">2020-2021</string>
+
+    <!--8th-->
+    <string name="grd_row81">PE 104</string>
+    <string name="grd_row82">Team Sports</string>
+    <string name="grd_row83">3</string>
+    <string name="grd_row84"></string>
+    <string name="grd_row85">✔</string>
+    <string name="grd_row86">SECOND</string>
+    <string name="grd_row87">2020-2021</string>
+
+    <!--9th-->
+    <string name="grd_row91">Phy 101</string>
+    <string name="grd_row92">Calculus-Based Physics</string>
+    <string name="grd_row93">3</string>
+    <string name="grd_row94"></string>
+    <string name="grd_row95">✔</string>
+    <string name="grd_row96">FIRST</string>
+    <string name="grd_row97">2020-2021</string>
+
+    <!--10th-->
+    <string name="grd_row101">IT 212</string>
+    <string name="grd_row102">Computer Networking 1</string>
+    <string name="grd_row103">3</string>
+    <string name="grd_row104"></string>
+    <string name="grd_row105">✔</string>
+    <string name="grd_row106">FIRST</string>
+    <string name="grd_row107">2020-2021</string>
+
+    <!--11th-->
+    <string name="grd_row111">CS 212</string>
+    <string name="grd_row112">Computer Organization with Assembly Language</string>
+    <string name="grd_row113">3</string>
+    <string name="grd_row114"></string>
+    <string name="grd_row115">✔</string>
+    <string name="grd_row116">FIRST</string>
+    <string name="grd_row117">2020-2021</string>
+
+    <!--12th-->
+    <string name="grd_row121">IT 211</string>
+    <string name="grd_row122">Database Management System</string>
+    <string name="grd_row123">3</string>
+    <string name="grd_row124"></string>
+    <string name="grd_row125">✔</string>
+    <string name="grd_row126">FIRST</string>
+    <string name="grd_row127">2020-2021</string>
+
+    <!--13th-->
+    <string name="grd_row131">CpE 405</string>
+    <string name="grd_row132">Discrete Mathematics</string>
+    <string name="grd_row133">3</string>
+    <string name="grd_row134"></string>
+    <string name="grd_row135">✔</string>
+    <string name="grd_row136">FIRST</string>
+    <string name="grd_row137">2020-2021</string>
+
+    <!--14th-->
+    <string name="grd_row141">PE 103</string>
+    <string name="grd_row142">Individual and Dual Sports</string>
+    <string name="grd_row143">2</string>
+    <string name="grd_row144"></string>
+    <string name="grd_row145">✔</string>
+    <string name="grd_row146">FIRST</string>
+    <string name="grd_row147">2020-2021</string>
+
+    <!--15th-->
+    <string name="grd_row151">CS 211</string>
+    <string name="grd_row152">Object Oriented Programming</string>
+    <string name="grd_row153">3</string>
+    <string name="grd_row154"></string>
+    <string name="grd_row155">✔</string>
+    <string name="grd_row156">FIRST</string>
+    <string name="grd_row157">2020-2021</string>
+
+    <!--16th-->
+    <string name="grd_row161">GEd 109</string>
+    <string name="grd_row162">Science Technology and Society</string>
+    <string name="grd_row163">3</string>
+    <string name="grd_row164"></string>
+    <string name="grd_row165">✔</string>
+    <string name="grd_row166">FIRST</string>
+    <string name="grd_row167">2020-2021</string>
+
+    <!--17th-->
+    <string name="grd_row171">Litr 102</string>
+    <string name="grd_row172">ASEAN Literature</string>
+    <string name="grd_row173">3</string>
+    <string name="grd_row174"></string>
+    <string name="grd_row175">✔</string>
+    <string name="grd_row176">SUMMER</string>
+    <string name="grd_row177">2019-2020</string>
+
+    <!--18th-->
+    <string name="grd_row181">CS 131</string>
+    <string name="grd_row182">Data Structrures and Algorithms</string>
+    <string name="grd_row183">3</string>
+    <string name="grd_row184"></string>
+    <string name="grd_row185">✔</string>
+    <string name="grd_row186">SUMMER</string>
+    <string name="grd_row187">2019-2020</string>
+
+    <!--19th-->
+    <string name="grd_row191">MATH 402</string>
+    <string name="grd_row192">Integral Calculus</string>
+    <string name="grd_row193">3</string>
+    <string name="grd_row194"></string>
+    <string name="grd_row195">✔</string>
+    <string name="grd_row196">SUMMER</string>
+    <string name="grd_row197">2019-2020</string>
+
+    <!--20th-->
+    <string name="grd_row201">CS 121</string>
+    <string name="grd_row202">Advanced Computer Programming</string>
+    <string name="grd_row203">3</string>
+    <string name="grd_row204"></string>
+    <string name="grd_row205">✔</string>
+    <string name="grd_row206">SECOND</string>
+    <string name="grd_row207">2019-2020</string>
+
+    <!--21st-->
+    <string name="grd_row211">GEd 108</string>
+    <string name="grd_row212">Art Appreciation</string>
+    <string name="grd_row213">3</string>
+    <string name="grd_row214"></string>
+    <string name="grd_row215">✔</string>
+    <string name="grd_row216">SECOND</string>
+    <string name="grd_row217">2019-2020</string>
+
+    <!--22nd-->
+    <string name="grd_row221">MATH 401</string>
+    <string name="grd_row222">Differential Calculus</string>
+    <string name="grd_row223">3</string>
+    <string name="grd_row224"></string>
+    <string name="grd_row225">✔</string>
+    <string name="grd_row226">SECOND</string>
+    <string name="grd_row227">2019-2020</string>
+
+    <!--23rd-->
+    <string name="grd_row231">Fili 102</string>
+    <string name="grd_row232">Filipino sa Iba\'t ibang Disiplina</string>
+    <string name="grd_row233">3</string>
+    <string name="grd_row234"></string>
+    <string name="grd_row235">✔</string>
+    <string name="grd_row236">SECOND</string>
+    <string name="grd_row237">2019-2020</string>
+
+    <!--24th-->
+    <string name="grd_row241">NSTP 121CW</string>
+    <string name="grd_row242">NSTP-Civic Welfare Training Service 2</string>
+    <string name="grd_row243">3</string>
+    <string name="grd_row244"></string>
+    <string name="grd_row245">✔</string>
+    <string name="grd_row246">SECOND</string>
+    <string name="grd_row247">2019-2020</string>
+
+    <!--25th-->
+    <string name="grd_row251">MATH 407</string>
+    <string name="grd_row252">Number Theory</string>
+    <string name="grd_row253">3</string>
+    <string name="grd_row254"></string>
+    <string name="grd_row255">✔</string>
+    <string name="grd_row256">SECOND</string>
+    <string name="grd_row257">2019-2020</string>
+
+    <!--26th-->
+    <string name="grd_row261">GEd 105</string>
+    <string name="grd_row262">Readings in Philippine History</string>
+    <string name="grd_row263">3</string>
+    <string name="grd_row264"></string>
+    <string name="grd_row265">✔</string>
+    <string name="grd_row266">SECOND</string>
+    <string name="grd_row267">2019-2020</string>
+
+    <!--27th-->
+    <string name="grd_row271">PE 102</string>
+    <string name="grd_row272">Rhytmic Activities</string>
+    <string name="grd_row273">2</string>
+    <string name="grd_row274"></string>
+    <string name="grd_row275">✔</string>
+    <string name="grd_row276">SEOND</string>
+    <string name="grd_row277">2019-2020</string>
+
+    <!--28th-->
+    <string name="grd_row281">CS 111</string>
+    <string name="grd_row282">Computer Programming</string>
+    <string name="grd_row283">3</string>
+    <string name="grd_row284"></string>
+    <string name="grd_row285">✔</string>
+    <string name="grd_row286">FIRST</string>
+    <string name="grd_row287">2019-2020</string>
+
+    <!--29th-->
+    <string name="grd_row291">IT 111</string>
+    <string name="grd_row292">Introduction to Computing</string>
+    <string name="grd_row293">3</string>
+    <string name="grd_row294"></string>
+    <string name="grd_row295">✔</string>
+    <string name="grd_row296">FIRST</string>
+    <string name="grd_row297">2019-2020</string>
+
+    <!--30th-->
+    <string name="grd_row301">Fili 101</string>
+    <string name="grd_row302">Kontekstwalisadong Komunikasyon sa Filipino</string>
+    <string name="grd_row303">3</string>
+    <string name="grd_row304"></string>
+    <string name="grd_row305">✔</string>
+    <string name="grd_row306">FIRST</string>
+    <string name="grd_row307">2019-2020</string>
+
+
+    <!--31st-->
+    <string name="grd_row311">MATH 111</string>
+    <string name="grd_row312">Linear Algbra</string>
+    <string name="grd_row313">3</string>
+    <string name="grd_row314"></string>
+    <string name="grd_row315">✔</string>
+    <string name="grd_row316">FIRST</string>
+    <string name="grd_row317">2019-2020</string>
+
+    <!--32nd-->
+    <string name="grd_row321">GEd 102</string>
+    <string name="grd_row322">Mathematics in the Modern World</string>
+    <string name="grd_row323">3</string>
+    <string name="grd_row324"></string>
+    <string name="grd_row325">✔</string>
+    <string name="grd_row326">FIRST</string>
+    <string name="grd_row327">2019-2020</string>
+
+    <!--33rd-->
+    <string name="grd_row331">NSTP 111CW</string>
+    <string name="grd_row332">NSTP-Civic Welfare Training Service 1</string>
+    <string name="grd_row333">3</string>
+    <string name="grd_row334"></string>
+    <string name="grd_row335">✔</string>
+    <string name="grd_row336">FIRST</string>
+    <string name="grd_row337">2019-2020</string>
+
+    <!--34th-->
+    <string name="grd_row341">PE 101</string>
+    <string name="grd_row342">Physical Fitness, Gymnastics and Aerobics</string>
+    <string name="grd_row343">2</string>
+    <string name="grd_row344"></string>
+    <string name="grd_row345">✔</string>
+    <string name="grd_row346">FIRST</string>
+    <string name="grd_row347">2019-2020</string>
+
+    <!--35th-->
+    <string name="grd_row351">GEd 101</string>
+    <string name="grd_row352">Understanding the Self</string>
+    <string name="grd_row353">3</string>
+    <string name="grd_row354"></string>
+    <string name="grd_row355">✔</string>
+    <string name="grd_row356">FIRST</string>
+    <string name="grd_row357">2019-2020</string>
+
+
+    <!--END PACIS GRADES-->
+
     <!-- START CARE LINKS STRINGS -->
+
+
     <!--<string name="app_name">webpage</string>-->
 
     <string name ="linkSSCPBC1">
