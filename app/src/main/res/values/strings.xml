@@ -17,6 +17,10 @@
     <string name="forgot_password_click_here">Forgot Password? Click here</string>
     <string name="sign_in">Sign in</string>
     <string name="bsu_top_img">bsu_top_img</string>
+    <string name="for_new_students">For new Students</string>
+    <string name="login">LOGIN</string>
+    <string name="sr_code">Sr-code</string>
+
 
 
     <string name="information_new_student">information_new_student</string>
@@ -856,9 +860,7 @@
     <string name ="linkSOFPJIIEE">
     <a href = "https://www.facebook.com/JIIEEBatStateUChapter">JIIEE – Junior Institute of Integrated Electrical Engineers</a>
     </string>
-    <string name="for_new_students">For new Students</string>
-    <string name="login">LOGIN</string>
-    <string name="sr_code">Sr_code</string>
+
 
     <!-- END CARE LINKS STRINGS -->
 </resources>

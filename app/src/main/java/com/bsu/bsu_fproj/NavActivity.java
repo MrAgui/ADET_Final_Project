@@ -8,11 +8,13 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -24,7 +26,8 @@ import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 import com.bsu.bsu_fproj.ui.home.HomeFragment;
 import com.google.android.material.navigation.NavigationView;
 
-public class NavActivity extends AppCompatActivity {
+public class NavActivity extends AppCompatActivity{
+//    implements NavigationView.OnNavigationItemSelectedListener
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityNavBinding binding;
@@ -41,10 +44,44 @@ public class NavActivity extends AppCompatActivity {
     int srcID;
 
 
+
 //    timer
     CountDownTimer ctimer = null;
+//    @SuppressWarnings("StatementWithEmptyBody")
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item){
+//        int id = item.getItemId();
+//        if (id == R.id.nav_googleClass){
+//            this.finish();
+//        }
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+//        return true;
+//    }
     // declaration for menu buttons
 
+
+    // Logout the user using the three dots in navbar
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        switch (item.getItemId()){
+            case R.id.action_logout:{
+                this.finish();
+                return true;
+            }
+//            case R.id.nav_googleClass:{
+//                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.google.android.apps.classroom");
+//                if (launchIntent != null){
+//                    startActivity(launchIntent);
+//                }else{
+//                    Toast.makeText(NavActivity.this, "There is no package", Toast.LENGTH_LONG).show();
+//                }
+//                return true;
+//            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,21 +107,25 @@ public class NavActivity extends AppCompatActivity {
 
         /*End Care Links   */
 
-
+        // OPENS GOOGLE CLASSROOM APP
         setSupportActionBar(binding.appBarNav.toolbar);
         binding.appBarNav.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //logout
-                Intent logout = new Intent (NavActivity.this, MainActivity.class);
-                startActivity(logout);
-                finish();
-                Toast.makeText(NavActivity.this, "Successfully logged out.", Toast.LENGTH_SHORT).show();
+                Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.google.android.apps.classroom");
+                if (launchIntent != null){
+                    startActivity(launchIntent);
+                }else{
+                    Toast.makeText(NavActivity.this, "There is no package", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+//        navigationView.setNavigationItemSelectedListener(this);
 
 
          /*Passing each menu ID as a set of Ids because each
@@ -94,7 +135,8 @@ public class NavActivity extends AppCompatActivity {
                 R.id.nav_news,
                 R.id.nav_schedule,
                 R.id.nav_links,
-                R.id.nav_contacts)
+                R.id.nav_contacts,
+                R.id.nav_googleClass)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
@@ -186,7 +228,10 @@ public class NavActivity extends AppCompatActivity {
         navYearLvl.setText(received_data[3]);
 
         // saved the data in HomeFragment using instance (same as sending data in Homefragment)
-        new HomeFragment().newInstance(received_data[4]);
+        new HomeFragment().newInstance(received_data[4], //getting liability
+                                       received_data[0]);//getting SR_CODE
+
+
 
 
 
@@ -194,21 +239,7 @@ public class NavActivity extends AppCompatActivity {
         /*Display the pic in student id dialog*/
         /*ImageView n = (ImageView) findViewById(R.id.dialog_studentid_img);
         n.setImageResource(id);*/
-        /*Calling the Liabilities Method*/
-//        setupSetMessage();
-//        setupID();
-//        System.out.println("Before clicking Liabities");
-//        ImageButton btn_liabilities = (ImageButton) findViewById(R.id.liabilities_btn);
-//        btn_liabilities.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FragmentManager manager=getSupportFragmentManager();
-//                dialog_liabilities_class dialog = new dialog_liabilities_class().newInstance(received_data[4]);
-//                System.out.println("clicking Liabities");
-//                dialog.show(manager, "msgDial");
-//
-//            }
-//        });
+
 //
 //        System.out.println("Before clicking stud_ID");
 //        ImageButton btn_studentid = (ImageButton) findViewById(R.id.student_id_btn);
@@ -310,5 +341,14 @@ public class NavActivity extends AppCompatActivity {
         startTimer();
 
     }
+
+//    public void openclass(View view){
+//        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.google.android.apps.classroom");
+//        if (launchIntent != null){
+//            startActivity(launchIntent);
+//        }else{
+//            Toast.makeText(NavActivity.this, "There is no package", Toast.LENGTH_LONG).show();
+//        }
+//    }
 
 }

@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.bsu.bsu_fproj.R;
 import com.bsu.bsu_fproj.databinding.FragmentHomeBinding;
 import com.bsu.bsu_fproj.dialog_liabilities_class;
+import com.bsu.bsu_fproj.dialog_studentID_class;
 import com.bsu.bsu_fproj.ui.menu_curriculum.CurriculumFragment;
 import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
 import com.bsu.bsu_fproj.ui.menu_subjects.SubjectsFragment;
@@ -21,14 +22,11 @@ import com.bsu.bsu_fproj.ui.menu_subjects.SubjectsFragment;
 
 public class HomeFragment extends Fragment {
 
-    /*private HomeViewModel homeViewModel;*/
     private FragmentHomeBinding binding;
     private static String payment;
-//    public String paymentValue;
-//    public String data[];
 
     // Getting the data from NavActivity (line  189)
-    public static HomeFragment newInstance(String s){
+    public static HomeFragment newInstance(String s, String sr){
         payment = s;
         HomeFragment f = new HomeFragment();
         Bundle args = new Bundle();
@@ -36,17 +34,21 @@ public class HomeFragment extends Fragment {
         f.setArguments(args);
         System.out.println("SUCCESS" + s);
         return f;
-//        return HomeFragment.newInstance(payment);
+
     }
 
+//    public static HomeFragment newInstance(String i){
+//        payment = i;
+//        HomeFragment f = new HomeFragment();
+//        Bundle args = new Bundle();
+//        args.putString("payment", i);
+//        f.setArguments(args);
+//        System.out.println("SUCCESS" + i);
+//        return f;
+//
+//    }
 //
 
-/*
-
-    public HomeFragment() {
-        //this.setPaymentValue(data[4]);
-    }
-*/
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -133,39 +135,20 @@ public class HomeFragment extends Fragment {
             }
         });
 
-/*        binding.studentId.setOnClickListener(new View.OnClickListener() {
+        binding.studentIdBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    showID();
-                dialogStudID dialogID = new dialogStudID();
-                dialogID.show(getSupportFragmentManager(),"Student ID Dialog");
-                dialogID.setContentView(R.layout.dialog_stud_id);
+//                    showID();
+//                System.out.println("this is student ID");
+
+                dialog_studentID_class dialogID = new dialog_studentID_class();
+                dialogID.show(getChildFragmentManager(),"Student ID Dialog");
+//                new dialog_studentID_class().newInstance().show(getChildFragmentManager(), "Student ID Dialog");
+//                dialogID.setContentView(R.layout.dialog_stud_id);
             }
-        });*/
-
-//        NavActivity dia = new NavActivity();
-//        dia.setupSetMessage();
-
-
+        });
     }
 
-
-
-//    View v = LayoutInflater.from(getActivity()).inflate(R.layout.fragment_home, null);
-//    private void setupSetMessage(){
-//        ImageButton btn = (ImageButton) v.findViewById(R.id.liabilities_btn);
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                payment = getArguments().getString("payment");
-//                FragmentManager manager = getActivity().getSupportFragmentManager();
-//                HomeFragment dialog = new HomeFragment();
-//
-//                dialog.show(manager, "msgDial");
-//                dialog.
-//            }
-//        });
-//    }
 
 
 
@@ -177,12 +160,14 @@ public class HomeFragment extends Fragment {
 
     public void showID(){
 
-        /*Dialog dialog=new Dialog();
+/*
+        Dialog dialog=new Dialog();
         dialog.setContentView(R.layout.dialog_stud_id);
-        dialog.getWindow().setBackgroundDrawableResource(new ColorDrawable(Color.TRANSPARENT));*/
+        dialog.getWindow().setBackgroundDrawableResource(new ColorDrawable(Color.TRANSPARENT));
 
-        /*CustomDialog dialog = new CustomDialog();
-        dialog.show(getSupportFragmentManager(),"Custom Dialog");*/
+        CustomDialog dialog = new CustomDialog();
+        dialog.show(getSupportFragmentManager(),"Custom Dialog");
+*/
 
 
 

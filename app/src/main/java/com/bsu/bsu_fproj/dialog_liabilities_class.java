@@ -1,5 +1,6 @@
 package com.bsu.bsu_fproj;
 
+
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -28,6 +29,12 @@ public class dialog_liabilities_class extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
+//        TRIAL AND ERROR
+//        AlertDialog dialog = new AlertDialog(this);
+//        if (getDialog() != null && getDialog().getWindow() != null) {
+//            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+//            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+//        }
         System.out.println("checking statement");
         payment = getArguments().getString("payment");
 
@@ -35,25 +42,9 @@ public class dialog_liabilities_class extends DialogFragment {
 
         int id = getResources().getIdentifier("dialog_liabilities_"+payment, "layout", getActivity().getPackageName());
         View v = LayoutInflater.from(getActivity()).inflate(id, null);
-//
-
-
-        System.out.println(payment + "liability");
-
 
         // view
         System.out.println("entering statements");
-        /*if (payment == "paid"){
-            v = LayoutInflater.from(getActivity())
-                    .inflate(R.layout.dialog_liabilities_paid, null);
-            System.out.println("THIS IS PAID");
-        }
-        else if (payment == "unpaid"){
-            v = LayoutInflater.from(getActivity())
-                    .inflate(R.layout.dialog_liabilities_unpaid, null);
-            System.out.println("THIS IS UNPAID");
-        }*/
-
 
         //btn listener
         DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
@@ -63,12 +54,13 @@ public class dialog_liabilities_class extends DialogFragment {
             }
         };
 
-
         // alert dialog
         return new AlertDialog.Builder(getActivity())
-                .setTitle("Liabilities")
+        //.setTitle("Liabilities")
+
                 .setView(v)
-                .setPositiveButton(android.R.string.ok, listener)
+
+        //.setPositiveButton(android.R.string.ok, listener)
                 .create();
 
     }

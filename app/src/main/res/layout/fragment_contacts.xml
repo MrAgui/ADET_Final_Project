@@ -144,99 +144,51 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="411dp"
-                android:layout_height="500dp"
+                android:layout_height="365dp"
                 android:background="@color/white"
-                android:translationY="16dp">
+                android:translationY="16dp"
+                tools:layout_editor_absoluteX="-6dp"
+                tools:layout_editor_absoluteY="-104dp">
 
                 <View
                     android:id="@+id/divider"
                     android:layout_width="409dp"
                     android:layout_height="1dp"
-                    android:layout_marginBottom="23dp"
                     android:background="?android:attr/listDivider"
-                    app:layout_constraintBottom_toTopOf="@+id/trunklines"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
-                <TextView
-                    android:id="@+id/trunklines"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
-                    android:drawableStart="@drawable/con_phone"
-                    android:text="Trunklines"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toStartOf="@+id/registrar_contacts"
-                    app:layout_constraintHorizontal_bias="0.246"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/registrar_contacts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:drawableStart="@drawable/con_phone"
-                    android:text="Registrar"
-                    android:textSize="22sp"
-                    app:layout_constraintTop_toBottomOf="@+id/divider"
-                    app:layout_constraintStart_toEndOf="@id/trunklines"
-                    app:layout_constraintEnd_toStartOf="@id/ict_services_contacts"
-                    tools:layout_editor_absoluteX="144dp" />
-
-
-                <TextView
-                    android:id="@+id/ict_services_contacts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
-                    android:drawableStart="@drawable/con_phone"
-                    android:text="ICT Services"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/registrar_contacts"
-                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/ched_contacts"
                     android:layout_width="136dp"
                     android:layout_height="200dp"
-                    android:layout_marginTop="68dp"
                     android:src="@drawable/ched_icon"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/bsu_contacts"
-                    app:layout_constraintTop_toBottomOf="@+id/ict_services_contacts" />
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
 
                 <ImageView
                     android:id="@+id/bsu_contacts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="104dp"
+                    android:layout_marginTop="40dp"
                     android:src="@drawable/bsu_seal"
                     app:layout_constraintEnd_toStartOf="@+id/ched_contacts"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/trunklines" />
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
 
                 <ImageView
                     android:id="@+id/landbank_contacts"
                     android:layout_width="170dp"
                     android:layout_height="132dp"
-                    android:layout_marginTop="228dp"
+                    android:layout_marginTop="180dp"
                     android:src="@drawable/landbank"
                     app:layout_constraintEnd_toEndOf="@+id/ched_contacts"
-                    app:layout_constraintHorizontal_bias="0.443"
+                    app:layout_constraintHorizontal_bias="0.492"
                     app:layout_constraintStart_toStartOf="@+id/bsu_contacts"
-                    app:layout_constraintTop_toBottomOf="@+id/registrar_contacts" />
-
-                <!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="vertical">-->
-
-<!--                </LinearLayout>-->
-
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

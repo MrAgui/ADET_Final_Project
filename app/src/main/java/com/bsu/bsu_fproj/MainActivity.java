@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     * CHECK homefrag line 111 and Nav act 240
     *
     *
+    * If logged out btn is click onDestroy will be called with method to cancel the timer
+    *
     * Create table for GRADES, SUBJECTS, liabilities.
     *
     * Fragments for liabities, ID, Curriculum.
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     * Curriculum Pacis
     *
     * Edit the dialog box for the liabilities
-    * Add another profiles
+    *
     * Student ID same as jhonjhee
     *
     * FIX THE UI
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         contact_us_btn.setOnClickListener(view -> showContactUs());
 
         new_student_btn = findViewById(R.id.menu_new_Students_btn);
-        new_student_btn.setOnClickListener(view -> showDialog());
+        new_student_btn.setOnClickListener(view -> showDialogNewStud());
 
         btn_sign_in = findViewById(R.id.btn_sign_in);
 
@@ -205,14 +207,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void showContactUs(){
         Dialog dialog = new Dialog(this );
-        dialog.getWindow().setBackgroundDrawableResource(R.drawable.contact_us);
+        dialog.setContentView(R.layout.contact_us_dialog);
+        dialog.getWindow().setBackgroundDrawableResource(R.drawable.rounded_dialog_bg);
         dialog.show();
     }
 
-    private void showDialog(){
+    private void showDialogNewStud(){
         Dialog dialog = new Dialog (this);
         dialog.setContentView(R.layout.new_student_dialog);
-        dialog.getWindow().setBackgroundDrawableResource(R.drawable.new_student_dialog_bg);
+        dialog.getWindow().setBackgroundDrawableResource(R.drawable.rounded_dialog_bg);
         dialog.show();
     }
 

@@ -32,8 +32,9 @@
         android:backgroundTint="#d3d3d3"
         android:contentDescription="@string/menu_logout"
         android:scaleType="fitXY"
-        app:maxImageSize="48dp"
-        app:srcCompat="@drawable/logout" />
+        app:borderWidth="0dp"
+        app:maxImageSize="45dp"
+        app:srcCompat="@drawable/classroom_2" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
