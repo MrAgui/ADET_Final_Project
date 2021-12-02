@@ -5,7 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
+    android:background="@drawable/login_bg_5"
     tools:context=".MainActivity">
 
 
@@ -21,25 +21,6 @@
        app:layout_constraintTop_toTopOf="parent"
        tools:ignore="SpeakableTextPresentCheck" />
 
-   <EditText
-       android:id="@+id/inputSrcode"
-       android:layout_width="match_parent"
-       android:layout_height="48dp"
-       android:layout_marginStart="34dp"
-       android:layout_marginTop="390dp"
-       android:layout_marginEnd="34dp"
-       android:background="@drawable/input_bg"
-       android:ems="10"
-       android:hint="@string/sr_code"
-       android:importantForAutofill="no"
-       android:inputType="textPersonName"
-       android:paddingStart="12dp"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="1.0"
-       app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/menu_new_Students_btn"
-       tools:ignore="TextContrastCheck" />
-
    <!--   <com.google.android.material.textfield.TextInputEditText-->
    <!--       android:layout_width="match_parent"-->
    <!--       android:layout_height="48dp"-->
@@ -52,6 +33,25 @@
    <!--   </com.google.android.material.textfield.TextInputEditText>-->
 
    <EditText
+       android:id="@+id/inputSrcode"
+       android:layout_width="match_parent"
+       android:layout_height="48dp"
+       android:layout_marginStart="34dp"
+       android:layout_marginTop="416dp"
+       android:layout_marginEnd="34dp"
+       android:background="@drawable/input_bg"
+       android:ems="10"
+       android:hint="@string/sr_code"
+       android:importantForAutofill="no"
+       android:inputType="textPersonName"
+       android:paddingStart="12dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/menu_new_Students_btn"
+       tools:ignore="TextContrastCheck" />
+
+   <EditText
        android:id="@+id/inputPassword"
        android:layout_width="match_parent"
        android:layout_height="48dp"
@@ -59,7 +59,6 @@
        android:layout_marginTop="12dp"
        android:layout_marginEnd="32dp"
        android:background="@drawable/input_bg"
-       android:drawableEnd="@drawable/login_eye"
        android:ems="10"
        android:hint="@string/password"
        android:importantForAutofill="no"
@@ -122,159 +121,5 @@
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
        app:layout_constraintVertical_bias="0.0" />
-
-   <!--   <ImageView
-          android:id="@+id/imageView2"
-          android:layout_width="401dp"
-          android:layout_height="127dp"
-          android:contentDescription="@string/bsu_top_img"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          app:srcCompat="@drawable/bsu_logo"
-          tools:ignore="ImageContrastCheck" />
-
-
-      <EditText
-           android:id="@+id/inputSrcode"
-           android:layout_width="351dp"
-           android:layout_height="54dp"
-           android:layout_marginStart="32dp"
-           android:layout_marginTop="181dp"
-           android:layout_marginEnd="32dp"
-           android:layout_marginBottom="15dp"
-           android:background="@drawable/input_bg"
-           android:ems="10"
-           android:hint="@string/username"
-           android:inputType="textPersonName"
-           android:textColorHint="@color/white"
-           app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/imageView2"
-           tools:ignore="TextContrastCheck"
-           android:autofillHints="" />
-
-      <EditText
-          android:id="@+id/inputPassword"
-          android:layout_width="351dp"
-          android:layout_height="47dp"
-          android:layout_marginBottom="322dp"
-          android:background="@drawable/input_bg"
-          android:ems="10"
-          android:hint="@string/password"
-          android:inputType="textPassword"
-          android:textColorHint="@color/white"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="@+id/inputSrcode"
-          app:layout_constraintHorizontal_bias="0.0"
-          app:layout_constraintStart_toStartOf="@+id/inputSrcode"
-          app:layout_constraintTop_toBottomOf="@+id/inputSrcode"
-          tools:ignore="TouchTargetSizeCheck"
-          android:autofillHints="" />
-
-      <TextView
-          android:id="@+id/studentPortal"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/student_portal"
-          android:textColor="@color/white"
-          android:textSize="28sp"
-          app:layout_constraintBottom_toTopOf="@+id/inputSrcode"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/imageView2"
-          app:layout_constraintVertical_bias="0.811"
-          tools:ignore="TextContrastCheck" />
-
-      <TextView
-          android:id="@+id/passwordCaseSensitive"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/password_is_case_sensitive"
-          android:textColor="@color/white"
-          android:textColorHint="#F3F3F3"
-          android:textSize="18sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.164"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-          app:layout_constraintVertical_bias="0.034" />
-
-      <TextView
-          android:id="@+id/textView4"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="10dp"
-          android:layout_marginTop="34dp"
-          android:layout_marginEnd="188dp"
-          android:text="@string/for_new_students"
-          android:textColor="@color/white"
-          android:textSize="18sp"
-          app:layout_constraintBottom_toTopOf="@+id/studentPortal"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toEndOf="@+id/new_Students"
-          app:layout_constraintTop_toBottomOf="@+id/imageView2"
-          app:layout_constraintVertical_bias="0.326"
-          tools:ignore="TextContrastCheck" />
-
-      <Button
-          android:id="@+id/btn_sign_in"
-          android:layout_width="107dp"
-          android:layout_height="51dp"
-          android:layout_marginTop="52dp"
-          android:background="@drawable/btn_sign_in"
-          android:text="@string/sign_in"
-          android:textColor="#3E2723"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.901"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-          app:layout_constraintVertical_bias="0.0" />
-
-      <TextView
-          android:id="@+id/forgotPassword"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/forgot_password_click_here"
-          android:textColor="@color/white"
-          android:textSize="16sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.923"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/passwordCaseSensitive"
-          app:layout_constraintVertical_bias="0.305" />
-
-      <TextView
-          android:id="@+id/contactUs"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="@string/contact_us"
-          android:textColor="@color/white"
-          android:textSize="16sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.858"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
-          app:layout_constraintVertical_bias="0.076" />
-
-      <ImageButton
-          android:id="@+id/new_Students"
-          android:layout_width="48dp"
-          android:layout_height="48dp"
-          android:background="@drawable/i"
-          android:contentDescription="@string/information_new_student"
-          app:layout_constraintBottom_toTopOf="@+id/studentPortal"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.081"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/imageView2"
-          app:layout_constraintVertical_bias="0.527"
-          tools:ignore="SpeakableTextPresentCheck" />-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

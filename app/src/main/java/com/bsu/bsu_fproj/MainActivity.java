@@ -24,18 +24,19 @@ public class MainActivity extends AppCompatActivity {
     *Things to do :
     *
     *
-    * ERROR
+    *
     * NEXT MEET FIX THE STUDENT ID
-    * WHEN OPENING LIABILITIES FROM OTHER MENU
-    * CHECK homefrag line 111 and Nav act 240
     *
     *
-    * If logged out btn is click onDestroy will be called with method to cancel the timer
+    *
+    *
+    *
     *
     * Create table for GRADES, SUBJECTS, liabilities.
     *
-    * Fragments for liabities, ID, Curriculum.
     *
+    *
+    * edit grades content for thirde year
     *
     *
     *
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     *
     * Curriculum Pacis
     *
-    * Edit the dialog box for the liabilities
+    *
     *
     * Student ID same as jhonjhee
     *

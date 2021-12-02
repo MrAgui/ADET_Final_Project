@@ -13,5 +13,5 @@
         android:layout_height="2880px"
         android:layout_gravity="center"
         android:scaleType="fitXY"
-        android:src="@drawable/splash" />
+        android:src="@drawable/splash_bsu_logo_gif_7" />
 </LinearLayout>

@@ -58,16 +58,11 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
 */
         /*END UPDATE CODES HERE*/
 
-        /* LIABILITIES */
-//        DB.execSQL("create table liabilities_tbl("+
-//        ""
-//                );
-        /* LIABILITIES */
 
 
+   /*        *//*START UPDATE CODES HERE*//*
 
-        /*START UPDATE CODES HERE*/
-/*        DB.execSQL("create table subjects_tbl ("+
+        DB.execSQL("create table subjects_tbl ("+
                     "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
                     "subject_1 TEXT NOT NULL," +
                     "subject_2 TEXT NOT NULL," +
@@ -78,8 +73,42 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                     "subject_7 TEXT NOT NULL )");
 
         DB.execSQL("insert into subjects_tbl VALUES " +
-                "('1', 'Automata Theory and Formal Languages', 'Mobile Computing', 'Human-Computer Interaction', 'Web Systems and Technologies', 'Application Development and Emerging Technologies', 'Data Analysis', 'The Contemporary World'),"+
-                "('2', 'Automata Theory and Formal Languages', 'Mobile Computing', 'Human-Computer Interaction', 'Web Systems and Technologies', 'Application Development and Emerging Technologies', 'Data Analysis', 'The Contemporary World')");
+
+                "('1908638'," +
+                "'Automata Theory and Formal Languages', " +
+                "'Mobile Computing'," +
+                "'Human-Computer Interaction', " +
+                "'Web Systems and Technologies', '" +
+                "Application Development and Emerging Technologies', " +
+                "'Data Analysis', " +
+                "'The Contemporary World'),"+
+
+                "('1906341'," +
+                "'Automata Theory and Formal Languages', " +
+                "'Mobile Computing'," +
+                "'Human-Computer Interaction', " +
+                "'Web Systems and Technologies', '" +
+                "Application Development and Emerging Technologies', " +
+                "'Data Analysis', " +
+                "'The Contemporary World'),"+
+
+                "('1906796'," +
+                "'Automata Theory and Formal Languages', " +
+                "'Mobile Computing'," +
+                "'Human-Computer Interaction', " +
+                "'Web Systems and Technologies', '" +
+                "Application Development and Emerging Technologies', " +
+                "'Data Analysis', " +
+                "'The Contemporary World'),"+
+
+                "('4'," +
+                "'Automata Theory and Formal Languages', " +
+                "'Mobile Computing'," +
+                "'Human-Computer Interaction', " +
+                "'Web Systems and Technologies', '" +
+                "Application Development and Emerging Technologies', " +
+                "'Data Analysis', " +
+                "'The Contemporary World')");
 
         DB.execSQL("create table grades_tbl("+
                 "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
@@ -91,10 +120,46 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "grades_6 TEXT NOT NULL," +
                 "grades_7 TEXT NOT NULL )");
 
-        */
+        DB.execSQL("insert into grades_tbl VALUES " +
 
+                "('1908638'," +
+                "'2.75'," +
+                "'2.75', " +
+                "'3', " +
+                "'1.5', '" +
+                "1.5', " +
+                "'1.25', " +
+                "'1.25'),"+
 
+                "('1906341'," +
+                "'2', " +
+                "'3', " +
+                "'2.75'," +
+                "'1.75', '" +
+                "1.25', " +
+                "'1.25', " +
+                "'1.25'),"+
+
+                "('1906796'," +
+                "'2.75'," +
+                "'2', " +
+                "'3', " +
+                "'1', '" +
+                "1', " +
+                "'1.25', " +
+                "'1.25'),"+
+
+                "('1947555',"+
+                "'2', " +
+                "'3', " +
+                "'2.75'," +
+                "'1', '" +
+                "1', " +
+                "'1.25', " +
+                "'1.25')");
+    */
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1) {

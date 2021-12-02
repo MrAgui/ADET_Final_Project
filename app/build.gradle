@@ -59,7 +59,8 @@ dependencies {
 
     /*for password eye toggle*/
 
-
+    /* for links */
+    implementation 'me.saket:better-link-movement-method:1.0'
 
 
 }
