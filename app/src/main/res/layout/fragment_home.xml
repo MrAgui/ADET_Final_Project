@@ -10,31 +10,19 @@
 
 
 <!-- START HEADER DO NOT EDIT-->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="411dp"
-        android:layout_height="80dp"
-        android:background="@drawable/student_portal_bg"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-<!-- END HEADER DO NOT EDIT-->
-
-    </LinearLayout>
 
     <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 
     <ScrollView
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="SpeakableTextPresentCheck">
+<!--        app:layout_constraintTop_toTopOf="parent"-->
 
 
         <!--Layout Inside ScrollView-->
@@ -45,22 +33,37 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/frameLayout"
-                android:layout_width="411dp"
-                android:layout_height="256dp"
+                android:layout_width="match_parent"
+                android:layout_height="238dp"
                 android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/liabilities_btn"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="40dp"
+                    android:background="@drawable/btn_menu"
+                    android:foreground="?android:attr/actionBarItemBackground"
+
+                    android:scaleType="fitXY"
+                    android:src="@drawable/liabilities"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
                     android:id="@+id/subjects"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginStart="48dp"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="32dp"
 
 
-                    android:foreground="?android:attr/actionBarItemBackground"
                     android:background="@drawable/btn_menu"
-
-
+                    android:foreground="?android:attr/actionBarItemBackground"
 
 
                     android:scaleType="fitXY"
@@ -73,67 +76,50 @@
                     android:id="@+id/grades"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginTop="36dp"
-                    android:foreground="?android:attr/actionBarItemBackground"
+                    android:layout_marginTop="32dp"
                     android:background="@drawable/btn_menu"
+                    android:foreground="?android:attr/actionBarItemBackground"
 
                     android:scaleType="fitXY"
                     android:src="@drawable/grades"
                     app:layout_constraintEnd_toStartOf="@+id/liabilities_btn"
-                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintHorizontal_bias="0.489"
                     app:layout_constraintStart_toEndOf="@+id/subjects"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="SpeakableTextPresentCheck" />
-
-                <ImageButton
-                    android:id="@+id/liabilities_btn"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginTop="36dp"
-                    android:layout_marginEnd="48dp"
-                    android:foreground="?android:attr/actionBarItemBackground"
-                    android:background="@drawable/btn_menu"
-
-                    android:scaleType="fitXY"
-                    android:src="@drawable/liabilities"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
                     android:id="@+id/student_id_btn"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginStart="48dp"
-                    android:layout_marginTop="16dp"
-                    android:foreground="?android:attr/actionBarItemBackground"
                     android:background="@drawable/btn_menu"
 
+                    android:foreground="?android:attr/actionBarItemBackground"
                     android:scaleType="fitXY"
                     android:src="@drawable/stud_id"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/subjects"
+                    app:layout_constraintEnd_toStartOf="@+id/grades"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/subjects"
+                    app:layout_constraintTop_toTopOf="@+id/grades_txt"
+                    app:layout_constraintVertical_bias="0.435"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <ImageButton
                     android:id="@+id/curriculum"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:layout_marginStart="61dp"
-                    android:layout_marginTop="16dp"
-                    android:foreground="?android:attr/actionBarItemBackground"
-                    android:background="@drawable/btn_menu"
 
+                    android:background="@drawable/btn_menu"
+                    android:foreground="?android:attr/actionBarItemBackground"
                     android:scaleType="fitXY"
                     android:src="@drawable/curriculum"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/student_id_btn"
+                    app:layout_constraintEnd_toStartOf="@+id/liabilities_btn"
+                    app:layout_constraintHorizontal_bias="0.272"
+                    app:layout_constraintStart_toEndOf="@+id/grades"
                     app:layout_constraintTop_toBottomOf="@+id/grades"
+                    app:layout_constraintVertical_bias="0.435"
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <TextView
@@ -144,7 +130,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/subjects"
                     app:layout_constraintStart_toStartOf="@+id/subjects"
                     app:layout_constraintTop_toBottomOf="@+id/subjects"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/grades_txt"
@@ -154,7 +140,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/grades"
                     app:layout_constraintStart_toStartOf="@+id/grades"
                     app:layout_constraintTop_toBottomOf="@+id/grades"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/liabilities_txt"
@@ -164,7 +150,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/liabilities_btn"
                     app:layout_constraintStart_toStartOf="@+id/liabilities_btn"
                     app:layout_constraintTop_toBottomOf="@+id/liabilities_btn"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/stud_id_txt"
@@ -174,7 +160,7 @@
                     app:layout_constraintEnd_toEndOf="@+id/student_id_btn"
                     app:layout_constraintStart_toStartOf="@+id/student_id_btn"
                     app:layout_constraintTop_toBottomOf="@+id/student_id_btn"
-                    tools:ignore="HardcodedText"/>
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:id="@+id/curriculum_txt"
@@ -195,37 +181,81 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="411dp"
+                android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:background="@color/white"
                 android:translationY="16dp" >
 
-                <TextView
-                    android:id="@+id/News"
-                    android:layout_width="61dp"
-                    android:layout_height="16dp"
-                    android:layout_marginTop="104dp"
-                    android:text="TextView"
+
+
+
+
+
+<!--CArousel in Home Frag-->
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselView"
+                    android:layout_width="match_parent"
+                    android:layout_height="216dp"
+                    android:background="@drawable/carouselbg"
+                    app:fillColor="#FFFFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.46"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.644"
+                    app:pageColor="#00000000"
+                    app:radius="6dp"
+                    app:slideInterval="3000"
+                    app:strokeColor="#FF777777"
+                    app:strokeWidth="1dp" />
+
+                <ImageView
+                    android:id="@+id/advisory"
+                    android:layout_width="match_parent"
+                    android:layout_height="152dp"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:src="@drawable/menu_advisory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.47"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:layout_width="410dp"
-                android:layout_height="32dp"
-                android:background="@drawable/rectangle_contacts"
-                android:text="Copyright © Batangas State University"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
 
 
         </LinearLayout>
 
 
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/student_portal_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+        <!-- END HEADER DO NOT EDIT-->
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/rectangle_contacts"
+        android:text="Copyright © Batangas State University"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 

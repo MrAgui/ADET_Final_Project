@@ -13,31 +13,22 @@
        android:id="@+id/menu_new_Students_btn"
        android:layout_width="52dp"
        android:layout_height="50dp"
-       android:layout_marginStart="352dp"
-       android:layout_marginTop="16dp"
        android:background="@drawable/i_2"
        android:contentDescription="@string/information_new_student"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.955"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.023"
        tools:ignore="SpeakableTextPresentCheck" />
-
-   <!--   <com.google.android.material.textfield.TextInputEditText-->
-   <!--       android:layout_width="match_parent"-->
-   <!--       android:layout_height="48dp"-->
-   <!--       android:background="@drawable/input_bg"-->
-   <!--       app:passwordToggleEnabled="true"-->
-   <!--       tools:layout_editor_absoluteX="-16dp"-->
-   <!--       tools:layout_editor_absoluteY="394dp">-->
-
-
-   <!--   </com.google.android.material.textfield.TextInputEditText>-->
 
    <EditText
        android:id="@+id/inputSrcode"
        android:layout_width="match_parent"
        android:layout_height="48dp"
        android:layout_marginStart="34dp"
-       android:layout_marginTop="416dp"
+       android:layout_marginTop="264dp"
        android:layout_marginEnd="34dp"
        android:background="@drawable/input_bg"
        android:ems="10"
@@ -45,10 +36,12 @@
        android:importantForAutofill="no"
        android:inputType="textPersonName"
        android:paddingStart="12dp"
+       app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintHorizontal_bias="1.0"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/menu_new_Students_btn"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.465"
        tools:ignore="TextContrastCheck" />
 
    <EditText
@@ -65,10 +58,12 @@
        android:inputType="textPassword"
        android:paddingStart="12dp"
        android:paddingEnd="12dp"
+       app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/inputSrcode"
+       app:layout_constraintVertical_bias="0.0"
        tools:ignore="TextContrastCheck" />
 
    <Button
@@ -86,40 +81,40 @@
        app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintTop_toBottomOf="@+id/inputPassword"
-       app:layout_constraintVertical_bias="0.258" />
+       app:layout_constraintVertical_bias="0.116" />
 
    <TextView
        android:id="@+id/contactUs"
        android:layout_width="91dp"
        android:layout_height="23dp"
-       android:layout_marginTop="3dp"
-       android:layout_marginBottom="78dp"
+       android:layout_marginBottom="44dp"
        android:alpha=".8"
        android:text="@string/contact_us"
        android:textColor="@color/white"
        android:textSize="16sp"
+
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.5"
-       app:layout_constraintStart_toEndOf="@+id/forgotPassword"
-       app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
-       app:layout_constraintVertical_bias="0.0" />
-
-   <TextView
-       android:id="@+id/forgotPassword"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginBottom="78dp"
-       android:alpha=".8"
-       android:paddingTop="4dp"
-       android:text="@string/forgot_password_click_here"
-       android:textColor="@color/white"
-       android:textSize="16sp"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toStartOf="@+id/contactUs"
-       app:layout_constraintHorizontal_bias="0.5"
+       app:layout_constraintHorizontal_bias="0.85"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
-       app:layout_constraintVertical_bias="0.0" />
+       app:layout_constraintTop_toBottomOf="@+id/inputPassword"
+       app:layout_constraintVertical_bias="0.843" />
+
+   <!--   <TextView
+          android:id="@+id/forgotPassword"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="78dp"
+          android:alpha=".8"
+          android:paddingTop="4dp"
+          android:text="@string/forgot_password_click_here"
+          android:textColor="@color/white"
+          android:textSize="16sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/contactUs"
+          app:layout_constraintHorizontal_bias="0.5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
+          app:layout_constraintVertical_bias="0.0" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

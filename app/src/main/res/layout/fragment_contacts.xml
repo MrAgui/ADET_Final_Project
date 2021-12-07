@@ -11,7 +11,7 @@
     <!-- START HEADER DO NOT EDIT-->
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@drawable/student_portal_bg"
         android:orientation="vertical"
@@ -26,7 +26,7 @@
     <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 
     <ScrollView
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +42,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/frameLayout"
-                android:layout_width="411dp"
-                android:layout_height="256dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@color/white">
 
                 <TextView
@@ -76,7 +76,7 @@
                     android:id="@+id/University_Registrar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="48dp"
                     android:text="University Registrar"
                     android:textColor="#F44336"
                     android:textSize="16sp"
@@ -105,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:drawableLeft="@drawable/mail_ii"
-                    android:text=" batstateucat@gmail.com or tao@g.batstate-u.edu.ph"
+                    android:text=" batstateucat@gmail.com"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="@+id/test"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -114,18 +114,32 @@
                     tools:paddingBottom="2dp" />
 
                 <TextView
+                    android:id="@+id/gmail1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/mail_ii"
+                    android:text=" tao@g.batstate-u.edu.ph"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/gmail"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/gmail"
+                    app:layout_constraintTop_toBottomOf="@+id/gmail"
+                    tools:paddingBottom="2dp" />
+
+                <TextView
                     android:id="@+id/facebook"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:drawableLeft="@drawable/facebook"
                     android:paddingBottom="2dp"
                     android:text=" www.facebook.com/TAOBatStateU"
                     android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@+id/gmail"
+                    app:layout_constraintEnd_toEndOf="@+id/gmail1"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/gmail"
-                    app:layout_constraintTop_toBottomOf="@+id/gmail" />
+                    app:layout_constraintStart_toStartOf="@+id/gmail1"
+                    app:layout_constraintTop_toBottomOf="@+id/gmail1" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -143,7 +157,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="411dp"
+                android:layout_width="match_parent"
                 android:layout_height="365dp"
                 android:background="@color/white"
                 android:translationY="16dp"
@@ -162,8 +176,9 @@
 
                 <ImageView
                     android:id="@+id/ched_contacts"
-                    android:layout_width="136dp"
-                    android:layout_height="200dp"
+                    android:layout_width="144dp"
+                    android:layout_height="129dp"
+                    android:layout_marginTop="40dp"
                     android:src="@drawable/ched_icon"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/bsu_contacts"
@@ -192,13 +207,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="410dp"
-                android:layout_height="32dp"
-                android:background="@drawable/rectangle_contacts"
-                android:text="Copyright © Batangas State University"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
 
         </LinearLayout>
 
@@ -206,5 +214,15 @@
     </ScrollView>
 
     <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/rectangle_contacts"
+        android:text="Copyright © Batangas State University"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@
     <!-- START HEADER DO NOT EDIT-->
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="vertical"
         android:background="@drawable/student_portal_bg"
@@ -40,7 +40,7 @@
     <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 
     <ScrollView
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,23 +61,28 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="720dp"
+                android:layout_height="match_parent"
                 android:background="@color/white"
                 android:translationY="16dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:paddingLeft="120dp"
-                    android:text="SCHEDULE"
-                    android:textSize="35dp"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/tableLayout"/>
+                    <!--android:paddingLeft="120dp"-->
 
                 <!-- codes in here -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="50dp"
+                    android:text="SCHEDULE"
+                    android:textColor="@color/black"
+                    android:textSize="35dp"
+                    app:layout_constraintBottom_toTopOf="@id/tableLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
                 <TableLayout
                     android:id="@+id/tableLayout"
                     android:layout_width="match_parent"
@@ -100,7 +105,7 @@
                             android:padding="10sp"
                             android:text="@string/col1"
                             android:textColor="@android:color/black"
-                            android:textSize="14sp" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -110,7 +115,7 @@
                             android:padding="10sp"
                             android:text="@string/col2"
                             android:textColor="@android:color/black"
-                            android:textSize="14sp" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -120,7 +125,7 @@
                             android:padding="10sp"
                             android:text="@string/col3"
                             android:textColor="@android:color/black"
-                            android:textSize="14sp" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -130,7 +135,7 @@
                             android:padding="10sp"
                             android:text="@string/col4"
                             android:textColor="@android:color/black"
-                            android:textSize="14sp" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -140,7 +145,7 @@
                             android:padding="10sp"
                             android:text="@string/col5"
                             android:textColor="@android:color/black"
-                            android:textSize="14sp" />
+                            android:textSize="11sp" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -150,7 +155,7 @@
                             android:padding="10sp"
                             android:text="@string/col6"
                             android:textColor="@android:color/black"
-                            android:textSize="14sp" />
+                            android:textSize="11sp" />
 
 
                     </TableRow>
@@ -859,13 +864,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="410dp"
-                android:layout_height="32dp"
-                android:background="@drawable/rectangle_contacts"
-                android:text="Copyright © Batangas State University"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+
 
 
         </LinearLayout>
@@ -873,6 +872,18 @@
 
 
     </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/rectangle_contacts"
+        android:text="Copyright © Batangas State University"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 
     <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 </androidx.constraintlayout.widget.ConstraintLayout>

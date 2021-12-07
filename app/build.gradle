@@ -63,6 +63,8 @@ dependencies {
 /*     for slider in menu
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
+
      RoundedImageView
     implementation 'com.makerramen:roundedimageview:2.3.0'*/
+    implementation 'com.synnapps:carouselview:0.1.5'
 }

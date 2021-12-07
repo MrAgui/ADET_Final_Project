@@ -26,11 +26,6 @@ public class MainActivity extends AppCompatActivity {
     *
     * NEXT MEET FIX THE STUDENT ID
     *
-    * Create table for GRADES, SUBJECTS, liabilities.
-    *
-    * edit grades content for third year
-    *
-    * Grades  Pacis
     *
     * Student ID same as jhonjhee
     *

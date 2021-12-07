@@ -29,12 +29,6 @@ public class dialog_liabilities_class extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
 
-//        TRIAL AND ERROR
-//        AlertDialog dialog = new AlertDialog(this);
-//        if (getDialog() != null && getDialog().getWindow() != null) {
-//            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-//            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-//        }
         System.out.println("checking statement");
         payment = getArguments().getString("payment");
 

@@ -7,24 +7,11 @@
     tools:context=".ui.home.HomeFragment"
     android:id="@+id/grade_frag">
 
-    <!--    android:background="@color/lightred"-->
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:background="#fff"-->
-<!--    tools:context=".ui.menu_grades.GradesFragment">-->
-
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:text="This is Grades Fragment" />-->
     <!-- START HEADER DO NOT EDIT-->
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="80dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +27,8 @@
     <!-- START  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 
     <ScrollView
-        android:layout_width="411dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,13 +43,13 @@
         <!--Start editing here-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="646dp"
                 android:background="@color/white"
                 android:translationY="16dp">
 
@@ -78,9 +66,10 @@
 
                 <TableLayout
                     android:id="@+id/tableLayout"
-                    android:layout_width="375dp"
-                    android:layout_height="544dp"
+                    android:layout_width="365dp"
+                    android:layout_height="547dp"
                     android:layout_margin="40dp"
+                    android:layout_marginTop="40dp"
                     android:background="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -169,12 +158,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row2"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -196,7 +185,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row4"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -252,12 +241,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row22"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -279,7 +268,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row24"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -336,12 +325,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row32"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -363,7 +352,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row34"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -419,12 +408,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row42"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -446,7 +435,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row44"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -502,12 +491,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row52"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -529,7 +518,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row24"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -585,12 +574,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row62"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -612,7 +601,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row64"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -668,12 +657,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row72"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -695,7 +684,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row74"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -751,12 +740,12 @@
                         <TextView
                             android:layout_width="5dp"
                             android:layout_height="wrap_content"
-                            android:textSize="12sp"
                             android:layout_weight="7"
                             android:gravity="center_horizontal"
                             android:padding="10sp"
                             android:text="@string/grd_row82"
                             android:textColor="@android:color/black"
+                            android:textSize="12sp"
 
                             />
 
@@ -778,7 +767,7 @@
                             android:gravity="center_horizontal"
                             android:padding="9sp"
                             android:text="@string/grd_row84"
-                            android:textColor="@android:color/black"
+                            android:textColor="#66EA34"
                             android:textSize="12sp" />
 
                         <TextView
@@ -823,13 +812,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:layout_width="410dp"
-                android:layout_height="32dp"
-                android:background="@drawable/rectangle_contacts"
-                android:text="Copyright © Batangas State University"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
 
 
         </LinearLayout>
@@ -841,7 +823,16 @@
     <!-- END  OF SCROLL VIEW INSIDE A LINEAR LAYOUT -->
 
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/rectangle_contacts"
+        android:text="Copyright © Batangas State University"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 <!--</FrameLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

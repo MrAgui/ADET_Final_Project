@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -17,7 +18,8 @@ import com.bsu.bsu_fproj.dialog_studentID_class;
 import com.bsu.bsu_fproj.ui.menu_curriculum.CurriculumFragment;
 import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
 import com.bsu.bsu_fproj.ui.menu_subjects.SubjectsFragment;
-
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 
 public class HomeFragment extends Fragment {
@@ -25,6 +27,10 @@ public class HomeFragment extends Fragment {
     private FragmentHomeBinding binding;
     private static String payment;
     private static String usr;
+
+    // for carousel
+    CarouselView carouselView;
+    int[] sampleImages = {R.drawable.carousel1, R.drawable.carousel2, R.drawable.carousel3, R.drawable.carousel4};
 
     // Getting the data from NavActivity (line  189)
     public static HomeFragment newInstance(String s, String sr){
@@ -82,6 +88,13 @@ public class HomeFragment extends Fragment {
 //    When the view is displayed,
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+
+
+        carouselView = (CarouselView) view.findViewById(R.id.carouselView);
+        carouselView.setImageListener(imageListener);
+        carouselView.setPageCount(sampleImages.length);
+
+
 
         /* OnClick Listener methods */
 
@@ -152,7 +165,12 @@ public class HomeFragment extends Fragment {
         });
     }
 
-
+    ImageListener imageListener = new ImageListener() {
+        @Override
+        public void setImageForPosition(int position, ImageView imageView) {
+            imageView.setImageResource(sampleImages[position]);
+        }
+    };
 
 
     @Override

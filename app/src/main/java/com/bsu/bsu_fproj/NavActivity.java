@@ -26,6 +26,8 @@ import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 import com.bsu.bsu_fproj.ui.home.HomeFragment;
 import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageListener;
 
 public class NavActivity extends AppCompatActivity{
 //    implements NavigationView.OnNavigationItemSelectedListener
@@ -45,6 +47,8 @@ public class NavActivity extends AppCompatActivity{
 
     //for profile pic
     int srcID;
+
+    //for carousel
 
 
 
@@ -256,6 +260,7 @@ public class NavActivity extends AppCompatActivity{
         } finally {
 
         }
+
         // Sending Grade Data to Grades Fragment
         new GradesFragment().newInstance(received_grade);
 
@@ -286,8 +291,8 @@ public class NavActivity extends AppCompatActivity{
 
 
 
-
     }
+
 
     void startTimer(){
         ctimer = new CountDownTimer(5000,1000) {

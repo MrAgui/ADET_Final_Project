@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatDialogFragment;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class dialog_studentID_class extends AppCompatDialogFragment {
 
@@ -36,11 +37,17 @@ public class dialog_studentID_class extends AppCompatDialogFragment {
 //        int id = getResources().getIdentifier("dialog_studentID_"+sr_code, "layout", getActivity().getPackageName());
 
 /*END EDIT*/
+
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.dialog_studentid, null);
 //
 //         n = (ImageView) v.findViewById(R.layout.dialog_studentid_img);
 //        n.setImageResource(profileID);
-
+        ConstraintLayout front = (ConstraintLayout) v.findViewById(R.id.frontID);
+        ConstraintLayout back = (ConstraintLayout) v.findViewById(R.id.backID);
+        int frontsrc = getResources().getIdentifier("front_"+usr, "drawable", getActivity().getPackageName());
+        int backsrc = getResources().getIdentifier("back_"+usr, "drawable", getActivity().getPackageName());
+        front.setBackgroundResource(frontsrc);
+        back.setBackgroundResource(backsrc);
 
 
         //btn listener

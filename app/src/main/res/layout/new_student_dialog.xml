@@ -7,9 +7,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="369dp"
+        android:layout_width="match_parent"
         android:layout_height="258dp"
         android:contentDescription="@string/information_new_student"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
