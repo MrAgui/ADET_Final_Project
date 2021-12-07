@@ -57,10 +57,12 @@ dependencies {
     /* for gifs*/
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
 
-    /*for password eye toggle*/
-
     /* for links */
     implementation 'me.saket:better-link-movement-method:1.0'
 
+/*     for slider in menu
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
 
+     RoundedImageView
+    implementation 'com.makerramen:roundedimageview:2.3.0'*/
 }

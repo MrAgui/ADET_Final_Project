@@ -24,10 +24,12 @@ public class HomeFragment extends Fragment {
 
     private FragmentHomeBinding binding;
     private static String payment;
+    private static String usr;
 
     // Getting the data from NavActivity (line  189)
     public static HomeFragment newInstance(String s, String sr){
         payment = s;
+        usr = sr;
         HomeFragment f = new HomeFragment();
         Bundle args = new Bundle();
         args.putString("payment", s);
@@ -100,7 +102,7 @@ public class HomeFragment extends Fragment {
         binding.grades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("Clicked Subjects");
+                System.out.println("Clicked Grades");
                 Fragment gradesFragment = new GradesFragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -128,8 +130,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 System.out.println(payment + " after Nav to HomeFrag clicked");
-                dialog_liabilities_class lia_dialog = new dialog_liabilities_class().newInstance(payment);
-                lia_dialog.show(getChildFragmentManager(),"Dialog Liabilities");
+//                dialog_liabilities_class lia_dialog = new dialog_liabilities_class().newInstance(payment);
+//                lia_dialog.show(getChildFragmentManager(),"Dialog Liabilities");
                 new dialog_liabilities_class().newInstance(payment).show(getChildFragmentManager(),"Liabilities Dialog");
                 System.out.println(payment);
             }
@@ -141,8 +143,9 @@ public class HomeFragment extends Fragment {
 //                    showID();
 //                System.out.println("this is student ID");
 
-                dialog_studentID_class dialogID = new dialog_studentID_class();
-                dialogID.show(getChildFragmentManager(),"Student ID Dialog");
+//                dialog_studentID_class dialogID = new dialog_studentID_class().newInstance(usr);
+//                dialogID.show(getChildFragmentManager(),"Student ID Dialog");
+                new dialog_studentID_class().newInstance(usr).show(getChildFragmentManager(),"Student ID Dialog");
 //                new dialog_studentID_class().newInstance().show(getChildFragmentManager(), "Student ID Dialog");
 //                dialogID.setContentView(R.layout.dialog_stud_id);
             }

@@ -60,55 +60,7 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
 
 
 
-   /*        *//*START UPDATE CODES HERE*//*
-
-        DB.execSQL("create table subjects_tbl ("+
-                    "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
-                    "subject_1 TEXT NOT NULL," +
-                    "subject_2 TEXT NOT NULL," +
-                    "subject_3 TEXT NOT NULL," +
-                    "subject_4 TEXT NOT NULL," +
-                    "subject_5 TEXT NOT NULL," +
-                    "subject_6 TEXT NOT NULL," +
-                    "subject_7 TEXT NOT NULL )");
-
-        DB.execSQL("insert into subjects_tbl VALUES " +
-
-                "('1908638'," +
-                "'Automata Theory and Formal Languages', " +
-                "'Mobile Computing'," +
-                "'Human-Computer Interaction', " +
-                "'Web Systems and Technologies', '" +
-                "Application Development and Emerging Technologies', " +
-                "'Data Analysis', " +
-                "'The Contemporary World'),"+
-
-                "('1906341'," +
-                "'Automata Theory and Formal Languages', " +
-                "'Mobile Computing'," +
-                "'Human-Computer Interaction', " +
-                "'Web Systems and Technologies', '" +
-                "Application Development and Emerging Technologies', " +
-                "'Data Analysis', " +
-                "'The Contemporary World'),"+
-
-                "('1906796'," +
-                "'Automata Theory and Formal Languages', " +
-                "'Mobile Computing'," +
-                "'Human-Computer Interaction', " +
-                "'Web Systems and Technologies', '" +
-                "Application Development and Emerging Technologies', " +
-                "'Data Analysis', " +
-                "'The Contemporary World'),"+
-
-                "('4'," +
-                "'Automata Theory and Formal Languages', " +
-                "'Mobile Computing'," +
-                "'Human-Computer Interaction', " +
-                "'Web Systems and Technologies', '" +
-                "Application Development and Emerging Technologies', " +
-                "'Data Analysis', " +
-                "'The Contemporary World')");
+         /*  START UPDATE CODES HERE*/
 
         DB.execSQL("create table grades_tbl("+
                 "sr_code VARCHAR (8) NOT NULL UNIQUE,"+
@@ -118,7 +70,8 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "grades_4 TEXT NOT NULL," +
                 "grades_5 TEXT NOT NULL," +
                 "grades_6 TEXT NOT NULL," +
-                "grades_7 TEXT NOT NULL )");
+                "grades_7 TEXT NOT NULL," +
+                "grades_8 TEXT NOT NULL)");
 
         DB.execSQL("insert into grades_tbl VALUES " +
 
@@ -129,7 +82,8 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "'1.5', '" +
                 "1.5', " +
                 "'1.25', " +
-                "'1.25'),"+
+                "'1.25'," +
+                "'1'),"+
 
                 "('1906341'," +
                 "'2', " +
@@ -138,7 +92,8 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "'1.75', '" +
                 "1.25', " +
                 "'1.25', " +
-                "'1.25'),"+
+                "'1.25'," +
+                "'1'),"+
 
                 "('1906796'," +
                 "'2.75'," +
@@ -147,7 +102,8 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "'1', '" +
                 "1', " +
                 "'1.25', " +
-                "'1.25'),"+
+                "'1.25'," +
+                "'1'),"+
 
                 "('1947555',"+
                 "'2', " +
@@ -156,8 +112,8 @@ public class DatabaseOpenHelper_2  extends SQLiteOpenHelper {
                 "'1', '" +
                 "1', " +
                 "'1.25', " +
-                "'1.25')");
-    */
+                "'1.25'," +
+                "'1')");
     }
 
 

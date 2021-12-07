@@ -13,14 +13,15 @@ import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class dialog_studentID_class extends AppCompatDialogFragment {
 
-    private int profileID;
+    private static String usr;
 
      /*Made a method called newInstance to create an instance with arguments */
-    static dialog_studentID_class newInstance(int id){
+    public static dialog_studentID_class newInstance(String sr){
         dialog_studentID_class f = new dialog_studentID_class();
-
+        usr = sr;
+        System.out.println("Success passing to studID class: "+usr);
         Bundle args = new Bundle();
-        args.putInt("profile", id);
+        args.putString("profile", sr);
         f.setArguments(args);
 
         return f;

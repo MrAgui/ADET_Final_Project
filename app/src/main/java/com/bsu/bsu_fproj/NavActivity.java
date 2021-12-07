@@ -24,6 +24,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 import com.bsu.bsu_fproj.ui.home.HomeFragment;
+import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavActivity extends AppCompatActivity{
@@ -38,6 +39,8 @@ public class NavActivity extends AppCompatActivity{
     public String sr_codeHolder;
     TextView Name;
     public String[] received_data = {"","","","",""};
+    public String[] received_grade ={"","","","","","","",""};
+
     DatabaseOpenHelper_2 dbHelper = new DatabaseOpenHelper_2(this);
 
     //for profile pic
@@ -135,8 +138,7 @@ public class NavActivity extends AppCompatActivity{
                 R.id.nav_news,
                 R.id.nav_schedule,
                 R.id.nav_links,
-                R.id.nav_contacts,
-                R.id.nav_googleClass)
+                R.id.nav_contacts)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_nav);
@@ -148,8 +150,6 @@ public class NavActivity extends AppCompatActivity{
         Name = drawer.findViewById(R.id.navName);
 
         //for setting image in nav drawer
-
-
 
         // getting extras from intent before activity starts
         Bundle extras = getIntent().getExtras();
@@ -179,12 +179,6 @@ public class NavActivity extends AppCompatActivity{
                 received_data[3] = c.getString(5);
                 received_data[4] = c.getString(7);
 
-
-
-                //Make arrays
-                //received_grades[]
-                //received_subjects[]
-
                 Intent intent = getIntent();
                 sr_codeHolder  = intent.getStringExtra("name");
 
@@ -199,7 +193,7 @@ public class NavActivity extends AppCompatActivity{
 
         }
 
-        // Setting TextView as the data inside the database
+        // Setting TextView in the nav profile as the data inside the database
         /*https://stackoverflow.com/questions/34973456/how-to-change-text-of-a-textview-in-navigation-drawer-header#comment117348821_38418531*/
         NavigationView stack_navigationView = (NavigationView) findViewById(R.id.nav_view);
 
@@ -229,8 +223,41 @@ public class NavActivity extends AppCompatActivity{
 
         // saved the data in HomeFragment using instance (same as sending data in Homefragment)
         new HomeFragment().newInstance(received_data[4], //getting liability
-                                       received_data[0]);//getting SR_CODE
+                extras.getString("name") );//getting SR_CODE
 
+
+        //Make arrays for
+        //received_grades[]
+        c = null;
+        try {
+            db = dbHelper.getReadableDatabase();
+            c = db.rawQuery("select * from grades_tbl where sr_code="+ extras.getString("name"), new String[]{});
+            c.moveToFirst();
+            do {
+                System.out.println(c.getString(2));
+                System.out.println(c.getString(1));
+                System.out.println(c.getString(4));
+                System.out.println(c.getString(5));
+                System.out.println(c.getString(7));
+
+                received_grade[0] = c.getString(1);
+                received_grade[1] = c.getString(2);
+                received_grade[2] = c.getString(3);
+                received_grade[3] = c.getString(4);
+                received_grade[4] = c.getString(5);
+                received_grade[5] = c.getString(6);
+                received_grade[6] = c.getString(7);
+                received_grade[7] = c.getString(8);
+
+            } while (c.moveToNext());
+
+            db.close();
+
+        } finally {
+
+        }
+        // Sending Grade Data to Grades Fragment
+        new GradesFragment().newInstance(received_grade);
 
 
 
