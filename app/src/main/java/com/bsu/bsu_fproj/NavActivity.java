@@ -26,8 +26,6 @@ import com.bsu.bsu_fproj.databinding.ActivityNavBinding;
 import com.bsu.bsu_fproj.ui.home.HomeFragment;
 import com.bsu.bsu_fproj.ui.menu_grades.GradesFragment;
 import com.google.android.material.navigation.NavigationView;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageListener;
 
 public class NavActivity extends AppCompatActivity{
 //    implements NavigationView.OnNavigationItemSelectedListener
@@ -109,7 +107,7 @@ public class NavActivity extends AppCompatActivity{
 /*End edit*/
 
         /*Start Care Links*/
-        TextView text1 = (TextView) findViewById(R.id.textView2);
+//        TextView text1 = (TextView) findViewById(R.id.textView2);
         /*text1.setMovementMethod(LinkMovementMethod.getInstance());*/
 
         /*End Care Links   */
@@ -121,6 +119,7 @@ public class NavActivity extends AppCompatActivity{
             public void onClick(View view) {
                 //logout
                 Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.google.android.apps.classroom");
+//                Intent launchIntent = getPackageManager().getLeanbackLaunchIntentForPackage("com.google.android.apps.classroom");
                 if (launchIntent != null){
                     startActivity(launchIntent);
                 }else{
